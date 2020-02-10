@@ -1,0 +1,52 @@
+@import 'assets/colors';
+
+// .hdr__nav-link:not(.disabled):hover {
+// 	&::after {
+// 		width: 100%;
+// 	}
+// }
+
+.contacts-block__link-text,
+.catalog-block__more-btn,
+.ftr__site-link {
+	&:hover {
+		border-bottom-color: transparent;
+	}	
+}
+
+.catalog-block__more-btn:hover {
+
+}
+
+.ftr {
+	&__privacy-policy-btn:hover, &__dev-link:hover {
+		border-bottom-color: currentColor;
+	}
+}
+
+.hdr__nav-link:not(.disabled):hover {
+	text-shadow: 0 0 1px;
+	&::after {
+		width: 30%;
+	}
+}
+
+.btn:hover {
+	background-color: transparent;
+	color: $dark-color;
+	&::before {
+		right: 0;
+		bottom: 0;
+		box-sizing: border-box;
+	}
+	&::after {
+		top: 0;
+		left: 0;
+		box-sizing: border-box;
+	}
+}
+
+.btn-ol:hover {
+	background-color: $orange-color;
+	color: $white-color;
+}

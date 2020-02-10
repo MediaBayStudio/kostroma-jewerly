@@ -1,0 +1,20 @@
+.hdr {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	&.fixed {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	&__logo {
+		>.logo__text {
+			max-width: 100px;
+			height: auto;
+		}
+		&::before {
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+		}
+	}
+}
+

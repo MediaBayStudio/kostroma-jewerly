@@ -1,0 +1,29 @@
+.contacts {
+	&-sect {
+		flex-wrap: wrap;
+		height: 532px;
+		max-height: 750px;
+		background: linear-gradient(to left, #fdfbfa 45%, #fff 10%);
+		&::before {
+			top: 110px;
+			left: calc(50vw - 525px);
+		}
+		&__title {
+			margin-top: 60px;
+		}
+		&__map-block {
+			width: calc((100vw - 992px)/(1229 - 992)*(675 - 575) + 575px);
+			margin: 100.612px 0 0 calc((50vw - 480px) * -1);
+			z-index: 1;
+		}
+		&__form {
+			order: 12;
+			margin: 0;
+			z-index: 1;
+		}
+	}
+
+	&-block {
+		width: 575px;
+	}
+}

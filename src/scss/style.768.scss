@@ -1,0 +1,82 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.sect {
+	&-title {
+		font-size: 32px;
+	}
+}
+
+.trying-popup {
+	padding: 35px 60px 30px;
+	width: 100%;
+	max-width: 800px;
+	flex-flow: column wrap;
+	align-content: space-between;
+	height: 585px;
+	min-height: 585px;
+	&__close {
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		margin: 0;
+		transform: none;
+		&:active {
+			transform: scale(.9);
+		}
+	}
+	&__title {
+		order: 1;
+		margin-top: 25px;
+		width: 350px;
+		text-align: left;
+		font-size: 20px;
+		white-space: nowrap;
+	}
+	&__desc {
+		order: 2;
+		width: 300px;
+		margin-top: 6px;
+		white-space: nowrap;
+		font-size: 14px;
+	}
+
+	&__product {
+		>.catalog-card {
+			&__img {
+				width: 250px;
+				height: 250px;
+			}
+			&__title {
+				font-size: 16px;
+			}
+			&__desc {
+				font-size: 14px;
+			}
+		}
+		&.catalog-card {
+			order: 3;
+			flex-flow: column nowrap;
+			max-width: 250px;
+			height: 325px;
+		}
+	}
+
+	&__form {
+		max-width: 335px;
+		width: 100%;
+		order: 4;
+		margin-top: 90px;
+	}
+}
+
+// blocks import
+@import 'blocks/header/header.768';
+@import 'blocks/hero/hero.768';
+@import 'blocks/catalog/catalog.768';
+@import 'blocks/delivery/delivery.768';
+@import 'blocks/contacts/contacts.768';
+@import 'blocks/footer/footer.768';

@@ -1,0 +1,21 @@
+.hero-sect {
+	padding-top: 275px;
+	padding-bottom: 110px;
+	background: linear-gradient(to bottom, #fff 260px, #FCF9F7 260px) no-repeat;
+	background-position-x: calc((50vw - 300px) * -1);
+	&::after {
+		width: 690px;
+		height: 620px;
+		margin: 40px calc(50vw - 600px) 0 0;
+	}
+	&::before {
+		top: 45px;
+		left: -15px;
+	}
+	&__title {
+		margin: 0;
+	}
+	&__subtitle {
+		margin: 5px 0 70px;
+	}
+}

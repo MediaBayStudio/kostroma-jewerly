@@ -1,0 +1,41 @@
+.hero {
+	&-sect {
+		padding-top: 295px;
+		padding-bottom: 50px;
+		background:	linear-gradient(to bottom, #fff 200px, #FCF9F7 200px);
+		&::before {
+			top: 88px;
+			left: calc((100vw - 420px)/(320 - 420)*(-38 - 60) + 60px);
+			transform: rotate(-90deg);
+			pointer-events: auto;
+		}
+		&::after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 247px;
+			height: 267px;
+			background:url('../img/hero-img.320.jpg') no-repeat;
+			z-index: 2;
+		}
+		&__title {
+			font-size: 74px;
+		}
+		&__subtitle {
+			display: block;
+			margin: 8px 0 32px;
+			font: 20px/150% Montserrat;
+			max-width: 270px;
+		}
+		&__btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			max-width: 160px;
+			min-height: 46px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.catalog {
+	&-sect {
+		padding-top: 170px;
+		padding-bottom: 170px;
+		&__subtitle {
+			max-width: none;
+		}
+	}
+
+	&-block {
+		margin: 0;
+		&__more-btn {
+			margin-top: 30px;
+		}
+		&__catalog-card {
+			margin-top: 55px;
+			max-width: 385px;
+
+			>.catalog-card {
+				&__img {
+					width: 330px;
+					height: 330px;
+				}
+				&__title {
+					margin: 50px 0 5px;
+					font-size: 18px;
+				}
+				&__desc {
+					font-size: 16px;
+					max-width: 330px;
+				}
+			}
+
+			.catalog-card {
+				&__price {
+					font-size: 24px;
+				}
+				&__btn {
+					max-width: 180px;
+					min-height: 48px;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

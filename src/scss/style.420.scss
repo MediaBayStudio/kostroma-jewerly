@@ -1,0 +1,21 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.check-inp-block,
+label.invalid {
+	font-size: 9px;
+}
+
+
+.trying-popup {
+	width: 360px;
+}
+
+// blocks import
+@import 'blocks/header/header.420';
+@import 'blocks/hero/hero.420';
+@import 'blocks/catalog/catalog.420';
+@import 'blocks/delivery/delivery.420';
+@import 'blocks/contacts/contacts.420';
+@import 'blocks/footer/footer.420';

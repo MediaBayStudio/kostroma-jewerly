@@ -1,0 +1,24 @@
+.hero {
+	&-sect {
+		padding-top: 475px;
+		padding-bottom: 70px;
+		background: linear-gradient(to bottom, #fff 380px, #FCF9F7 380px);
+		&::after {
+			width: 450px;
+			height: 450px;
+			background-image: url('../img/hero-img.768.jpg');
+		}
+		&::before {
+			top: 140px;
+			left: calc((100vw - 767px)/(576 - 767)*(-100 - 92) + 92px);
+			font-size: 120px;
+		}
+		&__title {
+			font-size: 92px;
+		}
+		&__subtitle {
+			max-width: 290px;
+			font-size: 22px;
+		}
+	}
+}

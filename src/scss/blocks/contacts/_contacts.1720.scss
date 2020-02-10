@@ -1,0 +1,37 @@
+.contacts {
+	&-sect {
+		height: 558px;
+		&::before {
+			top: 45px;
+			left: calc(50vw - 875px);
+			font-size: 340px;
+		}
+		&__title {
+			transform: translateX(120px);
+		}
+		&__form {
+			>.form__title {
+				font-size: 36px;
+				transform: translateX(-20px);
+			}
+		}
+
+		&__map-block {
+			width: 970px;
+			// margin: 57.8px 0 0;
+			margin: 3.4% 0 0;
+		}
+	}
+
+	&-block {
+		width: 825px;
+		transform: translateX(120px);
+		font-size: 18px;
+		&__tel, &__email {
+			margin-bottom: 50px;
+		}
+		&__link {
+			align-self: center;
+		}
+	}
+}

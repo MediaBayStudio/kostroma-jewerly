@@ -1,0 +1,19 @@
+.hdr {
+	padding-bottom: 16px;
+	padding-top: 16px;
+	&.fixed {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&__nav {
+		font-size: 18px;
+	}
+	&__logo {
+		font-size: 17px;
+		&::before {
+			width: 48px;
+			height: 48px;
+			margin-right: 12px;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.delivery {
+	&-sect {
+		padding-bottom: 80px;
+		&__subtitle {
+			margin-top: 0;
+		}
+	}
+	&-block {
+		margin-top: 20px;
+	}
+	&-card {
+		margin-top: 35px;
+		&__img {
+			margin-left: 0;
+			align-self: flex-start;
+		}
+		&__title {
+			margin: 25px 0 20px;
+		}
+		&__desc {
+			max-width: 284px;
+		}
+	}
+}

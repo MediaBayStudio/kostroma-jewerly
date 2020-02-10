@@ -1,0 +1,20 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+
+.burger-btn {
+	display: none;
+}
+
+.thanks-popup {
+	width: 330px;
+}
+
+// blocks import
+@import 'blocks/header/header.992';
+@import 'blocks/hero/hero.992';
+@import 'blocks/catalog/catalog.992';
+@import 'blocks/delivery/delivery.992';
+@import 'blocks/contacts/contacts.992';
+@import 'blocks/footer/footer.992';

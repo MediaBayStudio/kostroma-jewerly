@@ -1,0 +1,145 @@
+.catalog {
+	&-sect {
+		padding-top: 80px;
+		padding-bottom: 45px;
+		overflow: hidden;
+		&__subtitle {
+			max-width: 270px;
+			margin-top: 5px;
+			padding: 0 10px 15px 0;
+			border-bottom: 1px solid #CBA696;
+		}
+	}
+
+	&-block {
+		position: relative;
+		&__more-btn {
+			display: none;
+			transition: border-bottom-color .5s;
+		}
+		&__catalog-card {
+			margin-top: 60px;
+			>.catalog-card__desc {
+				height: 70px;
+			}
+		}
+		&.slick-slider {
+			margin-left: -20px;
+			width: 100vw;
+			display: flex;
+			flex-direction: column-reverse;
+			.catalog-card__price, .catalog-card__btn {
+				transition: opacity .5s;
+				opacity: 0;
+				pointer-events: none;
+			}
+			.catalog-card.slick-current {
+				.catalog-card__price, .catalog-card__btn {
+					pointer-events: auto;
+					opacity: 1;
+				}
+			}
+		}
+		&__next {
+			right: 20px;
+			&::before {
+				content: 'Дальше';
+				margin-right: 5px;
+				font: 12px Playfair Display;
+				letter-spacing: 0.02em;
+				display: none;
+			}
+		}
+		&__prev {
+			left: 20px;
+		}
+		.slick-track {
+			display: flex;
+		}
+		&__dots {
+			position: relative;
+			margin-top: 10px;
+			>.slick-dots {
+				display: flex;
+				justify-content: center;
+				color: $secondary-color;
+				position: relative;
+				&::after, &::before {
+					content: '...';
+					font: inherit;
+					margin-right: 15px;
+					display: none;
+				}
+				&.elipsis {
+					&-before::before {display: inline-block;}
+					&-after::after {display: inline-block;}
+				}
+				>li {
+					&:last-child {
+						order: 10;
+						>button {
+							margin-right: 0;
+						}
+					}
+					&:first-child {
+						order: -1;
+					}
+					>button {
+						margin-right: 15px;
+						&.hide {
+							display: none;
+						}
+					}					
+					&.slick-active {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	&-card {
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px 20px 40px;
+		font-family: Montserrat;
+		color: #987A6E;
+		&__img {
+			display: block;
+			width: 240px;
+			height: 240px;
+			align-self: center;
+		}
+		&__title {
+			display: block;
+			min-width: 210px;
+			margin: 12px 0 5px;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		&__desc {
+			display: block;
+			max-width: 210px;
+			font: 14px/170% Montserrat;
+		}
+		&__bottom {
+			margin-top: 40px;
+		}
+		&__price {
+			white-space: nowrap;
+			font-size: 18px;
+			font-family: Playfair Display;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+		}
+		&__btn {
+			min-width: 150px;
+			max-width: 150px;
+			min-height: 40px;
+			margin-left: 30px;
+			&-text {
+				pointer-events: none;
+			}
+		}
+	}
+}

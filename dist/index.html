@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#fcf9f7">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="./css/style.css">
+	<link media="(hover), (-ms-high-contrast: active), (-ms-high-contrast: none)" rel="stylesheet" href="./css/hover.css">
+
+	<link media="(min-width: 419.98px)" rel="stylesheet" href="./css/style.420.css">
+	<link media="(min-width: 575.98px)" rel="stylesheet" href="./css/style.576.css">
+	<link media="(min-width: 767.98px)" rel="stylesheet" href="./css/style.768.css">
+	<link media="(min-width: 991.98px)" rel="stylesheet" href="./css/style.992.css">
+	<link media="(min-width: 1229.98px)" rel="stylesheet" href="./css/style.1200.css">
+	<link media="(min-width: 1719.98px)" rel="stylesheet" href="./css/style.1720.css">
+	<script defer src="./js/slick.min.js"></script>
+	<script defer src="./js/jquery.validate.min.js"></script>
+	<script defer src="./js/SimplePopup.min.js"></script>
+	<script defer src="./js/SimpleMenu.min.js"></script>
+	<script defer src="./js/jquery-settings.js"></script>
+	<script defer src="//api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU&load=SuggestView&onload=onLoad"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo1LNJevO-ouYd9LgKHtaGrrdtSDlBCO0&callback=initMap"></script>
+	<script defer src="./js/main.js"></script>	
+	<title>Пусеты</title>
+</head>
+<body>
+	<header class="hdr container flex">
+		<a href="/" class="logo hdr__logo" title="На главную"  tabindex="1">
+			<span class="logo__text">Бриллианты Костромы</span>
+		</a>
+		<nav class="hdr__nav">
+			<a href="#start" class="hdr__nav-link">Главная</a>
+			<a href="#catalog" class="hdr__nav-link">Каталог</a>
+			<a href="#delivery" class="hdr__nav-link">Примерка и доставка</a>
+			<a href="#" class="hdr__nav-link disabled" title="Раздел в разработке">О нас</a>
+			<a href="#" class="hdr__nav-link disabled" title="Раздел в разработке">Производство</a>
+			<a href="#contacts" class="hdr__nav-link">Контакты</a>
+		</nav>
+		<button type="button" class="burger-btn" tabindex="1">
+			<span class="burger-btn-line top">-</span>
+			<span class="burger-btn-line middle">-</span>
+			<span class="burger-btn-line bottom">-</span>
+		</button>
+		<aside class="mobile-menu hdr__mobile-menu">
+			<nav class="mobile-menu__nav">
+				<a href="#start" class="mobile-menu__link">Главная</a>
+				<a href="#catalog" class="mobile-menu__link">Каталог</a>
+				<a href="#delivery" class="mobile-menu__link">Примерка и доставка</a>
+				<a href="#" class="mobile-menu__link disabled">О нас</a>
+				<a href="#" class="mobile-menu__link disabled">Производство</a>
+				<a href="#contacts" class="mobile-menu__link">Контакты</a>
+			</nav>
+		</aside>
+	</header>
+
+	<section id="start" class="hero-sect container duplicate-title" data-title="Pusets">
+		<h1 class="hero-sect__title">Пусеты</h1>
+		<span class="hero-sect__subtitle">С  бриллиантами и драгоценными камнями</span>
+		<a href="#catalog" class="hero-sect__btn btn" tabindex="1"><span class="hero-sect__btn-text">Подобрать</span></a>
+	</section>
+
+	<section id="catalog" class="catalog-sect container">
+		<h2 class="catalog-sect__title sect-title">Специально для вас</h2>
+		<p class="catalog-sect__subtitle sect-subtitle">Мы собрали для вас лучшее из нашей коллекции</p>
+		<div class="catalog-block">
+			<div class="loader-bg">
+				<div class="loader"></div>
+			</div>
+			<div class="catalog-block__dots dots"></div>
+		</div>
+		<button type="button" class="catalog-block__more-btn"><span>Еще</span></button>
+	</section>
+
+	<section id="delivery" class="delivery-sect container">
+		<h2 class="delivery-sect__title sect-title">Примерка и доставка</h2>
+		<p class="delivery-sect__subtitle sect-subtitle">Мы сделали все, чтобы вам было удобно и приятно выбирать</p>
+		<div class="delivery-block">
+			<div class="delivery-card">
+				<img src="./img/delivery-1.svg" alt="" class="delivery-card__img">
+				<b class="delivery-card__title">Примерка</b>
+				<p class="delivery-card__desc">Наш курьер привезет вам понравившиеся украшения и вы сможете их примерить в комфортной обстановке. Украшения, которые вам не подойдут курьер заберет с собой.</p>
+			</div>
+			<div class="delivery-card">
+				<img src="./img/delivery-2.svg" alt="" class="delivery-card__img">
+				<b class="delivery-card__title">Доставка</b>
+				<p class="delivery-card__desc">Доставка осуществялется службой <q>Pony Express</q> в пункты выдачи и курьером на дом. Курьер свяжется с Вами для уточнения время и места доставки. Примерный срок доставки 7 рабочих дней.</p>
+			</div>
+			<div class="delivery-card">
+				<img src="./img/delivery-3.svg" alt="" class="delivery-card__img">
+				<b class="delivery-card__title">Оплата</b>
+				<p class="delivery-card__desc">Оплата производиться при получении товара двумя удобными вам способами: <br>– наличный расчет <br>– банковская карта</p>
+			</div>
+			<div class="delivery-card">
+				<img src="./img/delivery-4.svg" alt="" class="delivery-card__img">
+				<b class="delivery-card__title">Гарантии</b>
+				<p class="delivery-card__desc">Украшения ювелирного завода “Брилианнты Костромы” имеют все необходимые пометки о подлинности:
+					<button type="button" class="delivery-card__guarantee">
+						<i class="info-icon">i</i>
+						<span class="info-text">Бирку</span>
+						<span class="info-dropdown">сертефикат соответсвия заявленным характеристикам камней и металла</span>
+					</button>
+					<button type="button" class="delivery-card__guarantee">
+						<i class="info-icon">i</i>
+						<span class="info-text">Именник</span>
+						<span class="info-dropdown">сертефикат соответсвия заявленным характеристикам камней и металла</span>
+					</button>
+					<button type="button" class="delivery-card__guarantee">
+						<i class="info-icon">i</i>
+						<span class="info-text">Пробирное клеймо</span>
+						<span class="info-dropdown">сертефикат соответсвия заявленным характеристикам камней и металла</span>
+					</button>
+				</p>
+			</div>
+			<div class="delivery-block__arrows arrows"></div>
+		</div>
+	</section>
+
+	<section id="contacts" class="contacts-sect container duplicate-title" data-title="Pusets">
+		<h2 class="contacts-sect__title sect-title">Контакты</h2>
+		<div class="contacts-block">
+			<a href="tel:+74942422023" class="contacts-block__tel">+7 (4942) 42-20-23</a>
+			<span class="contacts-block__address">156019, г. Кострома, <br>ул. Локомотивная, д. 2 ж</span>
+			<a href="mailto:info@best-brilliant.ru" class="contacts-block__email">info@best-brilliant.ru</a>
+			<a href="#" class="contacts-block__link"><span class="contacts-block__link-text">Основной сайт</span></a>
+		</div>
+		<div class="map-block contacts-sect__map-block"></div>
+		<form action="#" method="POST" class="form contacts-sect__form">
+			<b class="form__title">Есть вопросы?</b>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-name" id="user-name" class="inp-block__inp inp" placeholder="Имя">
+				<label for="user-name" class="inp-block__lbl">Имя</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-email" id="user-email" class="inp-block__inp inp" placeholder="E-mail">
+				<label for="user-email" class="inp-block__lbl">E-mail</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-msg" id="user-msg" class="inp-block__inp inp" placeholder="Сообщение">
+				<label for="user-msg" class="inp-block__lbl">Сообщение</label>
+			</div>
+			<label class="check-inp-block">
+				<input type="checkbox" name="privacy-policy" class="check-inp-block__inp" value="accepted">
+				<span class="check-inp-block__pseudo-inp">-</span>
+				<span class="check-inp-block__lbl">Принимаю соглашение об обработке персональных данных</span>
+			</label>
+			<label class="check-inp-block">
+				<input type="checkbox" name="advertising" class="check-inp-block__inp" value="accepted">
+				<span class="check-inp-block__pseudo-inp">-</span>
+				<span class="check-inp-block__lbl">Хочу получать рекламную рассылку <q>Бриллианты Костромы</q></span>
+			</label>
+			<button class="form__btn btn">Отправить</button>
+		</form>
+	</section>
+
+	<footer class="ftr container">
+		<a href="/" class="logo ftr__logo" title="На главную">
+			<span class="logo__text">Бриллианты Костромы</span>
+		</a>
+		<div class="ftr__copy-wrap">
+			<span class="ftr__copy">&copy; 2014 - 2019 <q>Бриллианты Костромы</q></span>
+			<button type="button" class="ftr__privacy-policy-btn">Политика конфеденциальности</button>
+		</div>
+		<div class="ftr__links-wrap">
+			<a href="#" class="ftr__site-link">Основной сайт</a>
+			<a href="#" class="ftr__dev-link">Разработка - media bay</a>
+		</div>
+	</footer>
+
+	<div class="trying-popup">
+		<button type="button" class="trying-popup__close">
+			<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M15 1L1 15M1 1L15 15" stroke="#987A6E"/>
+			</svg>
+		</button>
+		<b class="trying-popup__title">Оформление примерки</b>
+		<p class="trying-popup__desc">Заполните форму и мы свяжемся с вами для подтвержания примерки и уточнения деталей.</p>
+		<div class="trying-popup__product catalog-card">
+			<img src="#" alt="#" class="catalog-card__img">
+			<strong class="catalog-card__title">-</strong>
+			<b class="catalog-card__desc">-</b>
+		</div>
+		<form action="#" method="POST" class="form trying-popup__form">
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-name" id="popup-user-name" class="inp-block__inp inp" placeholder="Имя">
+				<label for="popup-user-name" class="inp-block__lbl">Имя</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-tel" id="popup-user-tel" class="inp-block__inp inp" placeholder="Телефон">
+				<label for="popup-user-tel" class="inp-block__lbl">Телефон</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-email" id="popup-user-email" class="inp-block__inp inp" placeholder="E-mail">
+				<label for="popup-user-email" class="inp-block__lbl">E-mail</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-city" id="popup-user-city" class="inp-block__inp inp" placeholder="Город">
+				<label for="popup-user-city" class="inp-block__lbl">Город</label>
+			</div>
+			<label class="check-inp-block">
+				<input type="checkbox" name="privacy-policy" class="check-inp-block__inp" value="accepted">
+				<span class="check-inp-block__pseudo-inp">-</span>
+				<span class="check-inp-block__lbl">Принимаю соглашение об обработке персональных данных</span>
+			</label>
+			<label class="check-inp-block">
+				<input type="checkbox" name="advertising" class="check-inp-block__inp" value="accepted">
+				<span class="check-inp-block__pseudo-inp">-</span>
+				<span class="check-inp-block__lbl">Хочу получать рекламную рассылку <q>Бриллианты Костромы</q></span>
+			</label>
+			<button class="form__btn btn">Отправить</button>
+		</form>
+	</div>
+
+	<div class="thanks-popup">
+		<button type="button" class="thanks-popup__close">
+			<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M15 1L1 15M1 1L15 15" stroke="#987A6E"/>
+			</svg>
+		</button>
+		<b class="thanks-popup__title">Спасибо за обращение</b>
+		<p class="thanks-popup__desc">Скоро мы свяжемся с Вами и все обсудим</p>
+	</div>
+	<div class="overlay"></div>
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script>function onLoad(ymaps){let suggestView=new ymaps.SuggestView('popup-user-city')}function initMap(){let a={lat:57.757997,lng:40.986052},b=new google.maps.Map(document.querySelector(".contacts-sect__map-block"),{center:a,zoom:14}),c=new google.maps.Marker({position:a,map:b,icon:"img/geo-marker.svg"});b.setOptions({styles:[{featureType:"administrative",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#efebe2"}]},{featureType:"poi",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.attraction",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#fbfbfb"}]}]})}</script>
+</body>
+</html>

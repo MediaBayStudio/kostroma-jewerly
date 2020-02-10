@@ -1,0 +1,42 @@
+.hdr {
+	padding-top: 13.5px;
+	padding-bottom: 13.5px;
+	background-color: $almond-color;
+	position: relative;
+	z-index: 4;
+	&__nav {
+		display: none;
+	}
+	&__logo {
+		>.logo__text {
+   	 height: 22px;
+  	}
+	}
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		transition: padding .4s;
+		animation: fadeInBottom .5s;
+	}
+	&.active {
+		&::after {
+			width: 100%;
+		}
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		top: 0;
+		right: 0;
+		width: 62.5%;
+		height: calc(100% - 0.5px);
+		border-bottom: 1px solid $secondary-color;
+		pointer-events: none;
+		transition: width .5s;
+	}
+}

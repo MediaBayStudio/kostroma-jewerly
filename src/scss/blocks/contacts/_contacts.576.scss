@@ -1,0 +1,29 @@
+.contacts {
+	&-sect {
+		&__title {
+			margin-bottom: 40px;
+		}
+		&__map-block {
+			margin-left: calc((50vw - 270px) * -1);
+		}
+		&::before {
+			font-size: 170px;
+			top: -5px;
+			left: calc((100vw - 576px)/(757 - 576)*(95 - 30) + 30px);
+		}
+		&__form {
+			max-width: 350px;
+			>.check-inp-block {
+				>.check-inp-block__lbl {
+					width: 321px;
+				}
+			}
+		}
+	}	
+	&-block {
+		&__email, &__link {
+			flex-basis: 40%;
+		}
+	}
+	
+}

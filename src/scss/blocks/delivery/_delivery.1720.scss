@@ -1,0 +1,21 @@
+.delivery {
+	&-sect {
+		padding-bottom: 225px;
+	}
+	&-block {
+		margin-top: 50px;
+	}
+
+	&-card {
+		&__desc {
+			max-width: 380px;
+		}
+		&__guarantee {
+			>.info-dropdown {
+				max-width: none;
+				width: 100%;
+				padding-right: 50%;
+			}
+		}
+	}
+}

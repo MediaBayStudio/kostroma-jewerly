@@ -1,0 +1,7 @@
+.hero-sect {
+	&::after {
+		width: 575px;
+		height: 575px;
+		background-image: url('../img/hero-img.1440.jpg');
+	}
+}

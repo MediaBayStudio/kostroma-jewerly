@@ -1,0 +1,69 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.mobile-menu {
+	max-width: 300px;
+	&__nav {
+		font-size: 16px;
+	}
+}
+
+.burger-btn {
+  &.active {
+    >.top {
+      transform: translateY(8px) rotate(-45deg);
+    }
+    >.middle {
+      width: 23px;
+      transform: translateY(-1px) rotate(45deg);
+      opacity: 0;
+    }
+    >.bottom {
+      transform: translateY(-10px) rotate(45deg);
+    }
+  }
+  &-line {
+    width: 32px;
+    &.middle {
+      width: 23px;
+      margin: 6.25px 0;
+      transition: .5s opacity .25s, transform .5s, width .5s;
+    }
+  }
+}
+
+.sect {
+  &-title {
+    font-size: 28px;
+  }
+}
+
+.check-inp-block,
+label.invalid {
+  font-size: 10px;
+}
+
+.trying-popup {
+  width: 390px;
+  &__product {
+    &.catalog-card {
+      margin: 20px 0;
+    }
+    >.catalog-card {
+      &__img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+
+// blocks import
+@import 'blocks/header/header.576';
+@import 'blocks/hero/hero.576';
+@import 'blocks/catalog/catalog.576';
+@import 'blocks/delivery/delivery.576';
+@import 'blocks/contacts/contacts.576';
+@import 'blocks/footer/footer.576';

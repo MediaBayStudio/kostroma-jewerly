@@ -1,0 +1,15 @@
+.catalog {
+	&-sect {
+		padding-top: 110px;
+		padding-bottom: 110px;
+	}
+	&-block {
+		margin-top: 10px;
+		&__catalog-card {
+			max-width: 265px;
+		}
+		&__more-btn {
+			margin-top: 40px;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.contacts {
+	&-sect {
+		padding-bottom: 40px;
+		overflow: hidden;
+		background:	linear-gradient(to top, #FDFBFA 440px, #fff 440px);
+		&::before {
+			top: 165px;
+			left: calc((100vw - 320px)/(419 - 320)*(30 - -25) + -25px);
+			font-size: 120px;
+			z-index: 0;
+		}
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__map-block {
+			width: 100vw;
+			margin: 60px 0 0 -20px;
+			height: 140px;
+			// background-color: lightblue;
+		}
+		&__form {
+			margin: auto;
+			padding: 30px 0 25px;
+			max-width: 280px;
+			width: 100%;
+		}
+	}
+
+	&-block {
+		padding-left: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+		z-index: 1;
+		font: 16px/150% Montserrat;
+		&__tel, &__address, &__email {
+			margin-bottom: 15px;
+		}
+		&__link {
+			display: inline-flex;
+			align-items: center;
+			&-text {
+				border-bottom: 1px solid #CBA696;
+				transition: border-bottom-color .5s;
+			}
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 12px;
+				height: 5px;
+				margin-left: 20px;
+				background: url('../img/next-arrow.svg') center/contain no-repeat;
+			}			
+		}
+	}
+}

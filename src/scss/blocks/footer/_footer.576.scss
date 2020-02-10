@@ -1,0 +1,21 @@
+.ftr {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	&__logo {
+		margin: 0;
+		&::before {
+			margin-right: 11px;
+			width: 35px;
+			height: 32px;
+		}
+	}
+	&__privacy-policy-btn {
+		margin: 0;
+	}
+	&__copy, &__site-link {
+		margin-bottom: 8px;
+	}
+}

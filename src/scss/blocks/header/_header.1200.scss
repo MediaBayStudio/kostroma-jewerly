@@ -1,0 +1,5 @@
+.hdr {
+	&__nav-link:nth-last-child(n+2) {
+		margin-right: 60px;
+	}
+}

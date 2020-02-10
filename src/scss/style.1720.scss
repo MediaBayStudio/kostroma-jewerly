@@ -1,0 +1,25 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.btn,
+.btn-ol {
+	font-size: 18px;
+}
+
+.sect {
+	&-title {
+		font-size: 36px;
+	}
+	&-subtitle {
+		font-size: 18px;
+	}
+}
+
+// blocks import
+@import 'blocks/header/header.1720';
+@import 'blocks/hero/hero.1720';
+@import 'blocks/catalog/catalog.1720';
+@import 'blocks/delivery/delivery.1720';
+@import 'blocks/contacts/contacts.1720';
+@import 'blocks/footer/footer.1720';

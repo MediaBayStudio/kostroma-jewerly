@@ -1,0 +1,20 @@
+.delivery {
+	&-sect {
+		&__subtitle {
+			max-width: none;
+			margin-top: 15px;
+		}
+	}
+	&-block {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		&__arrows {
+			display: none;
+		}
+	}
+	&-card {
+		margin-top: 40px;
+	}
+}

@@ -1,0 +1,41 @@
+.contacts {
+	&-sect {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 0;
+		background: linear-gradient(to top, #FDFBFA 665px, #fff 440px);
+		&::before {
+			font-size: 220px;
+			top: -30px;
+			left: -30px;
+		}
+		&__map-block {
+			order: 10;
+			margin: 0 0 0 calc((50vw - 305px) * -1);
+			height: 200px;
+		}
+		&__form {
+			margin-top: 20px;
+			max-width: 385px;
+			padding-top: 60px;
+			padding-bottom: 50px;
+			>.form__title {
+				margin-bottom: 10px;
+				display: inline-block;
+				font-size: 32px;
+			}
+			>.form__btn {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	&-block {
+		&__tel, &__address {
+			flex-basis: 50%;
+		}
+		&__email, &__link {
+			flex-basis: 46%;
+		}
+	}
+}

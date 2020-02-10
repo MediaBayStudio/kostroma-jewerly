@@ -1,0 +1,9 @@
+.ftr {
+	&__logo {
+		&::before {
+			width: 45px;
+			height: 41px;
+			margin-right: 15px;
+		}
+	}
+}
