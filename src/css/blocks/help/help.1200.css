@@ -1,0 +1,8 @@
+.help-sect {
+  background-size: calc((100vw - 1230px)/(1720 - 1230)*(1000 - 750) + 750px) 92.5%, 520px 380px;
+  background-position: top right, bottom left calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px); }
+  .help-sect::before {
+    top: -75px;
+    left: calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px); }
+  .help-sect__form, .help-sect__desc, .help-sect__title {
+    margin-left: 580px; }

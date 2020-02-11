@@ -1,11 +1,12 @@
-//=require _utils.js
+//=include _utils.js
 
 document.addEventListener('DOMContentLoaded', function(){
-	//=require _menu.js
-	//=require _scrollToLinks.js
-	//=require _popup's.js
-	//=require _fixhdr.js
-	//=require _guarantees.js
-	//=require _telmask.js
-	//=require _catalog.js
+	//=include _menu.js
+	//=include _scrollToLinks.js
+	//=include _popup's.js
+	//=include _fixhdr.js
+	//=include _guarantees.js
+	//=include _telmask.js
+	//=include _catalog.js
+  //=include _about.js
 });

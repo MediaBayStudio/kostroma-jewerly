@@ -1,0 +1,49 @@
+.about {
+  &-sect {
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+
+    &__desc-block {
+      margin-bottom: 0;
+      &.elipsis {
+        >.about-sect__desc {
+          &:nth-child(n+3) {
+            display: block;
+          }
+        }
+        >.desc-block__more-btn {
+          display: none;
+        }
+      }
+    }
+
+    &__img {
+      grid-row: 5;
+    }
+
+    &__images-block {
+      grid-row: 5;
+    }
+
+    &__preview-img {
+      width: 258px;
+      height: 161px;
+    }
+
+    &__logo {
+      width: 130px;
+      height: 120px;
+      align-self: center;
+      margin-bottom: 60px;
+    }
+
+    &__link {
+      grid-row: 4;
+      margin: 30px 0 60px;
+    }
+  }
+}

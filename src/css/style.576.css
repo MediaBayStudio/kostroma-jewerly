@@ -131,6 +131,38 @@ label.invalid {
     .help-sect__form-btn {
       margin: 30px 0 0 0; }
 
+.about-sect {
+  grid-template-columns: 322px 1fr; }
+  .about-sect__title {
+    grid-column: 1/span 2; }
+  .about-sect__subtitle {
+    grid-column: 1/span 2;
+    max-width: none; }
+  .about-sect__desc-block {
+    grid-column: 1/span 2; }
+  .about-sect__img {
+    grid-row: 4;
+    grid-column: 1;
+    width: 322px;
+    height: 528px; }
+  .about-sect__images-block {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    grid-row: 4;
+    grid-column: 2; }
+  .about-sect__preview-img {
+    width: 200px;
+    height: 125px;
+    margin: 0 0 25px; }
+    .about-sect__preview-img:last-child {
+      margin: 0; }
+    .about-sect__preview-img:first-child {
+      display: inline-block; }
+  .about-sect__logo {
+    -o-object-fit: contain;
+    object-fit: contain; }
+
 .contacts-sect__title {
   margin-bottom: 40px; }
 

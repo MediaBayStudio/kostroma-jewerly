@@ -31,7 +31,7 @@
 }
 
 .hdr__nav-link:not(.disabled):hover {
-	text-shadow: 0 0 1px;
+	// text-shadow: 0 0 1px;
 	&::after {
 		width: 30%;
 	}

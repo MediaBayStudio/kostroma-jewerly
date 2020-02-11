@@ -137,6 +137,33 @@
   .help-sect__form .check-inp-block {
     font-size: 10px; }
 
+.about-sect__desc-block {
+  margin-bottom: 0; }
+  .about-sect__desc-block.elipsis > .about-sect__desc:nth-child(n+3) {
+    display: block; }
+  .about-sect__desc-block.elipsis > .desc-block__more-btn {
+    display: none; }
+
+.about-sect__img {
+  grid-row: 5; }
+
+.about-sect__images-block {
+  grid-row: 5; }
+
+.about-sect__preview-img {
+  width: 258px;
+  height: 161px; }
+
+.about-sect__logo {
+  width: 130px;
+  height: 120px;
+  align-self: center;
+  margin-bottom: 60px; }
+
+.about-sect__link {
+  grid-row: 4;
+  margin: 30px 0 60px; }
+
 .contacts-sect {
   display: flex;
   flex-direction: column;

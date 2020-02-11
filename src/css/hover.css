@@ -13,10 +13,8 @@
 .ftr__privacy-policy-btn:hover, .ftr__dev-link:hover {
   border-bottom-color: currentColor; }
 
-.hdr__nav-link:not(.disabled):hover {
-  text-shadow: 0 0 1px; }
-  .hdr__nav-link:not(.disabled):hover::after {
-    width: 30%; }
+.hdr__nav-link:not(.disabled):hover::after {
+  width: 30%; }
 
 .btn:hover::before {
   right: 0;

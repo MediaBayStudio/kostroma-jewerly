@@ -1,7 +1,7 @@
-//=require _utils.js
+//=include _utils.js
 
 $(document).ready(function() {
-	//=require _slick.js
-	//=require _validate.js
-	//=require _zoom.js
+	//=include _slick.js
+	//=include _validate.js
+	//=include _zoom.js
 })

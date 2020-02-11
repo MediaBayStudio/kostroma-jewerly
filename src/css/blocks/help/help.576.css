@@ -1,0 +1,20 @@
+.help-sect {
+  padding-bottom: 40px;
+  background: #FDFBFA; }
+  .help-sect__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: none; }
+    .help-sect__form > .inp-block {
+      width: 100%; }
+    .help-sect__form > .check-inps-wrap {
+      display: inline-flex;
+      flex-direction: column;
+      max-width: 270px;
+      margin-top: 30px; }
+      .help-sect__form > .check-inps-wrap > .check-inp-block:first-child {
+        margin-bottom: 7px; }
+    .help-sect__form-btn {
+      margin: 30px 0 0 0; }

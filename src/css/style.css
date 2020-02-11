@@ -254,6 +254,18 @@ body {
 .hide {
   display: none !important; }
 
+.site-link {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid #CBA696;
+  line-height: 150%; }
+  .site-link::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 5px;
+    background: url("../img/next-arrow.svg") center/contain no-repeat; }
+
 .loader {
   width: 35px;
   height: 35px;
@@ -427,8 +439,7 @@ body {
 
 .btn {
   background-color: #DD7D5C;
-  color: #FDFBFA;
-  transition: .5s background-color .15s, .5s color .15s; }
+  color: #FDFBFA; }
   .btn::after, .btn::before {
     content: '';
     position: absolute;
@@ -438,7 +449,7 @@ body {
     height: 100%;
     border: 1px solid #DD7D5C;
     pointer-events: none;
-    transition: all .25s; }
+    transition: all .5s; }
   .btn::after {
     top: -5px;
     left: -5px; }
@@ -1007,6 +1018,59 @@ label.invalid {
     margin: auto; }
     .help-sect__form > .inp-block {
       max-width: 260px; }
+
+.desc-block__more-btn {
+  display: none; }
+
+.about-sect {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, auto);
+  padding-bottom: 40px;
+  padding-top: 40px; }
+  .about-sect__title {
+    grid-row: 1; }
+  .about-sect__subtitle {
+    margin: 22px 0 15px;
+    max-width: 278px;
+    grid-row: 2; }
+  .about-sect__desc {
+    margin-bottom: 28px;
+    line-height: 150%; }
+    .about-sect__desc:last-of-type {
+      margin: 0; }
+    .about-sect__desc-block {
+      font-family: Montserrat;
+      margin-bottom: 30px;
+      transition: height .5s;
+      grid-row: 3; }
+      .about-sect__desc-block.elipsis > .about-sect__desc:nth-of-type(n+3) {
+        display: none; }
+      .about-sect__desc-block.elipsis > .desc-block__more-btn {
+        display: inline-block;
+        transform: translateY(-15px);
+        border-bottom: 1px solid; }
+  .about-sect__img {
+    width: 280px;
+    height: 448px;
+    margin-bottom: 10px;
+    grid-row: 4; }
+  .about-sect__preview-img {
+    width: 135px;
+    height: 75px;
+    margin-right: 5px; }
+    .about-sect__preview-img:last-child {
+      margin-right: 0; }
+    .about-sect__preview-img:first-child, .about-sect__preview-img:last-child {
+      display: none; }
+  .about-sect__images-block {
+    grid-row: 5; }
+  .about-sect__link {
+    margin-top: 20px;
+    justify-self: start;
+    grid-row: 6; }
+    .about-sect__link::after {
+      margin-left: 10px; }
 
 .contacts-sect {
   padding-bottom: 40px;

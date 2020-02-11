@@ -56,6 +56,15 @@
   .help-sect__form, .help-sect__desc, .help-sect__title {
     margin-left: 580px; }
 
+.about-sect {
+  grid-template-columns: 311px 100px 1fr; }
+  .about-sect__preview-img {
+    width: 268px;
+    height: 161px; }
+  .about-sect__logo {
+    width: 130px;
+    height: 120px; }
+
 .contacts-sect {
   background: none;
   height: 552px; }
