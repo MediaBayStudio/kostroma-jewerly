@@ -1,0 +1,20 @@
+.help {
+  &-sect {
+    padding-top: 40px;
+    &-wrap {
+      max-width: 610px;
+    }
+    &__form {
+      .inp {
+        width: 284px;
+      }
+      .check-inps-wrap, .invalid {
+        max-width: 340px;
+        font-size: 10px;
+      }
+      .check-inp-block {
+        font-size: 10px;
+      }
+    }
+  }
+}

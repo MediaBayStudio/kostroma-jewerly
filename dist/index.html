@@ -24,11 +24,12 @@
 	<link media="(min-width: 991.98px)" rel="stylesheet" href="./css/style.992.css">
 	<link media="(min-width: 1229.98px)" rel="stylesheet" href="./css/style.1200.css">
 	<link media="(min-width: 1719.98px)" rel="stylesheet" href="./css/style.1720.css">
+	
 	<script defer src="./js/slick.min.js"></script>
 	<script defer src="./js/jquery.validate.min.js"></script>
 	<script defer src="./js/SimplePopup.min.js"></script>
 	<script defer src="./js/SimpleMenu.min.js"></script>
-	<script defer src="./js/jquery-settings.js"></script>
+	<script defer src="./js/jquery-settings/jquery-settings.js"></script>
 	<script defer src="//api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU&load=SuggestView&onload=onLoad"></script>
 	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo1LNJevO-ouYd9LgKHtaGrrdtSDlBCO0&callback=initMap"></script>
 	<script defer src="./js/main.js"></script>	
@@ -52,7 +53,10 @@
 			<span class="burger-btn-line middle">-</span>
 			<span class="burger-btn-line bottom">-</span>
 		</button>
-		<aside class="mobile-menu hdr__mobile-menu">
+		<aside class="mobile-menu hdr__mobile-menu duplicate-title" data-title="Pusets">
+			<a href="/" class="logo mobile-menu__logo" title="На главную"  tabindex="1">
+				<span class="logo__text">Бриллианты Костромы</span>
+			</a>
 			<nav class="mobile-menu__nav">
 				<a href="#start" class="mobile-menu__link">Главная</a>
 				<a href="#catalog" class="mobile-menu__link">Каталог</a>
@@ -61,6 +65,10 @@
 				<a href="#" class="mobile-menu__link disabled">Производство</a>
 				<a href="#contacts" class="mobile-menu__link">Контакты</a>
 			</nav>
+			<div class="mobile-menu__contacts-block">
+				<a href="tel:+74942422023" class="mobile-menu__tel">+7 (4942) 42-20-23</a>
+				<a href="#" class="mobile-menu__site-link"><span>Основной сайт</span></a>
+			</div>			
 		</aside>
 	</header>
 
@@ -113,17 +121,53 @@
 					<button type="button" class="delivery-card__guarantee">
 						<i class="info-icon">i</i>
 						<span class="info-text">Именник</span>
-						<span class="info-dropdown">сертефикат соответсвия заявленным характеристикам камней и металла</span>
+						<span class="info-dropdown">персональный знак завода-изготовителя, зарегестрированный в Пробирной Палате РФ. <q>Брилльанты Костромы</q> – ВЪБ</span>
 					</button>
 					<button type="button" class="delivery-card__guarantee">
 						<i class="info-icon">i</i>
 						<span class="info-text">Пробирное клеймо</span>
-						<span class="info-dropdown">сертефикат соответсвия заявленным характеристикам камней и металла</span>
+						<span class="info-dropdown">специальный оттиск пробирного надзора Российской Федерации, соответствие характеристик металла изделия</span>
 					</button>
 				</p>
 			</div>
 			<div class="delivery-block__arrows arrows"></div>
 		</div>
+	</section>
+
+	<section class="help-sect container duplicate-title" data-title="Pusets">
+		<h2 class="help-sect__title sect-title">Не смогли определиться?</h2>
+		<p class="help-sect__desc sect-subtitle">Заполните форму и мы поможем вам с подбором и примеркой</p>
+		<form action="#" method="POST" class="form help-sect__form">
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-name" id="help-user-name" class="inp-block__inp inp" placeholder="Имя">
+				<label for="help-user-name" class="inp-block__lbl">Имя</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-tel" id="help-user-tel" class="inp-block__inp inp" placeholder="Телефон">
+				<label for="help-user-tel" class="inp-block__lbl">Телефон</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-email" id="help-user-email" class="inp-block__inp inp" placeholder="E-mail">
+				<label for="help-user-email" class="inp-block__lbl">E-mail</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-city" id="help-user-city" class="inp-block__inp inp" placeholder="Город">
+				<label for="help-user-city" class="inp-block__lbl">Город</label>
+			</div>
+			<div class="check-inps-wrap">
+				<label class="check-inp-block">
+					<input type="checkbox" name="privacy-policy" class="check-inp-block__inp" value="accepted">
+					<span class="check-inp-block__pseudo-inp">-</span>
+					<span class="check-inp-block__lbl">Принимаю соглашение об обработке персональных данных</span>
+				</label>
+				<label class="check-inp-block">
+					<input type="checkbox" name="advertising" class="check-inp-block__inp" value="accepted">
+					<span class="check-inp-block__pseudo-inp">-</span>
+					<span class="check-inp-block__lbl">Хочу получать рекламную рассылку <q>Бриллианты Костромы</q></span>
+				</label>
+			</div>
+			<button class="form__btn btn">Подобрать</button>
+		</form>
 	</section>
 
 	<section id="contacts" class="contacts-sect container duplicate-title" data-title="Pusets">
@@ -173,7 +217,7 @@
 		</div>
 		<div class="ftr__links-wrap">
 			<a href="#" class="ftr__site-link">Основной сайт</a>
-			<a href="#" class="ftr__dev-link">Разработка - media bay</a>
+			<a href="#" class="ftr__dev-link"><span>Разработка - </span></a>
 		</div>
 	</footer>
 
@@ -232,6 +276,6 @@
 	</div>
 	<div class="overlay"></div>
 	<script src="./js/jquery-3.4.1.min.js"></script>
-	<script>function onLoad(ymaps){let suggestView=new ymaps.SuggestView('popup-user-city')}function initMap(){let a={lat:57.757997,lng:40.986052},b=new google.maps.Map(document.querySelector(".contacts-sect__map-block"),{center:a,zoom:14}),c=new google.maps.Marker({position:a,map:b,icon:"img/geo-marker.svg"});b.setOptions({styles:[{featureType:"administrative",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#efebe2"}]},{featureType:"poi",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.attraction",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#fbfbfb"}]}]})}</script>
+	<script>function onLoad(ymaps){let suggestView=new ymaps.SuggestView('popup-user-city');let suggestView2=new ymaps.SuggestView('help-user-city')}function initMap(){let a={lat:57.757997,lng:40.986052},b=new google.maps.Map(document.querySelector(".contacts-sect__map-block"),{center:a,zoom:14}),c=new google.maps.Marker({position:a,map:b,icon:"img/geo-marker.svg"});b.setOptions({styles:[{featureType:"administrative",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#efebe2"}]},{featureType:"poi",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.attraction",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#fbfbfb"}]}]})}</script>
 </body>
 </html>

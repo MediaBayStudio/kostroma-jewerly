@@ -611,10 +611,13 @@ label.invalid {
 }
 
 
-// blocks import
+//blocks import
 @import 'blocks/header/header';
 @import 'blocks/hero/hero';
 @import 'blocks/catalog/catalog';
 @import 'blocks/delivery/delivery';
+@import 'blocks/help/help';
+@import 'blocks/about/about';
+@import 'blocks/production/production';
 @import 'blocks/contacts/contacts';
 @import 'blocks/footer/footer';

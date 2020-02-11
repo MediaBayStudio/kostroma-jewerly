@@ -134,6 +134,42 @@
 		</div>
 	</section>
 
+	<section class="help-sect container duplicate-title" data-title="Pusets">
+		<h2 class="help-sect__title sect-title">Не смогли определиться?</h2>
+		<p class="help-sect__desc sect-subtitle">Заполните форму и мы поможем вам с подбором и примеркой</p>
+		<form action="#" method="POST" class="form help-sect__form">
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-name" id="help-user-name" class="inp-block__inp inp" placeholder="Имя">
+				<label for="help-user-name" class="inp-block__lbl">Имя</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-tel" id="help-user-tel" class="inp-block__inp inp" placeholder="Телефон">
+				<label for="help-user-tel" class="inp-block__lbl">Телефон</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-email" id="help-user-email" class="inp-block__inp inp" placeholder="E-mail">
+				<label for="help-user-email" class="inp-block__lbl">E-mail</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-city" id="help-user-city" class="inp-block__inp inp" placeholder="Город">
+				<label for="help-user-city" class="inp-block__lbl">Город</label>
+			</div>
+			<div class="check-inps-wrap">
+				<label class="check-inp-block">
+					<input type="checkbox" name="privacy-policy" class="check-inp-block__inp" value="accepted">
+					<span class="check-inp-block__pseudo-inp">-</span>
+					<span class="check-inp-block__lbl">Принимаю соглашение об обработке персональных данных</span>
+				</label>
+				<label class="check-inp-block">
+					<input type="checkbox" name="advertising" class="check-inp-block__inp" value="accepted">
+					<span class="check-inp-block__pseudo-inp">-</span>
+					<span class="check-inp-block__lbl">Хочу получать рекламную рассылку <q>Бриллианты Костромы</q></span>
+				</label>
+			</div>
+			<button class="form__btn btn">Подобрать</button>
+		</form>
+	</section>
+
 	<section id="contacts" class="contacts-sect container duplicate-title" data-title="Pusets">
 		<h2 class="contacts-sect__title sect-title">Контакты</h2>
 		<div class="contacts-block">
@@ -240,6 +276,6 @@
 	</div>
 	<div class="overlay"></div>
 	<script src="./js/jquery-3.4.1.min.js"></script>
-	<script>function onLoad(ymaps){let suggestView=new ymaps.SuggestView('popup-user-city')}function initMap(){let a={lat:57.757997,lng:40.986052},b=new google.maps.Map(document.querySelector(".contacts-sect__map-block"),{center:a,zoom:14}),c=new google.maps.Marker({position:a,map:b,icon:"img/geo-marker.svg"});b.setOptions({styles:[{featureType:"administrative",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#efebe2"}]},{featureType:"poi",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.attraction",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#fbfbfb"}]}]})}</script>
+	<script>function onLoad(ymaps){let suggestView=new ymaps.SuggestView('popup-user-city');let suggestView2=new ymaps.SuggestView('help-user-city')}function initMap(){let a={lat:57.757997,lng:40.986052},b=new google.maps.Map(document.querySelector(".contacts-sect__map-block"),{center:a,zoom:14}),c=new google.maps.Marker({position:a,map:b,icon:"img/geo-marker.svg"});b.setOptions({styles:[{featureType:"administrative",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#efebe2"}]},{featureType:"poi",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.attraction",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#fbfbfb"}]}]})}</script>
 </body>
 </html>

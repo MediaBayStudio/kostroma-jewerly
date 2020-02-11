@@ -993,6 +993,21 @@ label.invalid {
     .delivery-card__guarantee:nth-child(2) > .info-dropdown {
       max-width: 192px; }
 
+.help-sect {
+  padding-top: 30px;
+  padding-bottom: calc((100vw - 320px)/(576 - 320)*(430 - 260) + 260px);
+  background: #F5F5F5 url("../img/help-sect-img.jpg") bottom/100% no-repeat; }
+  .help-sect::before {
+    display: none; }
+  .help-sect__desc {
+    margin: 22px 0;
+    max-width: 295px; }
+  .help-sect__form {
+    max-width: 280px;
+    margin: auto; }
+    .help-sect__form > .inp-block {
+      max-width: 260px; }
+
 .contacts-sect {
   padding-bottom: 40px;
   overflow: hidden;
