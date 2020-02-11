@@ -103,7 +103,7 @@
     transform: translateX(-20px); }
   .contacts-sect__map-block {
     width: 970px;
-    margin: 3.4% 0 0; }
+    margin: 3.4% calc(((95 * 100vw) / 1920) * -1) 0 0; }
 
 .contacts-block {
   width: 825px;

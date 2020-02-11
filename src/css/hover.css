@@ -3,6 +3,13 @@
 .ftr__site-link:hover {
   border-bottom-color: transparent; }
 
+.catalog-block__catalog-card:hover::after {
+  opacity: 1; }
+
+.catalog-block__catalog-card:hover .catalog-card__btn {
+  background-color: #DD7D5C;
+  color: #FDFBFA; }
+
 .ftr__privacy-policy-btn:hover, .ftr__dev-link:hover {
   border-bottom-color: currentColor; }
 
@@ -11,18 +18,46 @@
   .hdr__nav-link:not(.disabled):hover::after {
     width: 30%; }
 
-.btn:hover {
-  background-color: transparent;
-  color: #403637; }
-  .btn:hover::before {
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box; }
-  .btn:hover::after {
-    top: 0;
-    left: 0;
-    box-sizing: border-box; }
+.btn:hover::before {
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box; }
+
+.btn:hover::after {
+  top: 0;
+  left: 0;
+  box-sizing: border-box; }
 
 .btn-ol:hover {
   background-color: #DD7D5C;
   color: #FDFBFA; }
+
+.delivery-card__guarantee:hover > .info-icon {
+  background-color: transparent;
+  border-color: #CBA696; }
+
+.delivery-card__guarantee:hover > .info-dropdown {
+  opacity: 1;
+  pointer-events: auto; }
+
+.delivery-card__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.delivery-card__guarantee:active {
+  transform: none; }
+
+.delivery-card__guarantee > .info-dropdown {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  max-height: none;
+  max-width: none;
+  width: 182px;
+  overflow: visible;
+  padding: 7px 10px;
+  margin: 0;
+  pointer-events: none;
+  transition: opacity .5s; }

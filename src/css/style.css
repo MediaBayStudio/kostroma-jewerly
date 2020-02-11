@@ -279,6 +279,17 @@ body {
       -webkit-animation: fadeIn .5s;
       animation: fadeIn .5s; }
 
+.duplicate-title {
+  position: relative; }
+  .duplicate-title::before {
+    content: attr(data-title);
+    position: absolute;
+    font-size: 60px;
+    letter-spacing: 0.01em;
+    color: #FCF9F7;
+    z-index: 1;
+    pointer-events: none; }
+
 .burger-btn:focus,
 .logo:focus,
 .btn:focus,
@@ -358,23 +369,54 @@ body {
 
 .mobile-menu {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
-  right: 0;
-  top: 100%;
-  max-width: 420px;
-  width: 100%;
-  padding: 30px 45px;
-  background-color: #E8D4C9;
-  border-bottom-left-radius: 5px; }
+  left: 0;
+  top: 0;
+  max-width: 70vw;
+  width: 500px;
+  height: 100vh;
+  padding: 35px 20px;
+  font-size: 16px;
+  background-color: #fff;
+  z-index: 5;
+  overflow: hidden; }
+  .mobile-menu::before {
+    font-size: 200px;
+    transform: rotate(-90deg);
+    top: 150px;
+    left: -130px;
+    z-index: -1; }
+  .mobile-menu__logo::before {
+    min-width: 38px;
+    height: 35px;
+    margin-right: 9px; }
+  .mobile-menu__logo-text {
+    font-size: 14px; }
   .mobile-menu.active {
-    display: block; }
+    display: flex; }
   .mobile-menu__nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 13px; }
+    flex-direction: column; }
   .mobile-menu__link:nth-last-child(n+2) {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
+  .mobile-menu__tel {
+    display: block;
+    font-family: Montserrat; }
+  .mobile-menu__site-link {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #CBA696;
+    line-height: 150%;
+    margin-top: 10px; }
+    .mobile-menu__site-link::after {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 5px;
+      margin-left: 10px;
+      background: url("../img/next-arrow.svg") center/contain no-repeat; }
 
 .btn, .btn-ol {
   width: 100%;
@@ -405,17 +447,6 @@ body {
   color: #403637;
   border: 1px solid #DD7D5C;
   transition: background-color .5s, color .5s; }
-
-.duplicate-title {
-  position: relative; }
-  .duplicate-title::before {
-    content: attr(data-title);
-    position: absolute;
-    font-size: 60px;
-    letter-spacing: 0.01em;
-    color: #FCF9F7;
-    z-index: 1;
-    pointer-events: none; }
 
 .sect-title {
   font-size: 26px; }
@@ -769,7 +800,8 @@ label.invalid {
     display: none;
     transition: border-bottom-color .5s; }
   .catalog-block__catalog-card {
-    margin-top: 60px; }
+    margin-top: 60px;
+    cursor: pointer; }
     .catalog-block__catalog-card > .catalog-card__desc {
       height: 70px; }
   .catalog-block.slick-slider {
@@ -926,7 +958,7 @@ label.invalid {
     max-width: 240px;
     font: 16px/150% Montserrat; }
   .delivery-card__guarantee {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
     background-color: #fff;
@@ -937,22 +969,29 @@ label.invalid {
     .delivery-card__guarantee.active > .info-icon {
       background-color: transparent;
       border-color: #CBA696; }
+    .delivery-card__guarantee:nth-child(2).active > .info-dropdown {
+      max-height: 90px; }
+    .delivery-card__guarantee:last-child.active > .info-dropdown {
+      max-height: 85px; }
     .delivery-card__guarantee > .info-text, .delivery-card__guarantee > .info-icon {
       pointer-events: none; }
     .delivery-card__guarantee > .info-dropdown {
       margin-left: 18px;
       text-align: left;
-      max-width: 200px;
+      max-width: 208px;
       padding-right: 40px;
       max-height: 0;
+      padding-left: 7px;
       overflow: hidden;
       transition: max-height .5s;
       font: 10px/140% Montserrat;
       color: #CBA696;
       will-change: height;
-      background-color: #fff;
+      background-color: #FDFBFA;
       position: relative;
       z-index: 2; }
+    .delivery-card__guarantee:nth-child(2) > .info-dropdown {
+      max-width: 192px; }
 
 .contacts-sect {
   padding-bottom: 40px;
@@ -1023,6 +1062,16 @@ label.invalid {
   .ftr__dev-link, .ftr__privacy-policy-btn {
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .5s; }
+  .ftr__dev-link {
+    display: inline-flex;
+    align-items: center; }
+    .ftr__dev-link::after {
+      content: '';
+      display: inline-block;
+      margin-left: 4px;
+      width: 75px;
+      height: 15px;
+      background: url("../img/media-bay.svg") center/contain no-repeat; }
   .ftr__links-wrap, .ftr__copy-wrap {
     display: flex;
     flex-flow: column wrap;

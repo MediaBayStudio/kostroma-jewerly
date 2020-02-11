@@ -1,7 +1,7 @@
 ;(function() {
 	tryingPopup = new SimplePopup({
 		popup: '.trying-popup',
-		openBtn: '.catalog-card__btn',
+		openBtn: '.catalog-block__catalog-card',
 		closeBtn: '.trying-popup__close',
 		overlay: '.overlay',
 		popupAnimation: 'fadeOut 0.5s',

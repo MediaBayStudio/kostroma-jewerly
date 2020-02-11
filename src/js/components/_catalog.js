@@ -77,7 +77,7 @@
 			}
 			start = 8;
 			newCount = 8;
-			console.log('resized 1230');
+			// console.log('resized 1230');
 			resized['1230'] = false;
 			resized['992'] = true;
 			resized['768'] = true;
@@ -88,7 +88,7 @@
 			}
 			start = 6;
 			newCount = 6;
-			console.log('resized 992');
+			// console.log('resized 992');
 			resized['1230'] = true;
 			resized['992'] = false;
 			resized['768'] = true;
@@ -99,7 +99,7 @@
 			}
 			start = 4;
 			newCount = 4;
-			console.log('resized 768');
+			// console.log('resized 768');
 			resized['1230'] = true;
 			resized['992'] = true;
 			resized['768'] = false;
@@ -109,7 +109,7 @@
 				return;
 			}
 			start = 0;
-			console.log('resized 576');
+			// console.log('resized 576');
 			resized['1230'] = true;
 			resized['992'] = true;
 			resized['768'] = true;
@@ -141,25 +141,25 @@
 		} else {
 			moreBtn.classList.remove('hide');
 		}
-		console.log(catalogCards.length);
-		console.log(products.length);
+		// console.log(catalogCards.length);
+		// console.log(products.length);
 	};
 
-	catalogBlock.addEventListener('mouseover', function() {
-		let target = event.target;
+	// catalogBlock.addEventListener('mouseover', function() {
+	// 	let target = event.target;
 
-		if (event.target.classList.contains('btn-ol'))	{
-			target.closest('.catalog-card').classList.add('active');
-		}
-	});
+	// 	if (event.target.classList.contains('btn-ol'))	{
+	// 		target.closest('.catalog-card').classList.add('active');
+	// 	}
+	// });
 
-	catalogBlock.addEventListener('mouseout', function() {
-		let target = event.target;
+	// catalogBlock.addEventListener('mouseout', function() {
+	// 	let target = event.target;
 
-		if (event.target.classList.contains('btn-ol') && !tryingPopup.classList.contains('active'))	{
-			target.closest('.catalog-card').classList.remove('active');
-		}
-	});
+	// 	if (event.target.classList.contains('btn-ol') && !tryingPopup.classList.contains('active'))	{
+	// 		target.closest('.catalog-card').classList.remove('active');
+	// 	}
+	// });
 
 	moreBtn.addEventListener('click', function() {
 		showProducts(count, count + start);
