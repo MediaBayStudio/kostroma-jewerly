@@ -15,7 +15,7 @@
 			selector: '.burger-btn',
 			class: 'active'
 		},
-		toRight: true
+		toRight: true 
 	});
 
 	if (menu.style) {
