@@ -29,6 +29,19 @@
 		transition: border-bottom-color .5s;
 	}
 
+	&__dev-link {
+		display: inline-flex;
+		align-items: center;
+		&::after {
+			content: '';
+			display: inline-block;
+			margin-left: 4px;
+			width: 75px;
+			height: 15px;
+			background: url('../img/media-bay.svg') center/contain no-repeat;
+		}
+	}
+
 	&__links-wrap, &__copy-wrap {
 		display: flex;
 		flex-flow: column wrap;

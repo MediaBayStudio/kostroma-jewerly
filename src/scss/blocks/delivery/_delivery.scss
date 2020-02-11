@@ -72,12 +72,13 @@
 			font: 16px/150% Montserrat;
 		}
 		&__guarantee {
-			display: flex;
+			// display: flex;
+			display: inline-flex;
 			align-items: center;
 			flex-wrap: wrap;
 			background-color: #fff;
 			position: relative;
-			z-index: 2;
+			z-index: 2;			
 			&.active {
 				>.info-dropdown {
 					max-height: 41px;
@@ -87,6 +88,16 @@
 					border-color: #CBA696;
 				}
 			}
+			&:nth-child(2).active {
+				>.info-dropdown {
+					max-height: 90px;
+				}
+			}
+			&:last-child.active {
+				>.info-dropdown {
+					max-height: 85px;
+				}
+			}
 			>.info {
 				&-text, &-icon {
 					pointer-events: none;
@@ -94,17 +105,23 @@
 				&-dropdown {
 					margin-left: 18px;
 					text-align: left;
-					max-width: 200px;
+					max-width: 208px;
 					padding-right: 40px;
 					max-height: 0;
+					padding-left: 7px;
 					overflow: hidden;
 					transition: max-height .5s;
 					font: 10px/140% Montserrat;
 					color: #CBA696;
 					will-change: height;
-					background-color: #fff;
+					background-color: #FDFBFA;
 					position: relative;
 					z-index: 2;
+				}
+			}
+			&:nth-child(2) {
+				>.info-dropdown {
+					max-width: 192px;
 				}
 			}
 		}

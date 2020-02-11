@@ -2,13 +2,6 @@
 @import 'assets/variables';
 @import 'assets/mixins';
 
-.mobile-menu {
-	max-width: 300px;
-	&__nav {
-		font-size: 16px;
-	}
-}
-
 .burger-btn {
   &.active {
     >.top {
@@ -29,6 +22,25 @@
       width: 23px;
       margin: 6.25px 0;
       transition: .5s opacity .25s, transform .5s, width .5s;
+    }
+  }
+}
+
+.mobile-menu {
+  width: 420px;
+  padding: 80px;
+  &::before {
+    top: 400px;
+    left: 50px;
+  }
+  &__logo {
+    &::before {
+      width: 46px;
+      height: 43px;
+    }
+    >.logo__text {
+      font-size: 16px;
+      max-width: 150px;
     }
   }
 }

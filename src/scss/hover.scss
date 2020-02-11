@@ -14,8 +14,14 @@
 	}	
 }
 
-.catalog-block__more-btn:hover {
-
+.catalog-block__catalog-card:hover {
+	&::after {
+		opacity: 1;
+	}
+	.catalog-card__btn {
+		background-color: $orange-color;
+		color: $white-color;
+	}
 }
 
 .ftr {
@@ -32,8 +38,8 @@
 }
 
 .btn:hover {
-	background-color: transparent;
-	color: $dark-color;
+	// background-color: transparent;
+	// color: $dark-color;
 	&::before {
 		right: 0;
 		bottom: 0;
@@ -49,4 +55,44 @@
 .btn-ol:hover {
 	background-color: $orange-color;
 	color: $white-color;
+}
+
+.delivery-card__guarantee {
+	&:hover {
+		>.info-icon {
+			background-color: transparent;
+			border-color: #CBA696;
+		}
+		>.info-dropdown {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}
+
+.delivery-card {
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__guarantee {
+    &:active {
+      transform: none;
+    }
+    >.info-dropdown {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      max-height: none;
+      max-width: none;
+      width: 182px;
+      overflow: visible;
+      padding: 7px 10px;
+      margin: 0;
+      pointer-events: none;
+      transition: opacity .5s;
+    }
+  }
 }

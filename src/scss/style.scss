@@ -20,10 +20,6 @@ body {
   }
 }
 
-section, header, footer {
-  // transition: filter .25s;
-}
-
 .flex {
   display: flex;
   align-items: center;
@@ -69,6 +65,20 @@ section, header, footer {
       display: flex;
       animation: fadeIn .5s;
     }
+  }
+}
+
+.duplicate-title {
+  position: relative;
+  &::before {
+    content: attr(data-title);
+    position: absolute;
+    font-size: 60px;
+    letter-spacing: 0.01em;
+    color: #FCF9F7;
+    // color: red;
+    z-index: 1;
+    pointer-events: none;
   }
 }
 
@@ -175,25 +185,65 @@ section, header, footer {
 
 .mobile-menu {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
-  right: 0;
-  top: 100%;
-  max-width: 420px;
-  width: 100%;
-  padding: 30px 45px;
-  background-color: $almond-color;
-  border-bottom-left-radius: 5px;
+  left: 0;
+  top: 0;
+  max-width: 70vw;
+  width: 500px;
+  height: 100vh;
+  padding: 35px 20px;
+  font-size: 16px;
+  background-color: #fff;
+  z-index: 5;
+  overflow: hidden;
+  &::before {
+    font-size: 200px;
+    transform: rotate(-90deg);
+    top: 150px;
+    left: -130px;
+    z-index: -1;
+  }
+  &__logo {
+    &::before {
+      min-width: 38px;
+      height: 35px;
+      margin-right: 9px;
+    }
+    &-text {
+      font-size: 14px;
+    }
+  }
   &.active {
-    display: block;
+    display: flex;
   }
   &__nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 13px;
+    // margin: 100px 0;
   }
   &__link:nth-last-child(n+2) {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+  }
+  &__tel {
+    display: block;
+    font-family: Montserrat;
+  }
+  &__site-link {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #CBA696;
+    line-height: 150%;
+    margin-top: 10px;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 5px;
+      margin-left: 10px;
+      background: url('../img/next-arrow.svg') center/contain no-repeat;
+    }
   }
 }
 
@@ -230,31 +280,6 @@ section, header, footer {
   color: $dark-color;
   border: 1px solid $orange-color;
   transition: background-color .5s, color .5s;
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 0;
-  //   background-color: $orange-color;
-  //   transition: height .5s;
-  //   z-index: 0;
-  // }
-}
-
-.duplicate-title {
-  position: relative;
-  &::before {
-    content: attr(data-title);
-    position: absolute;
-    font-size: 60px;
-    letter-spacing: 0.01em;
-    color: #FCF9F7;
-    // color: red;
-    z-index: 1;
-    pointer-events: none;
-  }
 }
 
 .sect {

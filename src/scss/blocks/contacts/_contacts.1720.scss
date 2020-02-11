@@ -19,7 +19,7 @@
 		&__map-block {
 			width: 970px;
 			// margin: 57.8px 0 0;
-			margin: 3.4% 0 0;
+			margin: 3.4% calc(((95 * 100vw) / 1920) * -1) 0 0;
 		}
 	}
 
