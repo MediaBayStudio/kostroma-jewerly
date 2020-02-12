@@ -10,6 +10,9 @@
       max-width: none;
       >.inp-block {
         width: 100%;
+        &:nth-child(2) {
+          margin-top: 0;
+        }
       }
       >.check-inps-wrap {
         display: inline-flex;

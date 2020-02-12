@@ -1,0 +1,23 @@
+.production {
+  &-sect {
+    padding-top: 30px;
+    &__subtitle {
+      margin: 0 0 30px;
+    }
+  }
+  &-slider {
+    margin-top: 45px;
+    &__arrows {
+      top: 53%;
+    }
+    &__slide {
+      padding-left: calc(50vw - 305px);
+      &::before {
+        top: 100px;
+      }
+      &-square {
+        margin: 35px 0 10px 20px;
+      }
+    }
+  }
+}

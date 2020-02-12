@@ -1,22 +1,30 @@
 .about {
   &-sect {
-    grid-template-columns: 311px 240px 1fr;
+    padding-top: 165px;
+    grid-template-columns: 360px 245px 1fr;
+    -ms-grid-columns: 360px 245px 1fr;
 
     &__subtitle {
       grid-column: 1/span 2;
-    }
-    &__preview-img {
-      width: 268px;
-      height: 161px;
+      margin: 5px 0 45px;
     }
 
-    &__logo {
-      width: 130px;
-      height: 120px;
+    &__desc {
+      width: 1120px;
+      margin-bottom: 30px;
+      &-block {
+        grid-row: 2/span 2;
+        margin-top: 15px;
+      }
     }
 
-    &__desc-block {
-      grid-row: 2/span 2;
+    &__img {
+      width: 360px;
+      height: 568px;
+    }
+
+    &__images-block {
+      margin-top: 15px;
     }
 
     &__preview-img {
@@ -25,6 +33,9 @@
       margin-right: 30px;
       &:last-child {
         display: inline-block;
+      }
+      &:nth-child(3) {
+        margin-right: 30px;
       }
     }
 

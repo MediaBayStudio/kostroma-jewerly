@@ -1,3 +1,9 @@
+const nextArrow = '<svg width="100%" height="100%" viewBox="0 0 29 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 7.90495H25.3333L16.8889 1.23828"/></svg>',
+	prevArrow = '<svg width="100%" height="100%" viewBox="0 0 29 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 1.23861L3.66667 1.23861L12.1111 7.90527"/></svg>',
+	buildArrow = function(className, direction) {
+		return '<button type="button" class="' + className + '">' + direction + '</button>'
+	};
+
 destroyCatalogSlider = function() {
 	$('.catalog-block').slick('unslick');
 }
@@ -17,8 +23,10 @@ buildCatalogSlider = function() {
 			slide: '.catalog-card',
 			appendArrows: '.catalog-block__dots',
 			appendDots: '.catalog-block__dots',
-			nextArrow: '<button type="button" class="catalog-block__next next"></button>',
-			prevArrow: '<button type="button" class="catalog-block__prev prev"></button>',
+			// nextArrow: '<button type="button" class="catalog-block__next next"></button>',
+			// prevArrow: '<button type="button" class="catalog-block__prev prev"></button>',
+			nextArrow: buildArrow('catalog-block__next next', nextArrow),
+			prevArrow: buildArrow('catalog-block__prev prev', prevArrow),
 			responsive: [{
 				breakpoint: 575.98,
 				settings: {

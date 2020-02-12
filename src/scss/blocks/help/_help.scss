@@ -1,8 +1,9 @@
 .help {
   &-sect {
-    padding-top: 30px;
-    padding-bottom: calc((100vw - 320px)/(576 - 320)*(430 - 260) + 260px);; 
-    background: #F5F5F5 url('../img/help-sect-img.jpg') bottom/100% no-repeat;
+    padding-top: 25px;
+    padding-bottom: calc((100vw - 320px)/(576 - 320)*(430 - 265) + 265px);
+    // background: #F5F5F5 url('../img/help-sect-img.jpg') bottom/100% no-repeat;
+    background: #F5F5F5 url('../img/help-sect-img.jpg') bottom/100% calc((100vw - 320px)/(420 - 320)*(285 - 235) + 235px) no-repeat;
     &::before {
       display: none;
     }
@@ -10,7 +11,7 @@
       
     }
     &__desc {
-      margin: 22px 0;
+      margin: 10px 0 35px;
       max-width: 295px;
     }
 
@@ -18,7 +19,17 @@
       max-width: 280px;
       margin: auto;
       >.inp-block {
+        margin-top: 40px;
         max-width: 260px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      >.check-inps-wrap {
+        margin-top: 10px;
+      }
+      >.form__btn {
+        margin-top: 30px;
       }
     }
   }

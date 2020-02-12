@@ -1,0 +1,7 @@
+.production {
+  &-slider {
+    &__slide {
+      padding-left: calc(50vw - 480px);
+    }
+  }
+}

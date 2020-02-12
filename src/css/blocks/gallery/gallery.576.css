@@ -1,0 +1,6 @@
+.gallery-slider__img {
+  max-width: calc((100vw - 576px)/(767 - 576)*(215 - 190) + 190px);
+  max-height: 195px;
+  min-width: 1px;
+  min-height: 1px;
+  padding-right: calc((100vw - 576px)/(767 - 576)*(40 - 15) + 15px); }

@@ -48,26 +48,74 @@
     max-width: 270px; }
 
 .help-sect {
-  background-size: calc((100vw - 1230px)/(1720 - 1230)*(1000 - 750) + 750px) 92.5%, 520px 380px;
+  padding-top: 15px;
+  padding-bottom: 120px;
+  background-size: calc((100vw - 1230px)/(1720 - 1230)*(1000 - 725) + 725px) 83.5%, 520px 380px;
   background-position: top right, bottom left calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px); }
   .help-sect::before {
-    top: -75px;
+    top: -60px;
     left: calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px); }
-  .help-sect__form, .help-sect__desc, .help-sect__title {
+  .help-sect__form, .help-sect__title {
     margin-left: 580px; }
+  .help-sect__desc {
+    margin: 5px 0 0 580px; }
+  .help-sect__form > .inp-block:nth-child(2), .help-sect__form .inp-block:nth-child(4) {
+    margin-right: 0; }
 
 .about-sect {
+  padding-top: 110px;
   grid-template-columns: 311px 100px 1fr; }
+  .about-sect__title {
+    line-height: 155%; }
+  .about-sect__subtitle {
+    margin: 25px 0 20px; }
+  .about-sect__desc {
+    max-width: none; }
+    .about-sect__desc-block {
+      margin-top: 10px; }
   .about-sect__preview-img {
-    width: 268px;
-    height: 161px; }
+    width: 286px;
+    height: 161px;
+    margin-right: 15px; }
   .about-sect__logo {
+    margin-right: 70px;
     width: 130px;
     height: 120px; }
+  .about-sect__link {
+    margin-bottom: 55px; }
+
+.production-sect {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 75px; }
+  .production-sect__text-wrap {
+    width: 52%; }
+  .production-sect__desc {
+    width: 48%;
+    margin-top: 5px; }
+
+.production-slider {
+  margin-top: 95px; }
+  .production-slider__slide {
+    padding-left: calc(50vw - 600px); }
+  .production-slider__arrows {
+    top: 45%;
+    right: 120px; }
+
+.gallery-sect {
+  padding-top: 50px; }
+
+.gallery-slider__img {
+  width: 270px;
+  height: 273px;
+  margin-right: 40px; }
+  .gallery-slider__img:nth-child(-n+4) {
+    margin-bottom: 40px; }
 
 .contacts-sect {
+  padding-top: 90px;
   background: none;
-  height: 552px; }
+  height: 641px; }
   .contacts-sect::before {
     top: 135px;
     left: calc(50vw - 645px); }
@@ -84,7 +132,7 @@
     .contacts-sect__form > .form__title {
       margin-bottom: 20px; }
     .contacts-sect__form > .inp-block:last-of-type {
-      margin-bottom: 15px; }
+      margin-bottom: 20px; }
     .contacts-sect__form > .check-inp-block {
       justify-content: flex-start; }
       .contacts-sect__form > .check-inp-block > .check-inp-block__pseudo-inp {

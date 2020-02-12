@@ -1,0 +1,27 @@
+.production {
+  &-sect {
+    padding-top: 140px;
+    &__text-wrap {
+      width: 51.5%;
+    }
+    &__desc {
+      width: 48%;
+      margin-top: 10px;
+    }
+  }
+  &-slider {
+    &__arrows {
+      top: 50%;
+    }
+    &__slide {
+      padding-left: calc(50vw - 840px);
+    }
+    &__next, &__prev {
+      width: 29px;
+      height: 10px;
+    }
+    &__prev {
+      margin-top: 30px;
+    }
+  }
+}

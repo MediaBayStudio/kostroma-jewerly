@@ -1,16 +1,34 @@
 .help {
   &-sect {
-    padding-top: 40px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    &__desc {
+      max-width: none;
+      margin: 0;
+    }
     &-wrap {
       max-width: 610px;
     }
     &__form {
+      >.inp-block:first-child, .inp-block:nth-child(2), >.inp-block {
+        margin-top: 60px;
+      }
+      >.inp-block:nth-child(2), .inp-block:nth-child(4) {
+        margin-right: 20px;
+      }
       .inp {
         width: 284px;
       }
-      .check-inps-wrap, .invalid {
-        max-width: 340px;
-        font-size: 10px;
+      >.check-inps-wrap {
+        max-width: 350px;
+        margin-top: 60px;
+         .invalid {
+          max-width: 340px;
+          font-size: 10px;
+        }
+      }
+      >.form__btn {
+        margin: 45px 0 0 auto;
       }
       .check-inp-block {
         font-size: 10px;

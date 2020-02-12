@@ -1,3 +1,9 @@
+const nextArrow = '<svg width="100%" height="100%" viewBox="0 0 29 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 7.90495H25.3333L16.8889 1.23828"/></svg>',
+	prevArrow = '<svg width="100%" height="100%" viewBox="0 0 29 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 1.23861L3.66667 1.23861L12.1111 7.90527"/></svg>',
+	buildArrow = function(className, direction) {
+		return '<button type="button" class="' + className + '">' + direction + '</button>'
+	};
+
 destroyCatalogSlider = function() {
 	$('.catalog-block').slick('unslick');
 }
@@ -16,8 +22,8 @@ buildCatalogSlider = function() {
 			slide: '.catalog-card',
 			appendArrows: '.catalog-block__dots',
 			appendDots: '.catalog-block__dots',
-			nextArrow: '<button type="button" class="catalog-block__next next"></button>',
-			prevArrow: '<button type="button" class="catalog-block__prev prev"></button>',
+			nextArrow: buildArrow('catalog-block__next next', nextArrow),
+			prevArrow: buildArrow('catalog-block__prev prev', prevArrow),
 			responsive: [{
 				breakpoint: 575.98,
 				settings: {
@@ -123,11 +129,58 @@ $(document).ready(function() {
 		centerMode: true,
 		centerPadding: 'calc((100vw - 320px)/(575 - 320)*(125 - 0) + 0px)',
 		appendArrows: '.delivery-block__arrows',
-		nextArrow: '<button type="button" class="delivery-block__next next"></button>',
-		prevArrow: '<button type="button" class="delivery-block__prev prev"></button>',
-		adaptiveHeight: true,
+		nextArrow: buildArrow('delivery-block__next next', nextArrow),
+		prevArrow: buildArrow('delivery-block__prev prev', prevArrow),
 		responsive: [{
 			breakpoint: 575.98,
+			settings: 'unslick'
+		}]
+	});
+
+		$('.production-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		mobileFirst: true,
+		slide: '.production-slider__slide',
+		appendArrows: '.production-slider__arrows',
+		nextArrow: buildArrow('production-slider__next next', nextArrow),
+		prevArrow: buildArrow('production-slider__prev prev', prevArrow),
+		responsive: [{
+			breakpoint: 575.98,
+			settings: {
+				slidesToShow: 2
+			}
+		}, {
+			breakpoint: 991.98,
+			settings: {
+				slidesToShow: 3 
+			}
+		},{
+			breakpoint: 1229.98,
+			settings: {
+				slidesToShow: 4
+			}
+		}]
+	});
+
+		$('.gallery-slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		infinite: false,
+		mobileFirst: true,
+		variableWidth: true,
+		slidesPerRow: 1, 
+	  rows: 2,
+		nextArrow: buildArrow('gallery-slider__next next', nextArrow),
+		prevArrow: buildArrow('gallery-slider__prev prev', prevArrow),
+		responsive: [{
+			breakpoint: 575.98,
+			settings: {
+				slidesToShow: 3
+			}
+		}, {
+			breakpoint: 991.98,
 			settings: 'unslick'
 		}]
 	});

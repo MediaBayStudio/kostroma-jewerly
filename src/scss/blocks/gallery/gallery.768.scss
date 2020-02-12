@@ -1,0 +1,10 @@
+.gallery {
+  &-slider {
+    &__img {
+      padding-bottom: 40px;
+      padding-right: 40px;
+      max-width: calc((100vw - 767px)/(991 - 767)*(260 - 216) + 216px);
+      max-height: calc((100vw - 767px)/(991 - 767)*(260 - 246) + 246px);
+    }
+  }
+}

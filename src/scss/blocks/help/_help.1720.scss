@@ -1,15 +1,35 @@
 .help {
   &-sect {
-    padding-top: 60px;
-    background-size: calc((100vw - 1720px)/(1920 - 1720)*(1080 - 995) + 995px) 92.5%, 680px 450px;
+    padding-top: 40px;
+    padding-bottom: 155px;
+    background-size: calc((100vw - 1720px)/(1920 - 1720)*(1080 - 995) + 995px) 84.5%, 680px 450px;
     background-position: top right, bottom left calc((100vw - 1720px)/(1920 - 1720)*(260 - 145) + 145px);
     &::before {
       font-size: 180px;
-      top: -125px;
+      top: -60px;
       left: calc((100vw - 1720px)/(1920 - 1720)*(260 - 145) + 145px);
+    }
+    &__desc {
+      margin-top: 0;
     }
     &__form, &__desc, &__title {
       margin-left: 890px;
+    }
+
+    &__form {
+      max-width: 640px;
+      >.inp-block:nth-child(2),
+      .inp-block:nth-child(4) {
+        margin-right: 20px;
+      }
+      .inp {
+        width: 288px;
+      }
+      >.form__btn {
+        margin-top: 65px;
+        max-width: 200px;
+        min-height: 58px;
+      }
     }
   }
 }

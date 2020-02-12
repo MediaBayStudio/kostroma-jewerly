@@ -1,7 +1,7 @@
 .delivery {
 	&-sect {
 		overflow: hidden;
-		padding-bottom: 40px;
+		padding-bottom: 50px;
 		&__subtitle {
 			max-width: 275px;
 			margin-top: 10px;
@@ -43,8 +43,7 @@
 				z-index: 0;
 			}
 			>.prev {
-				margin: 0 12px -5px 0;
-				transform: scale(1, -1);
+				margin-right: 12px;
 			}
 		}
 	}

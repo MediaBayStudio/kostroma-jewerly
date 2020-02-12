@@ -1,7 +1,8 @@
 .contacts {
 	&-sect {
+		padding-top: 90px;
 		background: none;
-		height: 552px;
+		height: 641px;
 		&::before {
 			top: 135px;
 			left: calc(50vw - 645px);
@@ -23,7 +24,7 @@
 			}
 			>.inp-block {
 				&:last-of-type {
-					margin-bottom: 15px;
+					margin-bottom: 20px;
 				}
 			}
 			>.check-inp-block {

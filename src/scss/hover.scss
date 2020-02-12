@@ -1,11 +1,5 @@
 @import 'assets/colors';
 
-// .hdr__nav-link:not(.disabled):hover {
-// 	&::after {
-// 		width: 100%;
-// 	}
-// }
-
 .contacts-block__link-text,
 .catalog-block__more-btn,
 .ftr__site-link {
@@ -58,7 +52,7 @@
 }
 
 .delivery-card__guarantee {
-	&:hover {
+	&:hover, &.active:hover {
 		>.info-icon {
 			background-color: transparent;
 			border-color: #CBA696;
@@ -70,6 +64,15 @@
 	}
 }
 
+.prev,
+.next {
+  &:hover {
+    >svg>path {
+      stroke: #403637;
+    }
+  }
+}
+
 .delivery-card {
   &__desc {
     display: flex;
@@ -79,6 +82,12 @@
   &__guarantee {
     &:active {
       transform: none;
+    }
+    &.active {
+      >.info-icon {
+        background-color: #E8D4C9;
+        border-color: #E8D4C9;
+      }
     }
     >.info-dropdown {
       opacity: 0;

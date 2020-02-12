@@ -1,0 +1,15 @@
+.gallery {
+  &-sect {
+    padding-top: 50px;
+  }
+  &-slider {
+    &__img {
+      width: 270px;
+      height: 273px;
+      margin-right: 40px;
+      &:nth-child(-n+4) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

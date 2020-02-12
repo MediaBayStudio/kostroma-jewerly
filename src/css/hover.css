@@ -30,13 +30,17 @@
   background-color: #DD7D5C;
   color: #FDFBFA; }
 
-.delivery-card__guarantee:hover > .info-icon {
+.delivery-card__guarantee:hover > .info-icon, .delivery-card__guarantee.active:hover > .info-icon {
   background-color: transparent;
   border-color: #CBA696; }
 
-.delivery-card__guarantee:hover > .info-dropdown {
+.delivery-card__guarantee:hover > .info-dropdown, .delivery-card__guarantee.active:hover > .info-dropdown {
   opacity: 1;
   pointer-events: auto; }
+
+.prev:hover > svg > path,
+.next:hover > svg > path {
+  stroke: #403637; }
 
 .delivery-card__desc {
   display: flex;
@@ -45,6 +49,10 @@
 
 .delivery-card__guarantee:active {
   transform: none; }
+
+.delivery-card__guarantee.active > .info-icon {
+  background-color: #E8D4C9;
+  border-color: #E8D4C9; }
 
 .delivery-card__guarantee > .info-dropdown {
   opacity: 0;

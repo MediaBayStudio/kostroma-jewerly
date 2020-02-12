@@ -1,0 +1,24 @@
+.production {
+  &-sect {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 75px;
+    &__text-wrap {
+      width: 52%;
+    }
+    &__desc {
+      width: 48%;
+      margin-top: 5px;
+    }
+  }
+  &-slider {
+    margin-top: 95px;
+    &__slide {
+      padding-left: calc(50vw - 600px);
+    }
+    &__arrows {
+      top: 45%;
+      right: 120px;
+    }
+  }
+}

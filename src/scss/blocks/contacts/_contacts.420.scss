@@ -10,6 +10,7 @@
 		}
 		&__form {
 			max-width: 330px;
+			width: 100%;
 			padding-bottom: 15px;
 			>.check-inp-block {
 				justify-content: center;
@@ -34,9 +35,10 @@
 		&__address {
 			order: 3;
 			margin-bottom: 0;
-			flex-basis: 55%;
+			flex-basis: 58%;
 		}
 		&__link {
+			margin-top: 7.5px;
 			order: 4;
 			align-self: flex-start;
 		}
