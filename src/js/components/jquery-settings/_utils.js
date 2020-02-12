@@ -4,11 +4,25 @@ const nextArrow = '<svg width="100%" height="100%" viewBox="0 0 29 9" fill="none
 		return '<button type="button" class="' + className + '">' + direction + '</button>'
 	};
 
-destroyCatalogSlider = function() {
-	$('.catalog-block').slick('unslick');
-}
+let buildGallerySlider = function() {
+	$('.gallery-popup-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		slide: '.gallery-popup-slider__slide-wrap',
+		appendArrows: '.gallery-popup-slider__arrows',
+		nextArrow: buildArrow('gallery-popup-slider__next next', nextArrow),
+		prevArrow: buildArrow('gallery-popup-slider__prev prev', prevArrow)
+	});
+};
 
-buildCatalogSlider = function() {
+// buildGallerySlider();
+
+let destroyCatalogSlider = function() {
+	$('.catalog-block').slick('unslick');
+};
+
+let buildCatalogSlider = function() {
 		// let catalogBlock = $('.catalog-block');
 
 		$('.catalog-block').slick({
@@ -23,8 +37,6 @@ buildCatalogSlider = function() {
 			slide: '.catalog-card',
 			appendArrows: '.catalog-block__dots',
 			appendDots: '.catalog-block__dots',
-			// nextArrow: '<button type="button" class="catalog-block__next next"></button>',
-			// prevArrow: '<button type="button" class="catalog-block__prev prev"></button>',
 			nextArrow: buildArrow('catalog-block__next next', nextArrow),
 			prevArrow: buildArrow('catalog-block__prev prev', prevArrow),
 			responsive: [{
@@ -125,4 +137,4 @@ buildCatalogSlider = function() {
 			});
 		}
 	})();
-}
+};

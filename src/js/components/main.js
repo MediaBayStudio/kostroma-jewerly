@@ -9,4 +9,5 @@ document.addEventListener('DOMContentLoaded', function(){
 	//=include _telmask.js
 	//=include _catalog.js
   //=include _about.js
+  //=include _gallery.js
 });

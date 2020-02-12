@@ -4,7 +4,9 @@
 		background: none;
 		height: 641px;
 		&::before {
-			top: 135px;
+			top: 215px;
+			width: auto;
+			height: auto;
 			left: calc(50vw - 645px);
 		}
 		&__map-block {

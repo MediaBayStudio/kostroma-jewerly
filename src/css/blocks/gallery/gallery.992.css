@@ -11,3 +11,18 @@
     margin-right: 0; }
   .gallery-slider__img:nth-child(-n+4) {
     margin-bottom: 20px; }
+
+.gallery-popup {
+  width: 655px; }
+  .gallery-popup__close {
+    width: 20px; }
+  .gallery-popup-slider__slide-wrap {
+    padding: 0 50px;
+    width: 655px;
+    height: 585px; }
+    .gallery-popup-slider__slide-wrap::after {
+      left: 50px;
+      width: calc(100% - 100px); }
+  .gallery-popup-slider__arrows {
+    top: 292.5px;
+    width: calc(100% + 250px); }

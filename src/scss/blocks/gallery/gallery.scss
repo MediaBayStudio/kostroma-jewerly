@@ -43,4 +43,72 @@
       }
     }
   }
+
+
+  &-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    min-height: 285px;
+    z-index: 3;
+    display: none;
+    animation: fadeOut .5s;
+    &.active {
+      display: block;
+      animation: fadeIn .5s;
+    }
+    &__close {
+      width: 15px;
+      display: block;
+      margin: 0 10px 5px auto;
+      >svg>path {
+        stroke-width: 2;
+      }
+    }
+    &-slider {
+      display: flex;
+      flex-direction: column-reverse;
+      &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        height: 40px;
+        padding: 10px 20px;
+      }
+      &__prev, &__next {
+        width: 24px;
+        height: 12px;
+        position: relative;
+        transform: none;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        top: auto;
+        &:active {
+          transform: scale(.95);
+        }
+        >svg {
+          pointer-events: none;
+        }
+        >svg>path {
+          stroke-width: 3;
+          stroke: #fff;
+        }
+      }
+      &__slide {
+        width: 100%;
+        height: 100%;
+        &-wrap {
+          padding: 0 10px;
+          width: 300px;
+          height: 285px;
+        }
+      }
+    }
+  }
 }

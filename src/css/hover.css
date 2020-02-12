@@ -67,3 +67,6 @@
   margin: 0;
   pointer-events: none;
   transition: opacity .5s; }
+
+.gallery-slider__img {
+  cursor: pointer; }

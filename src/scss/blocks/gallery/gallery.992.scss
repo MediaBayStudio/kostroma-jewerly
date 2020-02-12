@@ -17,4 +17,28 @@
       }
     }
   }
+
+  &-popup {
+    width: 655px;
+    &__close {
+      width: 20px;
+    }
+    &-slider {
+      &__slide {
+        &-wrap {
+          padding: 0 50px;
+          width: 655px;
+          height: 585px;
+          &::after {
+            left: 50px;
+            width: calc(100% - 100px);
+          }
+        }
+      }
+      &__arrows {
+        top: 292.5px;
+        width: calc(100% + 250px);
+      }
+    }
+  }
 }

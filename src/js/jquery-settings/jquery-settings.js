@@ -4,11 +4,24 @@ const nextArrow = '<svg width="100%" height="100%" viewBox="0 0 29 9" fill="none
 		return '<button type="button" class="' + className + '">' + direction + '</button>'
 	};
 
-destroyCatalogSlider = function() {
-	$('.catalog-block').slick('unslick');
-}
+let buildGallerySlider = function() {
+	$('.gallery-popup-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		slide: '.gallery-popup-slider__slide-wrap',
+		appendArrows: '.gallery-popup-slider__arrows',
+		nextArrow: buildArrow('gallery-popup-slider__next next', nextArrow),
+		prevArrow: buildArrow('gallery-popup-slider__prev prev', prevArrow)
+	});
+};
 
-buildCatalogSlider = function() {
+
+let destroyCatalogSlider = function() {
+	$('.catalog-block').slick('unslick');
+};
+
+let buildCatalogSlider = function() {
 
 		$('.catalog-block').slick({
 			slidesToShow: 1,
@@ -117,7 +130,7 @@ buildCatalogSlider = function() {
 							});
 		}
 	})();
-}
+};
 
 $(document).ready(function() {
 	$('.delivery-block').slick({

@@ -117,7 +117,9 @@
   background: none;
   height: 641px; }
   .contacts-sect::before {
-    top: 135px;
+    top: 215px;
+    width: auto;
+    height: auto;
     left: calc(50vw - 645px); }
   .contacts-sect__map-block {
     width: calc((100vw - 1230px)/(1719 - 1230)*(845 - 600) + 600px);

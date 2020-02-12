@@ -14,10 +14,14 @@
         grid-column: 1/span 2;
       }
     }
+    &__link {
+      margin-left: 0;
+    }
 
     &__img {
       grid-row: 4;
       grid-column: 1;
+      justify-self: stretch;
       width: 322px;
       height: 528px;
     }

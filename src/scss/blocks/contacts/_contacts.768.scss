@@ -6,7 +6,9 @@
 		background: linear-gradient(to top, #FDFBFA 665px, #fff 440px);
 		&::before {
 			font-size: 220px;
-			top: -30px;
+			top: 20px;
+			height: 230px;
+			overflow: hidden;
 			left: -30px;
 		}
 		&__map-block {

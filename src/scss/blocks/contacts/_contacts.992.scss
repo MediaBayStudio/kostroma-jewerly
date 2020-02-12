@@ -5,7 +5,8 @@
 		max-height: 750px;
 		background: linear-gradient(to left, #fdfbfa 45%, #fff 10%);
 		&::before {
-			top: 110px;
+			top: 145px;
+			width: 585px;
 			left: calc(50vw - 525px);
 		}
 		&__title {

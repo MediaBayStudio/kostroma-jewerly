@@ -49,8 +49,14 @@ label.invalid {
   .help-sect__form .check-inp-block, .help-sect__form label.invalid {
     font-size: 8px; }
 
+.about-sect__img, .about-sect__images-block {
+  justify-self: center; }
+
+.about-sect__link {
+  margin-left: calc((100vw - 420px)/(575 - 420)*(127 - 49) + 49px); }
+
 .contacts-sect::before {
-  top: 20px;
+  top: 100px;
   left: 25px; }
 
 .contacts-sect__map-block {

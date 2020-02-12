@@ -8,4 +8,28 @@
       height: 395px;
     }
   }
+
+  &-popup {
+    width: 1000px;
+    &__close {
+      width: 30px;
+    }
+    &-slider {
+      &__slide {
+        &-wrap {
+          padding: 0 100px;
+          width: 1000px;
+          height: 700px;
+          &::after {
+            left: 100px;
+            width: calc(100% - 200px);
+          }
+        }
+      }
+      &__arrows {
+        top: 417.5px;
+        width: calc(100% + 450px);
+      }
+    }
+  }
 }

@@ -1,0 +1,10 @@
+.about {
+  &-sect {
+    &__img, &__images-block {
+      justify-self: center;
+    }
+    &__link {
+      margin-left: calc((100vw - 420px)/(575 - 420)*(127 - 49) + 49px);
+    }
+  }
+}

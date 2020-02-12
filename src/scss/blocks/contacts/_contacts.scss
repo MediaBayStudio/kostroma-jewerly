@@ -5,7 +5,7 @@
 		overflow: hidden;
 		background:	linear-gradient(to top, #FDFBFA 440px, #fff 440px);
 		&::before {
-			top: 165px;
+			top: 210px;
 			left: calc((100vw - 320px)/(419 - 320)*(30 - -25) + -25px);
 			font-size: 120px;
 			z-index: 0;

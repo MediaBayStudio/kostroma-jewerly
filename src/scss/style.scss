@@ -20,6 +20,10 @@ body {
   }
 }
 
+.slick-track {
+  display: flex;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -473,7 +477,7 @@ label.invalid {
   height: 100vh;
   top: 0;
   left: 0; 
-  background: rgba(64, 54, 55, 0.2) !important;
+  background: rgba(64, 54, 55, 0.7) !important;
   backdrop-filter: blur(5px);
   z-index: 2;
   &.active {
@@ -483,7 +487,7 @@ label.invalid {
 
 .thanks-popup,
 .overlay,
-.trying-popup {
+.trying-popup, {
   display: none;
   animation: fadeOut .5s;
   &.active {
