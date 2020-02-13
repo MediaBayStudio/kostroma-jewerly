@@ -1,3 +1,18 @@
+.burger-btn:focus,
+.logo:focus,
+.btn:focus,
+.btn-ol:focus,
+.next:focus,
+.prev:focus,
+.ftr__privacy-policy-btn:focus,
+.thanks-popup__close:focus,
+.trying-popup__close:focus,
+.ftr__site-link:focus,
+.ftr__dev-link:focus,
+.hdr__nav-link:focus,
+.catalog-block__more-btn:focus {
+  outline: 1px dotted #403637; }
+
 .contacts-block__link-text:hover,
 .catalog-block__more-btn:hover,
 .ftr__site-link:hover {

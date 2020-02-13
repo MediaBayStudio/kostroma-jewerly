@@ -173,12 +173,6 @@ textarea {
   .contained {
     margin-left: calc((50vw - 600px) * -1); } }
 
-@media (min-width: 1719.98px) {
-  .container {
-    padding: 0 calc(50% - 840px); }
-  .contained {
-    margin-left: calc((50vw - 840px) * -1); } }
-
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1; }
@@ -309,21 +303,6 @@ body {
     z-index: 1;
     pointer-events: none; }
 
-.burger-btn:focus,
-.logo:focus,
-.btn:focus,
-.btn-ol:focus,
-.next:focus,
-.prev:focus,
-.ftr__privacy-policy-btn:focus,
-.thanks-popup__close:focus,
-.trying-popup__close:focus,
-.ftr__site-link:focus,
-.ftr__dev-link:focus,
-.hdr__nav-link:focus,
-.catalog-block__more-btn:focus {
-  outline: 1px dotted #403637; }
-
 .close > svg,
 .prev > svg,
 .next > svg,
@@ -363,7 +342,8 @@ button > svg {
     transform: translateY(8px) rotate(-45deg); }
   .burger-btn.active > .middle {
     width: 26px;
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    border-bottom-width: 2.25px; }
   .burger-btn.active > .bottom {
     transform: translateY(-7px) rotate(45deg); }
   .burger-btn-line {
@@ -395,6 +375,9 @@ button > svg {
 .slick-dots > li > button:active {
   transform: scale(0.825); }
 
+.slick-dots {
+  font-feature-settings: 'pnum' on, 'lnum' on; }
+
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -410,7 +393,7 @@ button > svg {
   font-size: 16px;
   background-color: #fff;
   z-index: 5;
-  overflow: hidden; }
+  overflow: auto; }
   .mobile-menu::before {
     font-size: 200px;
     transform: rotate(-90deg);

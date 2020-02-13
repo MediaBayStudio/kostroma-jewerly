@@ -90,24 +90,6 @@ body {
   }
 }
 
-.burger-btn,
-.logo,
-.btn,
-.btn-ol,
-.next,
-.prev,
-.ftr__privacy-policy-btn,
-.thanks-popup__close,
-.trying-popup__close,
-.ftr__site-link,
-.ftr__dev-link,
-.hdr__nav-link,
-.catalog-block__more-btn {
-  &:focus {
-    outline: 1px dotted $dark-color;
-  }
-}
-
 .close,
 .prev,
 .next,
@@ -154,6 +136,7 @@ button {
     >.middle {
       width: 26px;
       transform: rotate(45deg);
+      border-bottom-width: 2.25px;
     }
     >.bottom {
       transform: translateY(-7px) rotate(45deg);
@@ -198,6 +181,10 @@ button {
   transform: scale(.825);
 }
 
+.slick-dots {
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -213,7 +200,7 @@ button {
   font-size: 16px;
   background-color: #fff;
   z-index: 5;
-  overflow: hidden;
+  overflow: auto;
   &::before {
     font-size: 200px;
     transform: rotate(-90deg);

@@ -1,5 +1,23 @@
 @import 'assets/colors';
 
+.burger-btn,
+.logo,
+.btn,
+.btn-ol,
+.next,
+.prev,
+.ftr__privacy-policy-btn,
+.thanks-popup__close,
+.trying-popup__close,
+.ftr__site-link,
+.ftr__dev-link,
+.hdr__nav-link,
+.catalog-block__more-btn {
+  &:focus {
+    outline: 1px dotted $dark-color;
+  }
+}
+
 .contacts-block__link-text,
 .catalog-block__more-btn,
 .ftr__site-link {
