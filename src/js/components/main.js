@@ -10,4 +10,5 @@ document.addEventListener('DOMContentLoaded', function(){
 	//=include _catalog.js
   //=include _about.js
   //=include _gallery.js
+  //=include _quiz.js
 });

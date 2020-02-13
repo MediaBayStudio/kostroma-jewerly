@@ -203,8 +203,7 @@ $(document).ready(function() {
 			let timer,
 				thanksPopup = document.querySelector('.thanks-popup'),
 				overlay = document.querySelector('.overlay'),
-				tryingPopup = document.querySelector('.trying-popup')
-				checkInputs = document.querySelectorAll('input[type="checkbox"]');
+				tryingPopup = document.querySelector('.trying-popup');
 
 					closeThanksPopup = function() {
 					thanksPopup.style.animation = 'fadeOut .5s';
@@ -259,18 +258,23 @@ $(document).ready(function() {
 						event.preventDefault();
 						form = $(this)[0].errorContext;
 						form.find('input').val('');
+						if (form.hasClass('quiz-popup__form')) {
+							form.addClass('hide');
 
-							for (let i = 0; i < checkInputs.length; i++) {
-							checkInputs[i].checked = false;
-						}					
+								$('.quiz-popup__thanks-wrap').removeClass('hide');
 
-												$('.thanks-popup').addClass('active');
-						if (!overlay.classList.contains('active')) {
-							overlay.classList.add('active');
+								timer = setTimeout(function() {
+								document.querySelector('.quiz-popup').close();
+							}, 5000);
+						} else {
+							$('.thanks-popup').addClass('active');
+							if (!overlay.classList.contains('active')) {
+								overlay.classList.add('active');
+							}
+							timer = setTimeout(function() {
+								closeThanksPopup();
+							}, 5000);
 						}
-						timer = setTimeout(function() {
-							closeThanksPopup();
-						}, 3000);
 					}
 				});
 			});

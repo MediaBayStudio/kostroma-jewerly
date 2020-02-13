@@ -11,5 +11,6 @@
 let menu,
 	tryingPopup,
 	thanksPopup,
+  quizPopup,
 	overlay,
 	hdr;

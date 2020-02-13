@@ -3,6 +3,54 @@
 @import 'assets/mixins';
 
 
+.quiz {
+  &-popup {
+    max-width: 815px;
+    &__close {
+      width: 22px;
+      height: 22px;
+    }
+    &::before {
+      font-size: 200px;
+      bottom: 35px;
+    }
+    &__desc {
+      margin-bottom: 100px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    .progress__block {
+      width: 490px;
+    }
+
+    &__thanks-desc {
+      padding: 0 170px;
+    }
+
+    &__form {
+      width: 100%;
+      >.form__title {
+        font-size: 20px;
+      }
+      >.form__subtitle {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      >.form__btn {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &-form {
+    margin-bottom: 90px;
+    &__lbl {
+      width: 340px;
+    }
+  }
+}
+
 //blocks import
 @import 'blocks/header/header.1200';
 @import 'blocks/hero/hero.1200';

@@ -8,7 +8,17 @@
 		overlayAnimation: 'fadeOut 0.5s',
 		popupAnimationName: 'fadeOut',
 		overlayAnimationName: 'fadeOut',
-		// scrollThreshold: 1000
+	});
+
+	quizPopup = new SimplePopup({
+		popup: '.quiz-popup',
+		openBtn: '.hero-sect__btn',
+		closeBtn: '.quiz-popup__close',
+		overlay: '.overlay',
+		popupAnimation: 'fadeOut 0.5s',
+		overlayAnimation: 'fadeOut 0.5s',
+		popupAnimationName: 'fadeOut',
+		overlayAnimationName: 'fadeOut',
 	});
 	let popupProductImg = tryingPopup.querySelector('.catalog-card__img'),
 		popupProductTitle = tryingPopup.querySelector('.catalog-card__title'),

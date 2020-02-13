@@ -75,7 +75,7 @@
 	<section id="start" class="hero-sect container duplicate-title" data-title="Pusets">
 		<h1 class="hero-sect__title">Пусеты</h1>
 		<span class="hero-sect__subtitle">С  бриллиантами и драгоценными камнями</span>
-		<a href="#catalog" class="hero-sect__btn btn" tabindex="1"><span class="hero-sect__btn-text">Подобрать</span></a>
+		<button type="button" class="hero-sect__btn btn" tabindex="1"><span class="hero-sect__btn-text">Подобрать</span></button>
 	</section>
 
 	<section id="catalog" class="catalog-sect container">
@@ -357,9 +357,70 @@
 		</div>		
 	</div>
 
+	<div class="quiz-popup duplicate-title" data-title="Тест">
+		<button type="button" class="quiz-popup__close close">
+			<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M15 1L1 15M1 1L15 15" stroke="#987A6E"/>
+			</svg>
+		</button>
+		<div class="loader-bg">
+			<div class="loader"></div>
+		</div>
+		<p class="quiz-popup__title">Какой драгоценный камень вам подходит</p>
+		<p class="quiz-popup__desc">Пройдите небольшой тест, чтобы определить какой камень вам лучше всего подходит.</p>
+		<div class="quiz-form"></div>
+		<div class="quiz-popup__thanks-wrap hide">
+			<b class="quiz-popup__thanks-title">Спасибо</b>
+			<p class="quiz-popup__thanks-desc">Ваш тест будет обрабатывать не бездушная машина, а живой человек.</p>
+			<p class="quiz-popup__thanks-desc">Запаситесь терпением, ответ придёт в течение 24 часов. Наш специалист подберет для вас лучшие украшения и проконсультирует по всем вопросам!</p>
+		</div>		
+		<form action="#" method="POST" class="form quiz-popup__form hide">
+			<b class="form__title">Спасибо что прошли тест!</b>
+			<p class="form__subtitle">Заполните форму и мы подберем для вас украшения в соответствии с результатом.</p>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-name" id="quiz-user-name" class="inp-block__inp inp" placeholder="Имя">
+				<label for="quiz-user-name" class="inp-block__lbl">Имя</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-tel" id="quiz-user-tel" class="inp-block__inp inp" placeholder="Телефон">
+				<label for="quiz-user-tel" class="inp-block__lbl">Телефон</label>
+			</div>
+			<div class="inp-block form__inp-block">
+				<input type="text" name="user-email" id="quiz-user-email" class="inp-block__inp inp" placeholder="E-mail">
+				<label for="quiz-user-email" class="inp-block__lbl">E-mail</label>
+			</div>
+			<label class="check-inp-block">
+				<input type="checkbox" name="privacy-policy" class="check-inp-block__inp" value="accepted" checked>
+				<span class="check-inp-block__pseudo-inp">-</span>
+				<span class="check-inp-block__lbl">Принимаю соглашение об обработке персональных данных</span>
+			</label>
+			<label class="check-inp-block">
+				<input type="checkbox" name="advertising" class="check-inp-block__inp" value="accepted" checked>
+				<span class="check-inp-block__pseudo-inp">-</span>
+				<span class="check-inp-block__lbl">Хочу получать рекламную рассылку <q>Бриллианты Костромы</q></span>
+			</label>
+			<button class="form__btn btn-ol">Получить результат</button>
+		</form>
+		<button type="button" class="quiz-form__btn">
+			<span>Дальше</span>
+			<svg viewBox="0 0 14 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 4H12L8 1"/>
+			</svg>
+		</button>
+		<div class="progress">
+			<span class="progress__text">
+					Готово: 
+					<b class="progress__percent">0%</b>
+				</span>
+			<div class="progress__block">				
+				<div class="progress__bar"></div>
+			</div>
+		</div>
+	</div>
+
 	<div class="overlay"></div>
 	<script src="./js/jquery-3.4.1.min.js"></script>
-	<script src="./js/jquery.pixlayout.0.9.8.js"></script>
+	<!-- <script src="./js/jquery.pixlayout.0.9.8.js"></script> -->
 	<script>function onLoad(ymaps){let suggestView=new ymaps.SuggestView('popup-user-city');let suggestView2=new ymaps.SuggestView('help-user-city')}function initMap(){let a={lat:57.757997,lng:40.986052},b=new google.maps.Map(document.querySelector(".contacts-sect__map-block"),{center:a,zoom:14}),c=new google.maps.Marker({position:a,map:b,icon:"img/geo-marker.svg"});b.setOptions({styles:[{featureType:"administrative",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"landscape.man_made",elementType:"geometry",stylers:[{color:"#efebe2"}]},{featureType:"poi",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.attraction",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#fbfbfb"}]}]})}</script>
 </body>
 </html>

@@ -326,11 +326,15 @@ body {
 
 .close > svg,
 .prev > svg,
-.next > svg {
+.next > svg,
+button > svg {
+  width: 100%;
+  height: 100%;
   pointer-events: none; }
   .close > svg > path,
   .prev > svg > path,
-  .next > svg > path {
+  .next > svg > path,
+  button > svg > path {
     transition: stroke .5s; }
 
 .check-inp-block.focus {
@@ -620,8 +624,8 @@ label.invalid {
   top: 0;
   left: 0;
   background: rgba(64, 54, 55, 0.7) !important;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
   z-index: 2; }
   .overlay.active {
     display: block; }
@@ -737,6 +741,160 @@ label.invalid {
     margin-top: 15px;
     font: 15px/130% Montserrat;
     color: #987A6E; }
+
+.quiz-popup {
+  max-width: 300px;
+  width: 100%;
+  max-height: calc(100% - 50px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  font-family: Montserrat;
+  color: #987A6E;
+  overflow: auto;
+  z-index: 5;
+  display: none;
+  -webkit-animation: fadeOut .5s;
+  animation: fadeOut .5s; }
+  .quiz-popup.active {
+    display: block;
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s; }
+  .quiz-popup::before {
+    font: bold 120px Playfair Display;
+    z-index: -1;
+    left: -28px;
+    bottom: 20px;
+    line-height: 100%; }
+  .quiz-popup__close {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: -10px -10px 0 auto; }
+    .quiz-popup__close > svg {
+      vertical-align: top; }
+  .quiz-popup__title {
+    font-weight: 600;
+    line-height: 140%; }
+  .quiz-popup__desc {
+    font-size: 14px;
+    line-height: 140%;
+    margin: 20px 0 40px; }
+  .quiz-popup__form > .form__title {
+    display: block;
+    margin: 45px auto 0;
+    max-width: 200px;
+    text-align: center;
+    font: bold 18px/140% Montserrat; }
+  .quiz-popup__form > .form__subtitle {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    font: 500 14px/140% Montserrat; }
+  .quiz-popup__form .check-inp-block > .check-inp-block__pseudo-inp {
+    margin-right: 10px;
+    width: 10px;
+    height: 10px; }
+  .quiz-popup__form .check-inp-block > .check-inp-block__lbl {
+    max-width: 200px; }
+  .quiz-popup__form > .form__btn {
+    max-width: 210px;
+    min-height: 47px;
+    margin-bottom: 30px; }
+  .quiz-popup__thanks-title {
+    display: block;
+    margin: 70px auto 50px;
+    font-size: 20px;
+    text-align: center; }
+  .quiz-popup__thanks-desc {
+    margin-bottom: 30px;
+    font: 500 14px/170% Montserrat;
+    text-align: center; }
+    .quiz-popup__thanks-desc:last-child {
+      margin-bottom: 70px; }
+
+.quiz-form {
+  min-height: 250px;
+  color: #43393A;
+  display: flex;
+  flex-direction: column; }
+  .quiz-form__title {
+    margin-bottom: 10px;
+    font-family: Playfair Display;
+    color: #403637; }
+  .quiz-form__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 160px;
+    width: 100%;
+    min-height: 47px;
+    margin: 14px auto 20px;
+    font: 600 16px Playfair Display;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background-color: #D79081; }
+    .quiz-form__btn > svg {
+      width: 20px;
+      height: 6px;
+      margin-left: 8px; }
+      .quiz-form__btn > svg > path {
+        stroke: currentColor;
+        stroke-width: 1; }
+  .quiz-form__lbl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 8px;
+    margin-bottom: 12px;
+    border: 1px solid #E8D4C9;
+    font-size: 14px; }
+    .quiz-form__lbl-text {
+      pointer-events: none; }
+    .quiz-form__lbl.active > .quiz-form__pseudo-inp {
+      box-shadow: inset 0 0 0 1.75px #fff; }
+  .quiz-form__radio-inp {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0; }
+    .quiz-form__radio-inp:checked + .quiz-form__pseudo-inp {
+      box-shadow: inset 0 0 0 1.75px #fff; }
+  .quiz-form__pseudo-inp {
+    width: 14px;
+    height: 14px;
+    margin-right: 11px;
+    border: inherit;
+    background-color: #E8D4C9;
+    box-shadow: inset 0 0 0 10px #fff;
+    transition: box-shadow .35s;
+    pointer-events: none; }
+
+.progress__text {
+  font-size: 14px;
+  color: #403637; }
+
+.progress__block {
+  margin-top: 10px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #E8D4C9;
+  position: relative;
+  overflow: hidden; }
+
+.progress__bar {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #D79081;
+  transition: width .25s; }
 
 .hdr {
   padding-top: 13.5px;

@@ -1,3 +1,34 @@
+.quiz-popup {
+  max-width: 815px; }
+  .quiz-popup__close {
+    width: 22px;
+    height: 22px; }
+  .quiz-popup::before {
+    font-size: 200px;
+    bottom: 35px; }
+  .quiz-popup__desc {
+    margin-bottom: 100px; }
+  .quiz-popup__title {
+    font-size: 20px; }
+  .quiz-popup .progress__block {
+    width: 490px; }
+  .quiz-popup__thanks-desc {
+    padding: 0 170px; }
+  .quiz-popup__form {
+    width: 100%; }
+    .quiz-popup__form > .form__title {
+      font-size: 20px; }
+    .quiz-popup__form > .form__subtitle {
+      font-size: 14px;
+      margin-bottom: 10px; }
+    .quiz-popup__form > .form__btn {
+      margin-top: 30px; }
+
+.quiz-form {
+  margin-bottom: 90px; }
+  .quiz-form__lbl {
+    width: 340px; }
+
 .hdr__nav-link:nth-last-child(n+2) {
   margin-right: 60px; }
 
