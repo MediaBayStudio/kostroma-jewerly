@@ -14,11 +14,42 @@
     }
 
     &__img {
-      min-width: calc((100vw - 320px)/(575 - 320)*(277.5 - 150) + 150px);
-      min-height: calc((100vw - 320px)/(575 - 320)*(277.5 - 150) + 150px);
-      max-width: calc((100vw - 320px)/(575 - 320)*(277.5 - 150) + 150px);
-      max-height: calc((100vw - 320px)/(575 - 320)*(277.5 - 150) + 150px);
-      padding: 0 20px 15px 0;
+      width: 100%;
+      height: 100%;
+      transition: filter .5s;
+      &-wrap {
+        min-width: calc((100vw - 320px)/(575 - 320)*(257.5 - 130) + 130px);
+        min-height: calc((100vw - 320px)/(575 - 320)*(262.5 - 135) + 135px);
+        max-width: calc((100vw - 320px)/(575 - 320)*(257.5 - 130) + 130px);
+        max-height: calc((100vw - 320px)/(575 - 320)*(262.5 - 135) + 135px);
+        margin: 0 20px 15px 0;
+        position: relative;
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          pointer-events: none;
+          opacity: 0;
+          box-sizing: border-box;
+          transition: opacity .5s;
+          z-index: 1;
+        }
+        &::after {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 71px;
+          height: 71px;
+          background: url('../img/zoom.svg') center/contain no-repeat;
+        }
+        &::before {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, rgba(203,166,150,.2), rgba(203,166,150,.2)) top left/100% content-box no-repeat;
+        }
+      }
     }
 
     &__prev, &__next {

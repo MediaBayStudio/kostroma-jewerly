@@ -73,3 +73,10 @@
 
 .gallery-popup__close:hover > svg > path {
   stroke: #403637; }
+
+.gallery-slider__img-wrap:hover > .gallery-slider__img {
+  -webkit-filter: blur(4px);
+  filter: blur(4px); }
+
+.gallery-slider__img-wrap:hover::after, .gallery-slider__img-wrap:hover::before {
+  opacity: 1; }

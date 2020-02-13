@@ -3,14 +3,14 @@
     padding-top: 140px;
   }
   &-slider {
-    &__img {
+    &__img-wrap {
       width: 390px;
       height: 395px;
     }
   }
 
   &-popup {
-    width: 1000px;
+    width: 1000px; 
     &__close {
       width: 30px;
     }

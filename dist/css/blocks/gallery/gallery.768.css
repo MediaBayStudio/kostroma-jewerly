@@ -1,1 +1,1 @@
-.gallery-slider__img{padding-bottom:40px;padding-right:40px;max-width:calc((100vw - 767px)/(991 - 767)*(260 - 216) + 216px);max-height:calc((100vw - 767px)/(991 - 767)*(260 - 246) + 246px)}
+.gallery-slider__img-wrap{margin-bottom:40px;margin-right:40px;max-width:calc((100vw - 767px)/(991 - 767)*(220 - 176) + 176px);max-height:calc((100vw - 767px)/(991 - 767)*(220 - 206) + 206px)}

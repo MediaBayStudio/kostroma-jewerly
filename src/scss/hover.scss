@@ -116,3 +116,12 @@
     }
   }
 }
+
+.gallery-slider__img-wrap:hover {
+  >.gallery-slider__img {
+    filter: blur(4px);
+  }
+  &::after, &::before {
+    opacity: 1;
+  }
+}

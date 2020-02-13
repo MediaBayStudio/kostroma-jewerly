@@ -1,5 +1,4 @@
-.gallery-slider__img {
-  padding: 0;
+.gallery-slider__img-wrap {
   width: 225px;
   height: 225px;
   min-width: 1px;
@@ -7,9 +6,9 @@
   max-width: none;
   max-height: none;
   margin-right: 20px; }
-  .gallery-slider__img:last-child, .gallery-slider__img:nth-child(4n) {
+  .gallery-slider__img-wrap:last-child, .gallery-slider__img-wrap:nth-child(4n) {
     margin-right: 0; }
-  .gallery-slider__img:nth-child(-n+4) {
+  .gallery-slider__img-wrap:nth-child(-n+4) {
     margin-bottom: 20px; }
 
 .gallery-popup {
