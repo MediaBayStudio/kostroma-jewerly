@@ -38,8 +38,8 @@
   opacity: 1;
   pointer-events: auto; }
 
-.prev:hover > svg > path,
-.next:hover > svg > path {
+.prev:not(.slick-disabled):hover > svg > path,
+.next:not(.slick-disabled):hover > svg > path {
   stroke: #403637; }
 
 .delivery-card__desc {
@@ -70,3 +70,6 @@
 
 .gallery-slider__img {
   cursor: pointer; }
+
+.gallery-popup__close:hover > svg > path {
+  stroke: #403637; }

@@ -25,15 +25,12 @@
 }
 
 .hdr__nav-link:not(.disabled):hover {
-	// text-shadow: 0 0 1px;
 	&::after {
 		width: 30%;
 	}
 }
 
 .btn:hover {
-	// background-color: transparent;
-	// color: $dark-color;
 	&::before {
 		right: 0;
 		bottom: 0;
@@ -66,9 +63,11 @@
 
 .prev,
 .next {
-  &:hover {
-    >svg>path {
-      stroke: #403637;
+  &:not(.slick-disabled) {
+    &:hover {
+      >svg>path {
+        stroke: #403637;
+      }
     }
   }
 }
@@ -106,7 +105,14 @@
   }
 }
 
-
 .gallery-slider__img {
   cursor: pointer;
+}
+
+.gallery-popup__close {
+  &:hover {
+    >svg>path {
+      stroke: $dark-color;
+    }
+  }
 }

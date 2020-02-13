@@ -9,6 +9,7 @@ let buildGallerySlider = function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		infinite: false,
+		draggable: false,
 		slide: '.gallery-popup-slider__slide-wrap',
 		appendArrows: '.gallery-popup-slider__arrows',
 		nextArrow: buildArrow('gallery-popup-slider__next next', nextArrow),

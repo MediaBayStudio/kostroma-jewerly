@@ -236,7 +236,11 @@ body {
   color: #403637; }
 
 .slick-track {
-  display: flex; }
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .flex {
   display: flex;
@@ -320,6 +324,15 @@ body {
 .catalog-block__more-btn:focus {
   outline: 1px dotted #403637; }
 
+.close > svg,
+.prev > svg,
+.next > svg {
+  pointer-events: none; }
+  .close > svg > path,
+  .prev > svg > path,
+  .next > svg > path {
+    transition: stroke .5s; }
+
 .check-inp-block.focus {
   outline: 1px dotted #403637; }
 
@@ -374,10 +387,6 @@ body {
 .btn:active,
 .btn-ol:active {
   transform: scale(0.975); }
-
-.next:active,
-.prev:active {
-  transform: translateY(-50%) scale(0.95); }
 
 .slick-dots > li > button:active {
   transform: scale(0.825); }
@@ -1211,8 +1220,6 @@ label.invalid {
       top: auto; }
       .gallery-popup-slider__prev:active, .gallery-popup-slider__next:active {
         transform: scale(0.95); }
-      .gallery-popup-slider__prev > svg, .gallery-popup-slider__next > svg {
-        pointer-events: none; }
       .gallery-popup-slider__prev > svg > path, .gallery-popup-slider__next > svg > path {
         stroke-width: 3;
         stroke: #fff; }

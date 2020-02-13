@@ -50,6 +50,7 @@ $('.gallery-slider').slick({
 	variableWidth: true,
 	slidesPerRow: 1, 
   rows: 2,
+  draggable: false,
 	nextArrow: buildArrow('gallery-slider__next next', nextArrow),
 	prevArrow: buildArrow('gallery-slider__prev prev', prevArrow),
 	responsive: [{
