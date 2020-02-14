@@ -20,6 +20,32 @@
 		popupAnimationName: 'fadeOut',
 		overlayAnimationName: 'fadeOut',
 	});
+	let videoPopup = new SimplePopup({
+		popup: '.video-popup',
+		openBtn: '.about-sect__preview-img-wrap',
+		closeBtn: '.video-popup__close',
+		overlay: '.overlay',
+		popupAnimation: 'fadeOut 0.5s',
+		overlayAnimation: 'fadeOut 0.5s',
+		popupAnimationName: 'fadeOut',
+		overlayAnimationName: 'fadeOut',
+	}),
+		iframe = document.createElement('iframe');
+		iframe.setAttribute('width', '100%');
+		iframe.setAttribute('height', '100%');
+		iframe.setAttribute('frameborder', '0');
+		iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+		iframe.setAttribute('allowfullscreen', 'allowfullscreen');
+
+	videoPopup.addEventListener('beforeopen', function() {
+		this.insertAdjacentElement('beforeend', iframe)
+		iframe.src = 'https://www.youtube.com/embed/W1Yavc80Ap4';
+	});
+
+	videoPopup.addEventListener('close', function() {
+		this.removeChild(iframe)
+	});
+
 	let popupProductImg = tryingPopup.querySelector('.catalog-card__img'),
 		popupProductTitle = tryingPopup.querySelector('.catalog-card__title'),
 		popupProductDesc = tryingPopup.querySelector('.catalog-card__desc'),

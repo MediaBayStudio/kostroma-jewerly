@@ -92,11 +92,10 @@
     justify-self: start; }
   .about-sect__preview-img {
     width: 220px;
-    height: 145px;
-    margin: 0 10px 0 0; }
+    height: 145px; }
+    .about-sect__preview-img-wrap {
+      margin: 0 10px 0 0; }
   .about-sect__logo {
-    width: 130px;
-    height: 120px;
     margin: 0 20px 0 0; }
   .about-sect__link {
     -ms-grid-row: 4;

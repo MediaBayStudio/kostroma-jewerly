@@ -111,6 +111,10 @@
     order: 11;
     margin: 0 0 0 auto; }
 
+.video-popup {
+  width: 687px;
+  height: 380px; }
+
 .hero-sect {
   padding-top: 520px;
   padding-bottom: 90px;

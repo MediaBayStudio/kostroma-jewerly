@@ -29,6 +29,10 @@
   .quiz-form__lbl {
     width: 340px; }
 
+.video-popup {
+  width: 790px;
+  height: 437px; }
+
 .hdr__nav-link:nth-last-child(n+2) {
   margin-right: 60px; }
 
@@ -107,12 +111,11 @@
       margin-top: 10px; }
   .about-sect__preview-img {
     width: 286px;
-    height: 161px;
-    margin-right: 15px; }
+    height: 161px; }
+    .about-sect__preview-img-wrap {
+      margin-right: 15px; }
   .about-sect__logo {
-    margin-right: 70px;
-    width: 130px;
-    height: 120px; }
+    margin-right: 70px; }
   .about-sect__link {
     margin-bottom: 55px; }
 

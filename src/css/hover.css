@@ -12,23 +12,9 @@
 .hdr__nav-link:focus,
 .catalog-block__more-btn:focus,
 .delivery-card__guarantee:focus,
-.gallery-slider__img-wrap:focus {
+.gallery-slider__img-wrap:focus,
+.about-sect__preview-img-wrap:focus {
   outline: 1px dotted #403637; }
-
-.contacts-block__link-text:hover,
-.catalog-block__more-btn:hover,
-.ftr__site-link:hover {
-  border-bottom-color: transparent; }
-
-.catalog-block__catalog-card:hover::after {
-  opacity: 1; }
-
-.catalog-block__catalog-card:hover .catalog-card__btn {
-  background-color: #DD7D5C;
-  color: #FDFBFA; }
-
-.ftr__privacy-policy-btn:hover, .ftr__dev-link:hover {
-  border-bottom-color: currentColor; }
 
 .hdr__nav-link:not(.disabled):hover::after {
   width: 30%; }
@@ -46,6 +32,14 @@
 .btn-ol:hover {
   background-color: #DD7D5C;
   color: #FDFBFA; }
+
+.quiz-popup__close:hover > svg > path {
+  stroke: #403637; }
+
+.quiz-form__btn:not(.disabled):hover {
+  background-color: transparent;
+  color: #403637;
+  border-color: #DD7D5C; }
 
 .delivery-card__guarantee:hover > .info-icon, .delivery-card__guarantee.active:hover > .info-icon {
   background-color: transparent;
@@ -85,6 +79,9 @@
   pointer-events: none;
   transition: opacity .5s; }
 
+.about-sect__preview-img-wrap:hover::after {
+  border-color: transparent transparent transparent #403637; }
+
 .gallery-popup__close:not(.slick-disabled):hover > svg > path,
 .gallery-popup-slider__next:not(.slick-disabled):hover > svg > path,
 .gallery-popup-slider__prev:not(.slick-disabled):hover > svg > path {
@@ -96,3 +93,21 @@
 
 .gallery-slider__img-wrap:hover::after, .gallery-slider__img-wrap:hover::before {
   opacity: 1; }
+
+.contacts-block__link-text:hover,
+.catalog-block__more-btn:hover,
+.ftr__site-link:hover {
+  border-bottom-color: transparent; }
+
+.catalog-block__catalog-card:hover::after {
+  opacity: 1; }
+
+.catalog-block__catalog-card:hover .catalog-card__btn {
+  background-color: #DD7D5C;
+  color: #FDFBFA; }
+
+.ftr__privacy-policy-btn:hover, .ftr__dev-link:hover {
+  border-bottom-color: currentColor; }
+
+.video-popup__close:hover > svg > path {
+  stroke: #CBA696; }
