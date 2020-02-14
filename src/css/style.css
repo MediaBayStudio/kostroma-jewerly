@@ -796,6 +796,7 @@ label.invalid {
   .quiz-popup__form > .form__btn {
     max-width: 210px;
     min-height: 47px;
+    line-height: 47px;
     margin-bottom: 30px; }
   .quiz-popup__thanks-title {
     display: block;
@@ -969,7 +970,8 @@ label.invalid {
     justify-content: center;
     text-align: center;
     max-width: 160px;
-    min-height: 46px; }
+    min-height: 46px;
+    line-height: 46px; }
 
 .catalog-sect {
   padding-top: 80px;

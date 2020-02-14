@@ -17,10 +17,18 @@
     
     for (let i = 0; i < galleryThumbs.length; i++) {
       if (!gallerySlider.classList.contains('slick-slider')) {
-        let src = `${galleryThumbs[i].src.slice(0, -3)}big.jpg`,
-          str = `<figure class="gallery-popup-slider__slide-wrap"><img src="${src}" alt="#" class="gallery-popup-slider__slide"></figure>`;
+        // let src = `${galleryThumbs[i].src.slice(0, -3)}big.jpg`,
+        //   str = `<figure class="gallery-popup-slider__slide-wrap"><img src="${src}" alt="#" class="gallery-popup-slider__slide"></figure>`;
+        let img = document.createElement('img'),
+          wrap = document.createElement('figure');
 
-        gallerySlider.insertAdjacentHTML('beforeend', str);
+        img.setAttribute('src', galleryThumbs[i].src);
+        img.classList.add('gallery-popup-slider__slide');
+        wrap.classList.add('gallery-popup-slider__slide-wrap');
+        wrap.appendChild(img);
+        gallerySlider.insertAdjacentElement('beforeend', wrap);
+
+        // gallerySlider.insertAdjacentHTML('beforeend', str);
       }
 
       if (this.caller === galleryThumbs[i]) {
