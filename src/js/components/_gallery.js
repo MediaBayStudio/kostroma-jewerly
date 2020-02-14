@@ -1,4 +1,5 @@
 ;(function() {
+  console.log('popup create?');
   let galleryPopup = new SimplePopup({
     popup: '.gallery-popup',
     openBtn: '.gallery-slider__img',
@@ -12,7 +13,10 @@
     galleryThumbs = document.querySelectorAll('.gallery-slider__img'),
     gallerySlider = document.querySelector('.gallery-popup-slider');
 
+  console.log(galleryPopup);
+
   galleryPopup.addEventListener('beforeopen', function() {
+    console.log(event);
     let initialSlide;
     
     for (let i = 0; i < galleryThumbs.length; i++) {
