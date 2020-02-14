@@ -483,7 +483,8 @@ document.addEventListener('DOMContentLoaded', function(){
           img.classList.add('gallery-popup-slider__slide');
           wrap.classList.add('gallery-popup-slider__slide-wrap');
           wrap.appendChild(img);
-          gallerySlider.insertAdjacentElement('beforeend', wrap);
+
+          gallerySlider.appendChild(wrap);
 
         }
 
