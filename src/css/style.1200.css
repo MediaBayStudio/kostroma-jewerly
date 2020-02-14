@@ -35,7 +35,7 @@
 .hero-sect {
   padding-top: 275px;
   padding-bottom: 110px;
-  background: linear-gradient(to bottom, #fff 260px, #FCF9F7 260px) no-repeat;
+  background: linear-gradient(to bottom, #fff 260px, #FDFBFA 260px) no-repeat;
   background-position-x: calc((50vw - 300px) * -1); }
   .hero-sect::after {
     width: 690px;
@@ -95,6 +95,7 @@
 
 .about-sect {
   padding-top: 110px;
+  -ms-grid-columns: 311px 100px 1fr;
   grid-template-columns: 311px 100px 1fr; }
   .about-sect__title {
     line-height: 155%; }
@@ -126,12 +127,10 @@
     margin-top: 5px; }
 
 .production-slider {
-  margin-top: 95px; }
-  .production-slider__slide {
-    padding-left: calc(50vw - 600px); }
+  margin-top: 95px;
+  padding-left: calc(50vw - 600px); }
   .production-slider__arrows {
-    top: 45%;
-    right: 120px; }
+    right: 100px; }
 
 .gallery-sect {
   padding-top: 50px; }
@@ -153,8 +152,8 @@
     height: auto;
     left: calc(50vw - 645px); }
   .contacts-sect__map-block {
-    width: calc((100vw - 1230px)/(1719 - 1230)*(845 - 600) + 600px);
-    margin-left: calc((50vw - 600px) * -1); }
+    width: auto;
+    margin-left: 0; }
   .contacts-sect__title {
     margin-bottom: 60px; }
   .contacts-sect__form {

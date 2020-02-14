@@ -111,6 +111,11 @@
 			>.check-inp-block {
 				font-size: 9px;
 				width: 305px;
+				>label.invalid {
+					max-width: none;
+					margin-left: 0;
+					white-space: nowrap;
+				}
 				&:first-of-type {
 					margin: 20px 0 10px;
 				}

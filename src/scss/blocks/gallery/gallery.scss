@@ -1,3 +1,4 @@
+@import '../../assets/colors';
 .gallery {
   &-sect {
     overflow: hidden;
@@ -59,7 +60,7 @@
     }
 
     &__prev {
-      bottom: -8px;
+      bottom: -6.5px;
       left: 45%;
       transform: translateX(-50%);
       &:active {
@@ -101,6 +102,9 @@
     &-slider {
       display: flex;
       flex-direction: column-reverse;
+      &__img {
+        cursor: pointer;
+      }
       &__arrows {
         display: flex;
         align-items: center;
@@ -125,7 +129,7 @@
         }
         >svg>path {
           stroke-width: 3;
-          stroke: #fff;
+          stroke: $white-color;
         }
       }
       &__slide {

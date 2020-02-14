@@ -145,6 +145,7 @@ $(document).ready(function() {
 		appendArrows: '.delivery-block__arrows',
 		nextArrow: buildArrow('delivery-block__next next', nextArrow),
 		prevArrow: buildArrow('delivery-block__prev prev', prevArrow),
+		accessibility: false,
 		responsive: [{
 			breakpoint: 575.98,
 			settings: 'unslick'
@@ -160,6 +161,7 @@ $(document).ready(function() {
 		appendArrows: '.production-slider__arrows',
 		nextArrow: buildArrow('production-slider__next next', nextArrow),
 		prevArrow: buildArrow('production-slider__prev prev', prevArrow),
+		accessibility: false,
 		responsive: [{
 			breakpoint: 575.98,
 			settings: {
@@ -189,6 +191,7 @@ $(document).ready(function() {
 	  draggable: false,
 		nextArrow: buildArrow('gallery-slider__next next', nextArrow),
 		prevArrow: buildArrow('gallery-slider__prev prev', prevArrow),
+		accessibility: false,
 		responsive: [{
 			breakpoint: 575.98,
 			settings: {

@@ -9,6 +9,7 @@ $('.delivery-block').slick({
 	appendArrows: '.delivery-block__arrows',
 	nextArrow: buildArrow('delivery-block__next next', nextArrow),
 	prevArrow: buildArrow('delivery-block__prev prev', prevArrow),
+	accessibility: false,
 	responsive: [{
 		breakpoint: 575.98,
 		settings: 'unslick'
@@ -24,6 +25,7 @@ $('.production-slider').slick({
 	appendArrows: '.production-slider__arrows',
 	nextArrow: buildArrow('production-slider__next next', nextArrow),
 	prevArrow: buildArrow('production-slider__prev prev', prevArrow),
+	accessibility: false,
 	responsive: [{
 		breakpoint: 575.98,
 		settings: {
@@ -53,6 +55,7 @@ $('.gallery-slider').slick({
   draggable: false,
 	nextArrow: buildArrow('gallery-slider__next next', nextArrow),
 	prevArrow: buildArrow('gallery-slider__prev prev', prevArrow),
+	accessibility: false,
 	responsive: [{
 		breakpoint: 575.98,
 		settings: {

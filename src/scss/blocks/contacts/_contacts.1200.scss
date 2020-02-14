@@ -10,8 +10,10 @@
 			left: calc(50vw - 645px);
 		}
 		&__map-block {
-			width: calc((100vw - 1230px)/(1719 - 1230)*(845 - 600) + 600px);
-			margin-left: calc((50vw - 600px) * -1);
+			// width: calc((100vw - 1230px)/(1719 - 1230)*(845 - 600) + 600px);
+			// margin-left: calc((50vw - 600px) * -1);
+			width: auto;
+			margin-left: 0;
 		}
 		&__title {
 			margin-bottom: 60px;

@@ -70,11 +70,11 @@ label.invalid {
 .hero-sect {
   padding-top: 475px;
   padding-bottom: 70px;
-  background: linear-gradient(to bottom, #fff 380px, #FCF9F7 380px); }
+  background: linear-gradient(to bottom, #fff 380px, #FDFBFA 380px); }
   .hero-sect::after {
     width: 450px;
     height: 450px;
-    background-image: url("../img/hero-img.768.jpg"); }
+    background-image: url("../img/pusets/hero-img.768.jpg"); }
   .hero-sect::before {
     top: 140px;
     left: calc((100vw - 767px)/(576 - 767)*(-100 - 92) + 92px);
@@ -129,7 +129,12 @@ label.invalid {
     justify-content: space-between;
     max-width: none; }
     .help-sect__form > .inp-block {
-      width: 100%; }
+      width: 100%;
+      position: relative; }
+      .help-sect__form > .inp-block > label.invalid {
+        position: absolute;
+        left: 0;
+        bottom: -15px; }
       .help-sect__form > .inp-block:nth-child(2) {
         margin-top: 0; }
     .help-sect__form > .check-inps-wrap {
@@ -143,19 +148,29 @@ label.invalid {
       margin: 30px 0 0 0; }
 
 .about-sect {
+  -ms-grid-columns: 322px 1fr;
   grid-template-columns: 322px 1fr; }
   .about-sect__title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/span 2; }
   .about-sect__subtitle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/span 2;
     max-width: none; }
   .about-sect__desc-block {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/span 2; }
   .about-sect__link {
     margin-left: 0; }
   .about-sect__img {
+    -ms-grid-row: 4;
     grid-row: 4;
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-column-align: stretch;
     justify-self: stretch;
     width: 322px;
     height: 528px; }
@@ -163,7 +178,9 @@ label.invalid {
     display: flex;
     flex-direction: column;
     justify-self: end;
+    -ms-grid-row: 4;
     grid-row: 4;
+    -ms-grid-column: 2;
     grid-column: 2; }
   .about-sect__preview-img {
     width: 200px;
@@ -177,7 +194,7 @@ label.invalid {
     -o-object-fit: contain;
     object-fit: contain; }
 
-.production-slider__slide {
+.production-slider {
   padding-left: calc(50vw - 270px); }
 
 .gallery-slider__img-wrap {

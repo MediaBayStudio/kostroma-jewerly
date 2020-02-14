@@ -1,6 +1,13 @@
-$dark-color: #403637;
-$secondary-color: #987A6E;
-$almond-color: #E8D4C9;
-$white-color: #FDFBFA;
-$orange-color: #DD7D5C;
-$light-orange-color: #FCF9F7;
+$main-text-color: #403637;                                // весь темный текст
+$white-text-color: #FDFBFA;                               // весь светлый текст (кнопки)
+$brown-text-color: #987A6E;                               // весь коричневый текст ()
+$brown-light-color: #CBA696;                              // весь светло-коричневый текст и etc (лейблы, чекбоксы, бордеры, тултипы, шапка, футер)
+$form-bg-color: #FDFBFA;                                  // цвет она в формах и на главном экране
+$quiz-inp-color: #E8D4C9;                                 // цвет рамок полей в квизе, прогрессбар, фон в иконках i
+$duplicate-text-color: $form-bg-color;                       // цвет плавающих надписей
+$invalid-color: #f00;                                     // цвет сообщений об ошибке
+$white-color: #fff;                                       // обычный белый цвет, фоны в попапах
+$black-color: #000;
+$overlay-color: fade-out($main-text-color, .3);
+
+$option-page-color: #DD7D5C;                              // цвет текущей страницы (кнопки, наведение на них, иконки)

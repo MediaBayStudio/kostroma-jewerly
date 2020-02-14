@@ -26,12 +26,12 @@
 .hero-sect {
   padding-top: 300px;
   padding-bottom: 165px;
-  background-image: linear-gradient(to bottom, #fff 265px, #FCF9F7 265px);
+  background-image: linear-gradient(to bottom, #fff 265px, #FDFBFA 265px);
   background-position-x: calc((50vw - 70px) * -1); }
   .hero-sect::after {
     width: 865px;
     height: 775px;
-    background-image: url("../img/hero-img.1920.jpg");
+    background-image: url("../img/pusets/hero-img.1920.jpg");
     margin: 60px calc(50vw - 840px) 0 0; }
   .hero-sect::before {
     top: -20px;
@@ -120,12 +120,16 @@
   grid-template-columns: 360px 245px 1fr;
   -ms-grid-columns: 360px 245px 1fr; }
   .about-sect__subtitle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/span 2;
     margin: 5px 0 45px; }
   .about-sect__desc {
     width: 1120px;
     margin-bottom: 30px; }
     .about-sect__desc-block {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 2;
       grid-row: 2/span 2;
       margin-top: 15px; }
   .about-sect__img {
@@ -212,6 +216,7 @@
   .contacts-block__tel, .contacts-block__email {
     margin-bottom: 50px; }
   .contacts-block__link {
+    -ms-grid-row-align: center;
     align-self: center; }
 
 .ftr__copy-wrap {

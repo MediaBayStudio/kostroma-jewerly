@@ -10,7 +10,9 @@
 .ftr__site-link:focus,
 .ftr__dev-link:focus,
 .hdr__nav-link:focus,
-.catalog-block__more-btn:focus {
+.catalog-block__more-btn:focus,
+.delivery-card__guarantee:focus,
+.gallery-slider__img-wrap:focus {
   outline: 1px dotted #403637; }
 
 .contacts-block__link-text:hover,
@@ -76,18 +78,17 @@
   right: 100%;
   max-height: none;
   max-width: none;
-  width: 182px;
+  min-width: 182px;
   overflow: visible;
-  padding: 7px 10px;
+  padding: 10px;
   margin: 0;
   pointer-events: none;
   transition: opacity .5s; }
 
-.gallery-slider__img {
-  cursor: pointer; }
-
-.gallery-popup__close:hover > svg > path {
-  stroke: #403637; }
+.gallery-popup__close:not(.slick-disabled):hover > svg > path,
+.gallery-popup-slider__next:not(.slick-disabled):hover > svg > path,
+.gallery-popup-slider__prev:not(.slick-disabled):hover > svg > path {
+  stroke: #E8D4C9; }
 
 .gallery-slider__img-wrap:hover > .gallery-slider__img {
   -webkit-filter: blur(4px);

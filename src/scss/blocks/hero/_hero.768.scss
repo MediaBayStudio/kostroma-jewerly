@@ -2,7 +2,7 @@
 	&-sect {
 		padding-top: 520px;
 		padding-bottom: 90px;
-		background: linear-gradient(to bottom, #fff 345px, #FCF9F7 345px);
+		background: linear-gradient(to bottom, $white-color 345px, $form-bg-color 345px);
 		&::after {
 			width: 520px;
 			height: 465px;

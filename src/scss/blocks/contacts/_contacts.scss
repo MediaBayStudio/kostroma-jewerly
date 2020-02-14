@@ -3,7 +3,7 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 		overflow: hidden;
-		background:	linear-gradient(to top, #FDFBFA 440px, #fff 440px);
+		background:	linear-gradient(to top, $white-text-color 440px, $white-color 440px);
 		&::before {
 			top: 210px;
 			left: calc((100vw - 320px)/(419 - 320)*(30 - -25) + -25px);
@@ -41,7 +41,7 @@
 			display: inline-flex;
 			align-items: center;
 			&-text {
-				border-bottom: 1px solid #CBA696;
+				border-bottom: 1px solid $brown-light-color;
 				transition: border-bottom-color .5s;
 			}
 			&::after {

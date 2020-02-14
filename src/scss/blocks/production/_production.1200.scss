@@ -13,12 +13,14 @@
   }
   &-slider {
     margin-top: 95px;
+    padding-left: calc(50vw - 600px);
     &__slide {
-      padding-left: calc(50vw - 600px);
+      // padding-left: calc(50vw - 600px);
+      // padding-left: 0;
     }
     &__arrows {
-      top: 45%;
-      right: 120px;
+      // top: 45%;
+      right: 100px;
     }
   }
 }

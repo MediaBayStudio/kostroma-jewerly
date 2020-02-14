@@ -1,7 +1,7 @@
 .hero-sect {
 	padding-top: 275px;
 	padding-bottom: 110px;
-	background: linear-gradient(to bottom, #fff 260px, #FCF9F7 260px) no-repeat;
+	background: linear-gradient(to bottom, $white-color 260px, $form-bg-color 260px) no-repeat;
 	background-position-x: calc((50vw - 300px) * -1);
 	&::after {
 		width: 690px;

@@ -3,7 +3,7 @@
 		flex-wrap: wrap;
 		height: 571px;
 		max-height: 750px;
-		background: linear-gradient(to left, #fdfbfa 45%, #fff 10%);
+		background: linear-gradient(to left, $white-text-color 45%, $white-color 10%);
 		&::before {
 			top: 145px;
 			width: 585px;

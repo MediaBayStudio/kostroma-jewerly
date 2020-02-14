@@ -7,7 +7,7 @@
 			max-width: 270px;
 			margin-top: 5px;
 			padding: 0 10px 15px 0;
-			border-bottom: 1px solid #CBA696;
+			border-bottom: 1px solid $brown-light-color;
 		}
 	}
 
@@ -63,7 +63,7 @@
 			>.slick-dots {
 				display: flex;
 				justify-content: center;
-				color: $secondary-color;
+				color: $brown-text-color;
 				position: relative;
 				&::after, &::before {
 					content: '...';
@@ -92,7 +92,7 @@
 						}
 					}					
 					&.slick-active {
-						color: #000;
+						color: $black-color;
 					}
 				}
 			}
@@ -105,7 +105,7 @@
 		flex-direction: column;
 		padding: 0 20px 20px 40px;
 		font-family: Montserrat;
-		color: #987A6E;
+		color: $brown-text-color;
 		&__img {
 			display: block;
 			width: 240px;

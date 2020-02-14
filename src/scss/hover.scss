@@ -12,9 +12,11 @@
 .ftr__site-link,
 .ftr__dev-link,
 .hdr__nav-link,
-.catalog-block__more-btn {
+.catalog-block__more-btn,
+.delivery-card__guarantee,
+.gallery-slider__img-wrap {
   &:focus {
-    outline: 1px dotted $dark-color;
+    outline: 1px dotted $main-text-color;
   }
 }
 
@@ -31,8 +33,8 @@
 		opacity: 1;
 	}
 	.catalog-card__btn {
-		background-color: $orange-color;
-		color: $white-color;
+		background-color: $option-page-color;
+		color: $white-text-color;
 	}
 }
 
@@ -62,15 +64,15 @@
 }
 
 .btn-ol:hover {
-	background-color: $orange-color;
-	color: $white-color;
+	background-color: $option-page-color;
+	color: $white-text-color;
 }
 
 .delivery-card__guarantee {
 	&:hover, &.active:hover {
 		>.info-icon {
 			background-color: transparent;
-			border-color: #CBA696;
+			border-color: $brown-light-color;
 		}
 		>.info-dropdown {
 			opacity: 1;
@@ -84,7 +86,7 @@
   &:not(.slick-disabled) {
     &:hover {
       >svg>path {
-        stroke: #403637;
+        stroke: $main-text-color;
       }
     }
   }
@@ -102,8 +104,8 @@
     }
     &.active {
       >.info-icon {
-        background-color: #E8D4C9;
-        border-color: #E8D4C9;
+        background-color: $quiz-inp-color;
+        border-color: $quiz-inp-color;
       }
     }
     >.info-dropdown {
@@ -113,9 +115,9 @@
       right: 100%;
       max-height: none;
       max-width: none;
-      width: 182px;
+      min-width: 182px;
       overflow: visible;
-      padding: 7px 10px;
+      padding: 10px;
       margin: 0;
       pointer-events: none;
       transition: opacity .5s;
@@ -123,14 +125,12 @@
   }
 }
 
-.gallery-slider__img {
-  cursor: pointer;
-}
-
-.gallery-popup__close {
-  &:hover {
+.gallery-popup__close,
+.gallery-popup-slider__next,
+.gallery-popup-slider__prev {
+  &:not(.slick-disabled):hover {
     >svg>path {
-      stroke: $dark-color;
+      stroke: $quiz-inp-color;
     }
   }
 }

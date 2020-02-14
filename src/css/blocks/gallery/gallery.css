@@ -47,7 +47,7 @@
     transform: none;
     bottom: -10px; }
   .gallery-slider__prev {
-    bottom: -8px;
+    bottom: -6.5px;
     left: 45%;
     transform: translateX(-50%); }
     .gallery-slider__prev:active {
@@ -82,6 +82,8 @@
   .gallery-popup-slider {
     display: flex;
     flex-direction: column-reverse; }
+    .gallery-popup-slider__img {
+      cursor: pointer; }
     .gallery-popup-slider__arrows {
       display: flex;
       align-items: center;

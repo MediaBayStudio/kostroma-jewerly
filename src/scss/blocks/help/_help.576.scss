@@ -1,7 +1,7 @@
 .help {
   &-sect {
     padding-bottom: 40px;
-    background: #FDFBFA;
+    background: $form-bg-color;
     &__form {
       display: flex;
       flex-wrap: wrap;
@@ -10,6 +10,12 @@
       max-width: none;
       >.inp-block {
         width: 100%;
+        position: relative;
+        >label.invalid {
+          position: absolute;
+          left: 0;
+          bottom: -15px;
+        }
         &:nth-child(2) {
           margin-top: 0;
         }

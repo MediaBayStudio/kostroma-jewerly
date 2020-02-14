@@ -2,11 +2,11 @@
 	&-sect {
 		padding-top: 475px;
 		padding-bottom: 70px;
-		background: linear-gradient(to bottom, #fff 380px, #FCF9F7 380px);
+		background: linear-gradient(to bottom, $white-color 380px, $form-bg-color 380px);
 		&::after {
 			width: 450px;
 			height: 450px;
-			background-image: url('../img/hero-img.768.jpg');
+			background-image: url('../img/pusets/hero-img.768.jpg');
 		}
 		&::before {
 			top: 140px;

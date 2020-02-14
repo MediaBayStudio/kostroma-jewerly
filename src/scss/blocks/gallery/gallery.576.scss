@@ -1,3 +1,4 @@
+@import '../../assets/colors';
 .gallery {
   &-slider {
     &__img-wrap {
@@ -28,7 +29,7 @@
             display: inline-block;
             width: calc(100% - 40px);
             height: 100%;
-            background-color: rgba(64, 54, 55, 0.7);
+            background-color: $overlay-color;
             transition: opacity .5s;
             opacity: 1;
             pointer-events: none;

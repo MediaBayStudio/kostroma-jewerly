@@ -8,7 +8,7 @@
 
 body {
   font: 16px/normal Playfair Display;
-  color: $dark-color;
+  color: $main-text-color;
 }
 
 .slick-track {
@@ -40,7 +40,7 @@ body {
 .site-link {
   display: inline-flex;
   align-items: center;
-  border-bottom: 1px solid #CBA696;
+  border-bottom: 1px solid $brown-light-color;
   line-height: 150%;
   &::after {
     content: '';
@@ -56,8 +56,8 @@ body {
   height: 35px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: $dark-color;
-  border-left-color: $dark-color;
+  border-top-color: $main-text-color;
+  border-left-color: $main-text-color;
   animation: spin .5s linear infinite;
   &-bg {
     display: none;
@@ -68,7 +68,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: $white-color;
     z-index: 12;
     &.active {
       display: flex;
@@ -84,7 +84,7 @@ body {
     position: absolute;
     font-size: 60px;
     letter-spacing: 0.01em;
-    color: #FCF9F7;
+    color: $duplicate-text-color;
     z-index: 1;
     pointer-events: none;
   }
@@ -105,7 +105,7 @@ button {
 }
 
 .check-inp-block.focus {
-  outline: 1px dotted $dark-color;
+  outline: 1px dotted $main-text-color;
 }
 
 .logo {
@@ -128,7 +128,7 @@ button {
   align-items: center;
   justify-content: space-between;
   font-size: 0;
-  color: $secondary-color;
+  color: $brown-text-color;
   &.active {
     >.top {
       transform: translateY(8px) rotate(-45deg);
@@ -198,7 +198,7 @@ button {
   height: calc(var(--vh, 1vh) * 100); 
   padding: 35px 20px;
   font-size: 16px;
-  background-color: #fff;
+  background-color: $white-color;
   z-index: 5;
   overflow: auto;
   &::before {
@@ -236,7 +236,7 @@ button {
   &__site-link {
     display: inline-flex;
     align-items: center;
-    border-bottom: 1px solid #CBA696;
+    border-bottom: 1px solid $brown-light-color;
     line-height: 150%;
     margin-top: 10px;
     &::after {
@@ -259,8 +259,8 @@ button {
 }
 
 .btn {
-  background-color: $orange-color;
-  color: $white-color;
+  background-color: $option-page-color;
+  color: $white-text-color;
   &::after, &::before {
     content: '';
     position: absolute;
@@ -268,7 +268,7 @@ button {
     right: -5px;
     width: 100%;
     height: 100%;
-    border: 1px solid $orange-color;
+    border: 1px solid $option-page-color;
     pointer-events: none;
     transition: all .5s;
   }
@@ -279,8 +279,8 @@ button {
 }
 
 .btn-ol {
-  color: $dark-color;
-  border: 1px solid $orange-color;
+  color: $main-text-color;
+  border: 1px solid $option-page-color;
   transition: background-color .5s, color .5s;
 }
 
@@ -302,8 +302,10 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 14px;
-  height: 5px;
+  // width: 14px;
+  // height: 5px;
+  width: 18.2px;
+  height: 6.5px;
   position: absolute;
   top: 50%;
   right: 0;
@@ -311,14 +313,15 @@ button {
   z-index: 1;
   >svg {
     >path {
-      stroke: #CBA696;
+      stroke: $brown-light-color;
       stroke-width: 2;
     }
   }
 }
 
 .prev {
-  margin-bottom: -5px;
+  // margin-bottom: -5px;
+  margin-bottom: -8px;
   right: auto;
   left: 0;
 }
@@ -329,10 +332,10 @@ button {
   justify-content: center;
   width: 11px;
   height: 11px;
-  background-color: #E8D4C9;
+  background-color: $quiz-inp-color;
   border: 1px solid transparent;
   font: 600 8px Montserrat;
-  color: #CBA696;
+  color: $brown-light-color;
   margin-right: 5px;
   transition: background-color .35s, border-color .35s;
 }
@@ -366,17 +369,18 @@ button {
 
 label.invalid {
   font-size: 8px;
-  color: red;
+  color: $invalid-color;
   text-align: center;
   margin-top: 5px;
 }
 
 .check-inp-block {
-  font: 8px Montserrat;
+  width: 101%;
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  font: 8px Montserrat;
   &__inp {
     margin: 0;
     opacity: 0;
@@ -386,7 +390,7 @@ label.invalid {
   }
   &__inp:checked {
     ~.check-inp-block__pseudo-inp {
-      background-color: #CBA696;
+      background-color: $brown-light-color;
     }
     ~.check-inp-block__lbl {
       text-shadow: 0px 0px .1px;
@@ -395,13 +399,15 @@ label.invalid {
   &__pseudo-inp {
     font-size: 0;
     margin-right: 5px;
-    width: 8px;
-    height: 8px;
+    // width: 8px;
+    // height: 8px;
+    width: 10px;
+    height: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    border: 1px solid #CBA696;
+    background-color: $white-color;
+    border: 1px solid $brown-light-color;
     transition: background-color .4s;
     &::after {
       content: '';
@@ -421,7 +427,7 @@ label.invalid {
     pointer-events: none;
     transition: font-size .4s, color .4s, top .4s;
     font-size: 12px;
-    color: #CBA696;
+    color: $brown-light-color;
     top: -17px;
   }
 }
@@ -429,13 +435,13 @@ label.invalid {
 .inp {
   border: none;
   background: none;
-  border-bottom: 1px solid #987A6E;
-  color: #403637;
+  border-bottom: 1px solid $brown-text-color;
+  color: $main-text-color;
   font-family: inherit;
   &:placeholder-shown {
     ~.inp-block__lbl {
       top: -1px;
-      color: #987A6E;
+      color: $brown-text-color;
       font-size: 16px;
     }    
   }
@@ -443,7 +449,7 @@ label.invalid {
     border-bottom-color: currentColor;
     ~.inp-block__lbl {
       font-size: 12px;
-      color: #CBA696;
+      color: $brown-light-color;
       top: -17px;
     }
   }
@@ -458,7 +464,7 @@ label.invalid {
   height: 100%;
   top: 0;
   left: 0; 
-  background: rgba(64, 54, 55, 0.7) !important;
+  background: $overlay-color !important;
   backdrop-filter: blur(1px);
   z-index: 2;
   &.active {
@@ -483,7 +489,7 @@ label.invalid {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: $white-color;
   text-align: center;
 }
 
@@ -510,12 +516,12 @@ label.invalid {
   }
   &__title {
     font: 600 18px Montserrat;
-    color: #987A6E;
+    color: $brown-text-color;
     order: 1;
   }
   &__desc {
     font: 13.5px/120% Montserrat;
-    color: #987A6E;
+    color: $brown-text-color;
     order: 3;
   }
   &__product {
@@ -552,7 +558,7 @@ label.invalid {
           top: -7.5px;
           left: 0;
           width: 80%;
-          border-bottom: 1px solid #CBA696;
+          border-bottom: 1px solid $brown-light-color;
         }
       }
     }
@@ -580,7 +586,7 @@ label.invalid {
   width: 280px;
   padding: 20px 50px 45px;
   z-index: 5;
-  border: 1px solid #987A6E;
+  border: 1px solid $brown-text-color;
   &__close {
     width: 15px;
     height: 15px;
@@ -601,7 +607,7 @@ label.invalid {
   &__desc {
     margin-top: 15px;
     font: 15px/130% Montserrat;
-    color: #987A6E;
+    color: $brown-text-color;
   }
 }
 
@@ -616,9 +622,9 @@ label.invalid {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #fff;
+    background-color: $white-color;
     font-family: Montserrat;
-    color: #987A6E;
+    color: $brown-text-color;
     overflow: auto;
     z-index: 5;
     display: none; 
@@ -669,6 +675,11 @@ label.invalid {
         font: 500 14px/140% Montserrat;
       }
       .check-inp-block  {
+        >label.invalid {
+          max-width: 200px;
+          text-align: left;
+          margin-left: 20px;
+        }
         >.check-inp-block__pseudo-inp {
           margin-right: 10px;
           width: 10px;
@@ -705,13 +716,13 @@ label.invalid {
 
   &-form {
     min-height: 250px;
-    color: #43393A;
+    color: $main-text-color;
     display: flex;
     flex-direction: column;
     &__title {
       margin-bottom: 10px;
       font-family: Playfair Display;
-      color: #403637;
+      color: $main-text-color;
     }
     &__btn {
       display: flex;
@@ -723,8 +734,8 @@ label.invalid {
       margin: 14px auto 20px;
       font: 600 16px Playfair Display;
       letter-spacing: 0.02em;
-      color: #fff;
-      background-color: #D79081;
+      color: $white-color;
+      background-color: $option-page-color;
       >svg {
         width: 20px;
         height: 6px;
@@ -742,14 +753,14 @@ label.invalid {
       justify-content: flex-start;
       padding: 12px 8px;
       margin-bottom: 12px;
-      border: 1px solid #E8D4C9;
+      border: 1px solid $quiz-inp-color;
       font-size: 14px;
       &-text {
         pointer-events: none;
       }
       &.active {
         >.quiz-form__pseudo-inp {
-          box-shadow: inset 0 0 0 1.75px #fff;
+          box-shadow: inset 0 0 0 1.75px $white-color;
         }
       }
     }
@@ -761,7 +772,7 @@ label.invalid {
       padding: 0;
       &:checked {
         +.quiz-form__pseudo-inp {
-          box-shadow: inset 0 0 0 1.75px #fff;
+          box-shadow: inset 0 0 0 1.75px $white-color;
         }
       }
     }
@@ -771,8 +782,8 @@ label.invalid {
       height: 14px;
       margin-right: 11px;
       border: inherit;
-      background-color: #E8D4C9;
-      box-shadow: inset 0 0 0 10px #fff;
+      background-color: $quiz-inp-color;
+      box-shadow: inset 0 0 0 10px $white-color;
       transition: box-shadow .35s;
       pointer-events: none;
     }
@@ -782,14 +793,14 @@ label.invalid {
 .progress {
   &__text {
     font-size: 14px;
-    color: #403637;
+    color: $main-text-color;
   }
 
   &__block {
     margin-top: 10px;
     height: 6px;
     border-radius: 5px;
-    background-color: #E8D4C9;
+    background-color: $quiz-inp-color;
     position: relative;
     overflow: hidden;
   }
@@ -801,7 +812,8 @@ label.invalid {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #D79081;
+    background-color: $option-page-color;
+    will-change: width;
     transition: width .25s;
   }
 }

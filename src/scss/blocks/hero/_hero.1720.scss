@@ -1,12 +1,12 @@
 .hero-sect {
 	padding-top: 300px;
 	padding-bottom: 165px;
-	background-image: linear-gradient(to bottom, #fff 265px, #FCF9F7 265px);
+	background-image: linear-gradient(to bottom, $white-color 265px, $form-bg-color 265px);
 	background-position-x: calc((50vw - 70px) * -1);
 	&::after {
 		width: 865px;
 		height: 775px;
-		background-image: url('../img/hero-img.1920.jpg');
+		background-image: url('../img/pusets/hero-img.1920.jpg');
 		margin: 60px calc(50vw - 840px) 0 0;
 	}
 	&::before {

@@ -39,12 +39,23 @@
 			if (!products[i]) {
 				break;
 			}
-			let str =
-			'<div class="catalog-card catalog-block__catalog-card"><img src="' + products[i].img + '" alt="' +
-			products[i].title + '" class="catalog-card__img"><strong class="catalog-card__title">' +
-			products[i].article + ' ' + products[i].title + '</strong><b class="catalog-card__desc">' + 
-			products[i].gems + '</b><div class="catalog-card__bottom flex"><b class="catalog-card__price">' +
-			products[i].price + '.-</b><button type="button" class="catalog-card__btn btn-ol"><span class="catalog-card__btn-text">Примерить</span></button></div>';
+			let {img, title, gems, price} = products[i],
+				str =
+					`<div class="catalog-card catalog-block__catalog-card">
+						<img src="${img}" alt="${title}" class="catalog-card__img">
+						<strong class="catalog-card__title">${title}</strong>
+						<b class="catalog-card__desc">${gems}</b>
+						<div class="catalog-card__bottom flex">
+							<b class="catalog-card__price">${price}.-</b>
+							<button type="button" class="catalog-card__btn btn-ol">
+								<span class="catalog-card__btn-text">Примерить</span>
+							</button>
+						</div>`;
+			// '<div class="catalog-card catalog-block__catalog-card"><img src="' + products[i].img + '" alt="' +
+			// products[i].title + '" class="catalog-card__img"><strong class="catalog-card__title">' +
+			// products[i].article + ' ' + products[i].title + '</strong><b class="catalog-card__desc">' + 
+			// products[i].gems + '</b><div class="catalog-card__bottom flex"><b class="catalog-card__price">' +
+			// products[i].price + '.-</b><button type="button" class="catalog-card__btn btn-ol"><span class="catalog-card__btn-text">Примерить</span></button></div>';
 			
 			catalogBlock.insertAdjacentHTML('beforeend', str);
 		}

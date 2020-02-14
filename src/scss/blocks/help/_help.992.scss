@@ -2,12 +2,11 @@
   &-sect {
     padding-bottom: 80px;
     background:
-      linear-gradient(to left, #FDFBFA, #FDFBFA) top right/calc((100vw - 992px)/(1230 - 992)*(735 - 620) + 620px) 92.5% no-repeat,
-      url('../img/help-sect-img.jpg') bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px)/450px 300px no-repeat;
+      linear-gradient(to left, $form-bg-color, $form-bg-color) top right/calc((100vw - 992px)/(1230 - 992)*(735 - 620) + 620px) 92.5% no-repeat,
+      url('../img/pusets/help-sect-img.jpg') bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px)/450px 300px no-repeat;
       &::before {
         display: inline-flex;
         font-size: 130px;
-        color: rgba(232, 212, 201, 0.15);
         z-index: -1;
         top: 0;
         left: calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px);

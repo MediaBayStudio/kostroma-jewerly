@@ -2,7 +2,7 @@
 	&-sect {
 		padding-top: 295px;
 		padding-bottom: 50px;
-		background:	linear-gradient(to bottom, #fff 200px, #FCF9F7 200px);
+		background:	linear-gradient(to bottom, $white-color 200px, $form-bg-color 200px);
 		&::before {
 			top: 88px;
 			left: calc((100vw - 420px)/(320 - 420)*(-38 - 60) + 60px);
@@ -17,7 +17,7 @@
 			right: 0;
 			width: 247px;
 			height: 267px;
-			background:url('../img/hero-img.320.jpg') no-repeat;
+			background:url('../img/pusets/hero-img.320.jpg') no-repeat;
 			z-index: 2;
 		}
 		&__title {

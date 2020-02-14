@@ -1,7 +1,8 @@
 .production {
   &-slider {
+    padding-left: calc(50vw - 480px);
     &__slide {
-      padding-left: calc(50vw - 480px);
+      // padding-left: calc(50vw - 480px);
     }
   }
 }

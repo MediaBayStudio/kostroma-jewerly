@@ -1,6 +1,6 @@
 .hero {
 	&-sect {
-		background: linear-gradient(to bottom, #fff 250px, #FCF9F7 250px);
+		background: linear-gradient(to bottom, $white-color 250px, $form-bg-color 250px);
 		&::after {
 			width: 300px;
 			height: 300px;

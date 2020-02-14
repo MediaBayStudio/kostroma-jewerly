@@ -7,17 +7,20 @@
   }
   &-slider {
     margin-top: 45px;
-    &__arrows {
-      top: 53%;
+    padding-left: calc(50vw - 305px);
+    &::before {
+      top: 100px;
     }
+
     &__slide {
-      padding-left: calc(50vw - 305px);
-      &::before {
-        top: 100px;
-      }
+      // padding-left: calc(50vw - 305px);
       &-square {
         margin: 35px 0 10px 20px;
       }
+    }
+
+    &__arrows {
+      top: 87px;
     }
   }
 }
