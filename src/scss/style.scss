@@ -42,6 +42,7 @@ body {
   align-items: center;
   border-bottom: 1px solid $brown-light-color;
   line-height: 150%;
+  transition: border-bottom-color .35s;
   &::after {
     content: '';
     display: inline-block;

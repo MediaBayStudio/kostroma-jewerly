@@ -53,7 +53,7 @@
 .next:not(.slick-disabled):hover > svg > path {
   stroke: #403637; }
 
-.delivery-card__desc {
+.delivery-card__desc:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start; }
@@ -96,7 +96,7 @@
 
 .contacts-block__link-text:hover,
 .catalog-block__more-btn:hover,
-.ftr__site-link:hover {
+.site-link:hover {
   border-bottom-color: transparent; }
 
 .catalog-block__catalog-card:hover::after {

@@ -88,7 +88,7 @@
 }
 
 .delivery-card {
-  &__desc {
+  &__desc:last-child {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -145,10 +145,9 @@
   }
 }
 
-
 .contacts-block__link-text,
 .catalog-block__more-btn,
-.ftr__site-link {
+.site-link {
   &:hover {
     border-bottom-color: transparent;
   } 

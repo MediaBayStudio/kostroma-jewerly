@@ -259,7 +259,8 @@ body {
   display: inline-flex;
   align-items: center;
   border-bottom: 1px solid #CBA696;
-  line-height: 150%; }
+  line-height: 150%;
+  transition: border-bottom-color .35s; }
   .site-link::after {
     content: '';
     display: inline-block;
@@ -1533,6 +1534,8 @@ label.invalid {
     margin-bottom: 20px;
     border-bottom: 1px solid;
     transition: border-bottom-color .5s; }
+    .ftr__site-link::after {
+      display: none; }
   .ftr__dev-link, .ftr__privacy-policy-btn {
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .5s; }
