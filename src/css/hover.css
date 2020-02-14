@@ -53,31 +53,27 @@
 .next:not(.slick-disabled):hover > svg > path {
   stroke: #403637; }
 
-.delivery-card:last-child > .delivery-card__desc {
+.delivery-card__guarantee {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; }
-
-.delivery-card__guarantee:active {
-  transform: none; }
-
-.delivery-card__guarantee.active > .info-icon {
-  background-color: #E8D4C9;
-  border-color: #E8D4C9; }
-
-.delivery-card__guarantee > .info-dropdown {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 100%;
-  max-height: none;
-  max-width: none;
-  min-width: 182px;
-  overflow: visible;
-  padding: 10px;
-  margin: 0;
-  pointer-events: none;
-  transition: opacity .5s; }
+  overflow: visible; }
+  .delivery-card__guarantee:active {
+    transform: none; }
+  .delivery-card__guarantee.active > .info-icon {
+    background-color: #E8D4C9;
+    border-color: #E8D4C9; }
+  .delivery-card__guarantee > .info-dropdown {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    max-height: none;
+    max-width: none;
+    min-width: 182px;
+    overflow: visible;
+    padding: 10px;
+    margin: 0;
+    pointer-events: none;
+    transition: opacity .5s; }
 
 .about-sect__preview-img-wrap:hover::after {
   border-color: transparent transparent transparent #403637; }

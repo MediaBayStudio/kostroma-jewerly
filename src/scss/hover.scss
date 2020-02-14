@@ -88,12 +88,14 @@
 }
 
 .delivery-card {
-  &:last-child>.delivery-card__desc {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  // &:last-child>.delivery-card__desc {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  // }
   &__guarantee {
+    display: flex;
+    overflow: visible;
     &:active {
       transform: none;
     }
