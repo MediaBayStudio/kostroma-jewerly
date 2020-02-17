@@ -229,12 +229,16 @@ body {
   font: 16px/normal Playfair Display;
   color: #403637; }
 
-.slick-track {
-  display: flex;
+.slick-slider {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  touch-action: pan-y; }
+
+.slick-track {
+  display: flex;
+  transform: translate3d(0, 0, 0); }
 
 .flex {
   display: flex;
@@ -1478,7 +1482,8 @@ label.invalid {
       .gallery-popup-slider__slide-wrap {
         padding: 0 10px;
         width: 300px;
-        height: 285px; }
+        height: 285px;
+        position: relative; }
         .gallery-popup-slider__slide-wrap > .loader-bg {
           display: flex;
           background: none;

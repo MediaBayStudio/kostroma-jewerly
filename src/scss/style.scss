@@ -11,9 +11,14 @@ body {
   color: $main-text-color;
 }
 
+.slick-slider {
+  user-select: none;
+  touch-action: pan-y;
+}
+
 .slick-track {
   display: flex;
-  user-select: none;
+  transform: translate3d(0, 0, 0);
 }
 
 .flex {
