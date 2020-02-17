@@ -36,6 +36,21 @@ window.addEventListener('resize', () => {
 let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+let inputs = document.querySelectorAll('.inp');
+
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('focus', function() {
+    if (!this.classList.contains('focus')) {
+      this.classList.add('focus');
+    }
+  });
+  inputs[i].addEventListener('blur', function() {
+    if (this.classList.contains('focus') && (this.value === '' || this.value === '+7')) {
+      this.classList.remove('focus');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function(){
 	;(function() {
 		hdr = document.querySelector('.hdr');
@@ -72,13 +87,14 @@ document.addEventListener('DOMContentLoaded', function(){
 			V = .25;
 
 
-
-					for (let i = 0; i < linkNav.length; i++) {
+						for (let i = 0; i < linkNav.length; i++) {
 			linkNav[i].addEventListener('click', function() {
-				event.preventDefault();
-					let w = window.pageYOffset,
+
+					event.preventDefault();
+
+						let wndwY = window.pageYOffset,
 					hash = this.href.replace(/[^#]*(.*)/, '$1'),
-					t = document.querySelector(hash).getBoundingClientRect().top,
+					targetTop = document.querySelector(hash).getBoundingClientRect().top - hdr.offsetHeight,
 					start = null;
 
 					requestAnimationFrame(step);
@@ -88,11 +104,12 @@ document.addEventListener('DOMContentLoaded', function(){
 						start = time;
 					}
 					let progress = time - start,
-						r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+						r = (targetTop < 0 ? Math.max(wndwY - progress/V, wndwY + targetTop) : Math.min(wndwY + progress/V, wndwY + targetTop));
 
 						window.scrollTo(0, r);
 
-						if (r != w + t) {
+
+							if (r != wndwY + targetTop) {
 						requestAnimationFrame(step);
 					} else {
 						location.hash = hash;
@@ -101,9 +118,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		}
 
-
-
-			})();
+		})();
 	;(function() {
 		tryingPopup = new SimplePopup({
 			popup: '.trying-popup',
@@ -471,10 +486,9 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   })();
   ;(function() {
-    console.log('popup create?');
     let galleryPopup = new SimplePopup({
       popup: '.gallery-popup',
-      openBtn: '.gallery-slider__img',
+      openBtn: '.gallery-slider__img-wrap',
       closeBtn: '.gallery-popup__close',
       overlay: '.overlay',
       popupAnimation: 'fadeOut 0.5s',
@@ -485,24 +499,17 @@ document.addEventListener('DOMContentLoaded', function(){
       galleryThumbs = document.querySelectorAll('.gallery-slider__img'),
       gallerySlider = document.querySelector('.gallery-popup-slider');
 
-      console.log(galleryPopup);
 
-      galleryPopup.addEventListener('beforeopen', function() {
-      console.log(event);
+        galleryPopup.addEventListener('beforeopen', function() {
       let initialSlide;
 
             for (let i = 0; i < galleryThumbs.length; i++) {
         if (!gallerySlider.classList.contains('slick-slider')) {
-          let img = document.createElement('img'),
-            wrap = document.createElement('figure');
+          let str = `<figure class="gallery-popup-slider__slide-wrap"><img src="${galleryThumbs[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
 
-            img.setAttribute('src', galleryThumbs[i].src);
-          img.classList.add('gallery-popup-slider__slide');
-          wrap.classList.add('gallery-popup-slider__slide-wrap');
-          wrap.appendChild(img);
 
-          gallerySlider.appendChild(wrap);
 
+            gallerySlider.insertAdjacentHTML('beforeend', str);
         }
 
           if (this.caller === galleryThumbs[i]) {

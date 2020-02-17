@@ -32,9 +32,9 @@
     .gallery-popup-slider__arrows {
       width: calc(100% + 175px);
       position: absolute;
-      top: 200px;
+      top: calc((100% / 2) - 20px);
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       z-index: 1; }
     .gallery-popup-slider__next, .gallery-popup-slider__prev {
       width: 30px;

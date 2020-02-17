@@ -3,35 +3,15 @@
 @import 'assets/mixins';
 
 .burger-btn {
-  &.active {
-    >.top {
-      transform: translateY(8px) rotate(-45deg);
-    }
-    >.middle {
-      width: 23px;
-      transform: translateY(-1px) rotate(45deg);
-      opacity: 0;
-    }
-    >.bottom {
-      transform: translateY(-10px) rotate(45deg);
-    }
-  }
-  &-line {
-    width: 32px;
-    &.middle {
-      width: 23px;
-      margin: 6.25px 0;
-      transition: .5s opacity .25s, transform .5s, width .5s;
-    }
-  }
+  width: 32px;
 }
 
 .mobile-menu {
   width: 420px;
   padding: 80px;
   &::before {
-    top: 400px;
-    left: 50px;
+    bottom: 31%;
+    left: calc((100vw - 576px)/(768 - 576)*(65 - 48) + 48px);
   }
   &__logo {
     &::before {

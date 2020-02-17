@@ -40,11 +40,11 @@
     <noindex class="noscript">Для полноценного использования сайта включите JavaScript в настройках вашего браузера.</noindex>
   </noscript>
 	<header class="hdr container flex">
-		<a href="/" class="logo hdr__logo" title="На главную">
+		<div class="logo hdr__logo">
 			<span class="logo__text">Бриллианты Костромы</span>
-		</a>
+		</div>
 		<nav class="hdr__nav">
-			<a href="/" class="hdr__nav-link">Главная</a>
+			<!-- <a href="/" class="hdr__nav-link">Главная</a> -->
 			<a href="#catalog" class="hdr__nav-link">Каталог</a>
 			<a href="#delivery" class="hdr__nav-link">Примерка и доставка</a>
 			<a href="#about" class="hdr__nav-link">О нас</a>
@@ -52,16 +52,18 @@
 			<a href="#contacts" class="hdr__nav-link">Контакты</a>
 		</nav>
 		<button type="button" class="burger-btn">
-			<span class="burger-btn-line top">-</span>
-			<span class="burger-btn-line middle">-</span>
-			<span class="burger-btn-line bottom">-</span>
+			<svg viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect class="burger-btn-line top"/>
+				<rect class="burger-btn-line middle" x="4" y="7"/>
+				<rect class="burger-btn-line bottom" y="14"/>
+			</svg>
 		</button>
 		<aside class="mobile-menu hdr__mobile-menu duplicate-title" data-title="Pusets">
-			<a href="/" class="logo mobile-menu__logo" title="На главную">
+			<div class="logo mobile-menu__logo">
 				<span class="logo__text">Бриллианты Костромы</span>
-			</a>
+			</div>
 			<nav class="mobile-menu__nav">
-				<a href="#start" class="mobile-menu__link">Главная</a>
+				<!-- <a href="#start" class="mobile-menu__link">Главная</a> -->
 				<a href="#catalog" class="mobile-menu__link">Каталог</a>
 				<a href="#delivery" class="mobile-menu__link">Примерка и доставка</a>
 				<a href="#about" class="mobile-menu__link">О нас</a>
@@ -75,7 +77,7 @@
 		</aside>
 	</header>
 
-	<section id="start" class="hero-sect container duplicate-title" data-title="Pusets">
+	<section class="hero-sect container duplicate-title" data-title="Pusets">
 		<h1 class="hero-sect__title">Пусеты</h1>
 		<span class="hero-sect__subtitle">С  бриллиантами и драгоценными камнями</span>
 		<button type="button" class="hero-sect__btn btn"><span class="hero-sect__btn-text">Подобрать</span></button>
@@ -100,31 +102,31 @@
 			<div class="delivery-card">
 				<img src="./img/pusets/delivery-1.svg" alt="" class="delivery-card__img">
 				<b class="delivery-card__title">Примерка</b>
-				<p class="delivery-card__desc">Наш курьер привезет вам понравившиеся украшения и вы сможете их примерить в комфортной обстановке. Украшения, которые вам не подойдут курьер заберет с собой.</p>
+				<p class="delivery-card__desc">Наш курьер привезет вам понравившиеся украшения и вы сможете их примерить в комфортной обстановке. Украшения, которые вам не подойдут, курьер заберет с собой.</p>
 			</div>
 			<div class="delivery-card">
 				<img src="./img/pusets/delivery-2.svg" alt="" class="delivery-card__img">
 				<b class="delivery-card__title">Доставка</b>
-				<p class="delivery-card__desc">Доставка осуществялется службой <q>Pony Express</q> в пункты выдачи и курьером на дом. Курьер свяжется с Вами для уточнения время и места доставки. Примерный срок доставки 7 рабочих дней.</p>
+				<p class="delivery-card__desc">Доставка осуществляется службой <q>Pony Express</q> в пункты выдачи и курьером на дом. Курьер свяжется с Вами для уточнения времени и места доставки. Примерный срок доставки 7 рабочих дней.</p>
 			</div>
 			<div class="delivery-card">
 				<img src="./img/pusets/delivery-3.svg" alt="" class="delivery-card__img">
 				<b class="delivery-card__title">Оплата</b>
-				<p class="delivery-card__desc">Оплата производиться при получении товара двумя удобными вам способами: <br>– наличный расчет <br>– банковская карта</p>
+				<p class="delivery-card__desc">Оплата производится при получении товара двумя удобными вам способами: <br>– наличный расчет <br>– банковская карта</p>
 			</div>
 			<div class="delivery-card">
 				<img src="./img/pusets/delivery-4.svg" alt="" class="delivery-card__img">
 				<b class="delivery-card__title">Гарантии</b>
-				<p class="delivery-card__desc"><span>Украшения ювелирного завода “Брилианнты Костромы” имеют все необходимые пометки о подлинности:</span>
+				<p class="delivery-card__desc"><span>Украшения ювелирного завода <q>Бриллианты Костромы</q> имеют все необходимые пометки о подлинности:</span>
 					<button type="button" class="delivery-card__guarantee">
 						<i class="info-icon">i</i>
 						<span class="info-text">Бирку</span>
-						<span class="info-dropdown">сертефикат соответсвия заявленным характеристикам камней и металла</span>
+						<span class="info-dropdown">сертификат соответсвия заявленным характеристикам камней и металла</span>
 					</button>
 					<button type="button" class="delivery-card__guarantee">
 						<i class="info-icon">i</i>
 						<span class="info-text">Именник</span>
-						<span class="info-dropdown">персональный знак завода-изготовителя, зарегестрированный в Пробирной Палате РФ. <q>Брилльанты Костромы</q> – ВЪБ</span>
+						<span class="info-dropdown">персональный знак завода-изготовителя, зарегистрированный в Пробирной Палате РФ. <q>Бриллианты Костромы</q> – ВЪБ</span>
 					</button>
 					<button type="button" class="delivery-card__guarantee">
 						<i class="info-icon">i</i>
@@ -300,11 +302,11 @@
 	</section>
 
 	<footer class="ftr container">
-		<a href="/" class="logo ftr__logo" title="На главную">
+		<div class="logo ftr__logo">
 			<span class="logo__text">Бриллианты Костромы</span>
-		</a>
+		</div>
 		<div class="ftr__copy-wrap">
-			<span class="ftr__copy">&copy; 2014 - 2019 <q>Бриллианты Костромы</q></span>
+			<span class="ftr__copy">&copy; 2020 <q>Бриллианты Костромы</q></span>
 			<button type="button" class="ftr__privacy-policy-btn">Политика конфеденциальности</button>
 		</div>
 		<div class="ftr__links-wrap">
@@ -440,6 +442,9 @@
 	</div>
 
 	<div class="video-popup">
+		<div class="loader-bg">
+				<div class="loader"></div>
+			</div>
 		<button type="button" class="video-popup__close">
 			<svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M15 1L1 15M1 1L15 15" stroke="#987A6E"/>

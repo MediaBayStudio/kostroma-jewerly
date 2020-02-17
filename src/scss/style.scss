@@ -124,34 +124,34 @@ button {
 }
 
 .burger-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  width: 26px;
   font-size: 0;
   color: $brown-text-color;
+  >svg {
+    overflow: visible;
+  }
   &.active {
-    >.top {
-      transform: translateY(8px) rotate(-45deg);
+    .top {
+      transform: translate(2px, -2px) rotate(45deg);
     }
-    >.middle {
+    .middle {
       width: 26px;
-      transform: rotate(45deg);
-      border-bottom-width: 2.25px;
+      transform: translate(-6px, 15px) rotate(-45deg);
     }
-    >.bottom {
-      transform: translateY(-7px) rotate(45deg);
+    .bottom {
+      transform: translate(-8px, 7px) rotate(-45deg);
     }
   }
   &-line {
-    width: 26px;
-    border-bottom: 2.5px solid;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
     pointer-events: none;
+    fill: currentColor;
     transform: translateY(0px) rotate(0deg);
     transition: transform .5s, opacity .5s, width .5s;
     &.middle {
-      width: 19px;
-      margin: 5px 0;
+      width: 73%;
     }
   }
 }
@@ -205,9 +205,12 @@ button {
   &::before {
     font-size: 200px;
     transform: rotate(-90deg);
-    top: 150px;
-    left: -130px;
+    bottom: 52%;
+    height: 0.57em;
+    line-height: 0.6em;
+    overflow: hidden;
     z-index: -1;
+    left: calc((100vw - 320px)/(575 - 320)*(48 - -131) + -131px);
   }
   &__logo {
     &::before {
@@ -440,14 +443,12 @@ label.invalid {
   border-bottom: 1px solid $brown-text-color;
   color: $main-text-color;
   font-family: inherit;
-  &:placeholder-shown {
-    ~.inp-block__lbl {
-      top: -1px;
-      color: $brown-text-color;
-      font-size: 16px;
-    }    
+  ~.inp-block__lbl {
+    top: -1px;
+    color: $brown-text-color;
+    font-size: 16px;
   }
-  &:focus {
+  &.focus {
     border-bottom-color: currentColor;
     ~.inp-block__lbl {
       font-size: 12px;
@@ -456,7 +457,7 @@ label.invalid {
     }
   }
   &::placeholder {
-    font-size: 0;
+    color: rgba(0,0,0,0);
   }
 }
 
@@ -830,6 +831,18 @@ label.invalid {
       >svg>path {
         stroke: $white-color;
       }
+    }
+    .loader {
+      border-top-color: $quiz-inp-color;
+      border-left-color: $quiz-inp-color;
+      &-bg {
+        display: flex;
+        background-color: transparent;
+        z-index: 2;
+      }
+    }
+    >iframe {
+      z-index: 3;
     }
   }
 }

@@ -35,3 +35,19 @@ window.addEventListener('resize', () => {
 
 let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+//for ie
+let inputs = document.querySelectorAll('.inp');
+
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('focus', function() {
+    if (!this.classList.contains('focus')) {
+      this.classList.add('focus');
+    }
+  });
+  inputs[i].addEventListener('blur', function() {
+    if (this.classList.contains('focus') && (this.value === '' || this.value === '+7')) {
+      this.classList.remove('focus');
+    }
+  });
+}

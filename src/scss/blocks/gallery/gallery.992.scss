@@ -26,8 +26,10 @@
       &__slide {
         &-wrap {
           padding: 0 50px;
-          width: 655px;
-          height: 585px;
+          // width: 655px;
+          // height: 585px;
+          width: 650px;
+          height: 490px;
           &::after {
             left: 50px;
             width: calc(100% - 100px);
@@ -35,7 +37,6 @@
         }
       }
       &__arrows {
-        top: 292.5px;
         width: calc(100% + 250px);
       }
     }
