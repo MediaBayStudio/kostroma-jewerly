@@ -1,6 +1,6 @@
 @import 'assets/colors';
 // colors and backgrounds for page
-$option-page-color: #034C3B;
+$option-page-color: #DD7D5C;
 
 .btn {
   background-color: $option-page-color;
@@ -43,18 +43,7 @@ $option-page-color: #034C3B;
   background-color: $option-page-color;
 }
 
-
-
-@media (min-width: 575.98px) {
-  .hero-sect::after {
-    background-image: url('../img/pusets/hero-img.768.jpg');
-  }
-}
-
 @media (min-width: 991.98px) {
-  .hero-sect::after {
-    background-image: url('../img/pusets/hero-img.1440.jpg');
-  }
   .help-sect {
     background-image: linear-gradient(to left, $form-bg-color, $form-bg-color), url('../img/pusets/help-sect-img.jpg');
   }
