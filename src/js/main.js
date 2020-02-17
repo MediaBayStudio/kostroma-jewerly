@@ -296,7 +296,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		let count,
 		newCount,
 		start,
-		slicked,
 		resized = {
 			'1230': true,
 			'992': true,

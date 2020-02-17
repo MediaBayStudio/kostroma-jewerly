@@ -1165,7 +1165,7 @@ label.invalid {
     position: relative;
     z-index: 2; }
     .delivery-card__guarantee.active > .info-dropdown {
-      max-height: 61px;
+      max-height: 68px;
       padding-top: 10px;
       padding-bottom: 10px; }
     .delivery-card__guarantee.active > .info-icon {
