@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             for (let i = 0; i < galleryThumbs.length; i++) {
         if (!gallerySlider.classList.contains('slick-slider')) {
-          let str = `<figure class="gallery-popup-slider__slide-wrap"><img src="${galleryThumbs[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
+          let str = `<figure class="gallery-popup-slider__slide-wrap"><div class="loader-bg"><div class="loader"></div></div><img src="${galleryThumbs[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
 
 
 

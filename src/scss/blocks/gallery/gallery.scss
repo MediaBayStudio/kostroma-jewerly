@@ -139,6 +139,15 @@
           padding: 0 10px;
           width: 300px;
           height: 285px;
+          >.loader-bg {
+            display: flex;
+            background: none;
+            z-index: -1;
+            >.loader {
+              border-top-color: $white-color;
+              border-left-color: $white-color;
+            }
+          }
         }
       }
     }

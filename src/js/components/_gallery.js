@@ -19,7 +19,7 @@
     for (let i = 0; i < galleryThumbs.length; i++) {
       if (!gallerySlider.classList.contains('slick-slider')) {
         // let src = `${galleryThumbs[i].src.slice(0, -3)}big.jpg`,
-        let str = `<figure class="gallery-popup-slider__slide-wrap"><img src="${galleryThumbs[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
+        let str = `<figure class="gallery-popup-slider__slide-wrap"><div class="loader-bg"><div class="loader"></div></div><img src="${galleryThumbs[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
         // let img = document.createElement('img'),
           // wrap = document.createElement('figure');
 

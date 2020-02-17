@@ -1479,6 +1479,13 @@ label.invalid {
         padding: 0 10px;
         width: 300px;
         height: 285px; }
+        .gallery-popup-slider__slide-wrap > .loader-bg {
+          display: flex;
+          background: none;
+          z-index: -1; }
+          .gallery-popup-slider__slide-wrap > .loader-bg > .loader {
+            border-top-color: #fff;
+            border-left-color: #fff; }
 
 .contacts-sect {
   padding-top: 40px;
