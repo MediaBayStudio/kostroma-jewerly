@@ -3,10 +3,15 @@
 	padding-bottom: 165px;
 	background-image: linear-gradient(to bottom, $white-color 265px, $form-bg-color 265px);
 	background-position-x: calc((50vw - 70px) * -1);
-	&::after {
+	// &::after {
+	// 	width: 865px;
+	// 	height: 775px;
+	// 	background-image: url('../img/pusets/hero-img.1920.jpg');
+	// 	margin: 60px calc(50vw - 840px) 0 0;
+	// }
+	&__img {
 		width: 865px;
 		height: 775px;
-		background-image: url('../img/pusets/hero-img.1920.jpg');
 		margin: 60px calc(50vw - 840px) 0 0;
 	}
 	&::before {

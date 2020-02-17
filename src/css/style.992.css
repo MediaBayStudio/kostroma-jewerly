@@ -28,17 +28,16 @@
   .hdr__nav-link:nth-last-child(n+2) {
     margin-right: 35px; }
 
-.hero-sect::after {
+.hero-sect__img {
   width: 575px;
-  height: 575px;
-  background-image: url("../img/pusets/hero-img.1440.jpg"); }
+  height: 575px; }
 
 .delivery-card:last-child {
   margin: 35px auto 0; }
 
 .help-sect {
   padding-bottom: 80px;
-  background: linear-gradient(to left, #FDFBFA, #FDFBFA) top right/calc((100vw - 992px)/(1230 - 992)*(735 - 620) + 620px) 92.5% no-repeat, url("../img/pusets/help-sect-img.jpg") bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px)/450px 300px no-repeat; }
+  background: url("#") top right/calc((100vw - 992px)/(1230 - 992)*(735 - 620) + 620px) 92.5% no-repeat, url("#") bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px)/450px 300px no-repeat; }
   .help-sect::before {
     display: inline-flex;
     font-size: 130px;

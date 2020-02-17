@@ -23,7 +23,8 @@
       position: absolute;
       display: inline-block;
       left: 0;
-      top: 75px;
+      // top: 75px;
+      top: 78.5px;
       width: 100vw;
       border-bottom: 1px solid;
     }
@@ -36,7 +37,6 @@
       &-square {
         width: 11px;
         height: 11px;
-        background-color: $option-page-color;
         margin: 10px 0 10px 10px;
         z-index: 1;
         position: relative;
@@ -52,7 +52,7 @@
       flex-direction: column-reverse;
       position: absolute;
       right: 40px;
-      top: 62px;
+      top: 65.5px;
     }
     &__next, &__prev {
       position: static;

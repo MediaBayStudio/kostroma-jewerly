@@ -9,7 +9,18 @@
 			transform: rotate(-90deg);
 			pointer-events: auto;
 		}
-		&::after {
+		// &::after {
+		// 	content: '';
+		// 	display: inline-block;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	width: 247px;
+		// 	height: 267px;
+		// 	background: url('#') no-repeat;
+		// 	z-index: 2;
+		// }
+		&__img {
 			content: '';
 			display: inline-block;
 			position: absolute;
@@ -17,7 +28,7 @@
 			right: 0;
 			width: 247px;
 			height: 267px;
-			background:url('../img/pusets/hero-img.320.jpg') no-repeat;
+			background: top left/cover no-repeat;
 			z-index: 2;
 		}
 		&__title {

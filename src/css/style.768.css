@@ -119,7 +119,7 @@
   padding-top: 520px;
   padding-bottom: 90px;
   background: linear-gradient(to bottom, #fff 345px, #FDFBFA 345px); }
-  .hero-sect::after {
+  .hero-sect__img {
     width: 520px;
     height: 465px; }
   .hero-sect::before {
@@ -257,11 +257,11 @@
   margin-top: 45px;
   padding-left: calc(50vw - 305px); }
   .production-slider::before {
-    top: 100px; }
+    top: 104px; }
   .production-slider__slide-square {
     margin: 35px 0 10px 20px; }
   .production-slider__arrows {
-    top: 87px; }
+    top: 91px; }
 
 .gallery-slider__img-wrap {
   margin-bottom: 40px;

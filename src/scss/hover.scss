@@ -41,7 +41,7 @@
 }
 
 .btn-ol:hover {
-	background-color: $option-page-color;
+	// background-color: $option-page-color;
 	color: $white-text-color;
 }
 
@@ -58,7 +58,7 @@
     &__btn:not(.disabled):hover {
       background-color: transparent;
       color: $main-text-color;
-      border-color: $option-page-color;
+      // border-color: $option-page-color;
     }
   }
 }
@@ -160,7 +160,7 @@
     opacity: 1;
   }
   .catalog-card__btn {
-    background-color: $option-page-color;
+    // background-color: $option-page-color;
     color: $white-text-color;
   }
 }

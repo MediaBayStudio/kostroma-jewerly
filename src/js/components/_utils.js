@@ -8,6 +8,8 @@
     };
 }(Element.prototype));
 
+lazyload();
+
 ;(function () {
   if (typeof window.CustomEvent === "function") return false;
 

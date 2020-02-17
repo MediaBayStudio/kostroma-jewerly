@@ -1,10 +1,14 @@
 .hero {
 	&-sect {
 		background: linear-gradient(to bottom, $white-color 250px, $form-bg-color 250px);
-		&::after {
+		// &::after {
+		// 	width: 300px;
+		// 	height: 300px;
+		// 	background-size: cover;
+		// }
+		&__img {
 			width: 300px;
 			height: 300px;
-			background-size: cover;
 		}
 		&::before {
 			left: calc((100vw - 575px)/(420 - 575)*(-30 - 125) + 125px);

@@ -30,7 +30,6 @@
   box-sizing: border-box; }
 
 .btn-ol:hover {
-  background-color: #DD7D5C;
   color: #FDFBFA; }
 
 .quiz-popup__close:hover > svg > path {
@@ -38,8 +37,7 @@
 
 .quiz-form__btn:not(.disabled):hover {
   background-color: transparent;
-  color: #403637;
-  border-color: #DD7D5C; }
+  color: #403637; }
 
 .delivery-card__guarantee:hover > .info-icon, .delivery-card__guarantee.active:hover > .info-icon {
   background-color: transparent;
@@ -99,7 +97,6 @@
   opacity: 1; }
 
 .catalog-block__catalog-card:hover .catalog-card__btn {
-  background-color: #DD7D5C;
   color: #FDFBFA; }
 
 .ftr__privacy-policy-btn:hover, .ftr__dev-link:hover {

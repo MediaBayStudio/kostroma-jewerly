@@ -9,27 +9,18 @@
     popupAnimationName: 'fadeOut',
     overlayAnimationName: 'fadeOut'
   }),
-    galleryThumbs = document.querySelectorAll('.gallery-slider__img'),
+    galleryThumbs = document.querySelectorAll('.gallery-slider__img-wrap'),
+    galleryThumbsImg = document.querySelectorAll('.gallery-slider__img')
     gallerySlider = document.querySelector('.gallery-popup-slider');
 
 
   galleryPopup.addEventListener('beforeopen', function() {
     let initialSlide;
     
-    for (let i = 0; i < galleryThumbs.length; i++) {
+    for (let i = 0; i < galleryThumbsImg.length; i++) {
       if (!gallerySlider.classList.contains('slick-slider')) {
-        // let src = `${galleryThumbs[i].src.slice(0, -3)}big.jpg`,
-        let str = `<figure class="gallery-popup-slider__slide-wrap"><div class="loader-bg"><div class="loader"></div></div><img src="${galleryThumbs[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
-        // let img = document.createElement('img'),
-          // wrap = document.createElement('figure');
-
-        // img.setAttribute('src', galleryThumbs[i].dataset.big);
-        // img.classList.add('gallery-popup-slider__slide');
-        // wrap.classList.add('gallery-popup-slider__slide-wrap');
-        // wrap.appendChild(img);
-
-        // gallerySlider.insertAdjacentElement('beforeend', wrap);
-        // gallerySlider.appendChild(wrap);
+        
+        let str = `<figure class="gallery-popup-slider__slide-wrap"><div class="loader-bg"><div class="loader"></div></div><img src="${galleryThumbsImg[i].dataset.big}" alt="#" class="gallery-popup-slider__slide"></figure>`;
 
         gallerySlider.insertAdjacentHTML('beforeend', str);
       }

@@ -1,7 +1,12 @@
 .hero-sect {
-	&::after {
-		width: 575px;
-		height: 575px;
-		background-image: url('../img/pusets/hero-img.1440.jpg');
-	}
+	// &::after {
+	// 	width: 575px;
+	// 	height: 575px;
+	// 	// background-image: url('../img/pusets/hero-img.1440.jpg');
+	// }
+  &__img {
+    width: 575px;
+    height: 575px;
+    // background-image: url('../img/pusets/hero-img.1440.jpg');
+  }
 }

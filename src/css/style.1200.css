@@ -41,7 +41,7 @@
   padding-bottom: 110px;
   background: linear-gradient(to bottom, #fff 260px, #FDFBFA 260px) no-repeat;
   background-position-x: calc((50vw - 300px) * -1); }
-  .hero-sect::after {
+  .hero-sect__img {
     width: 690px;
     height: 620px;
     margin: 40px calc(50vw - 600px) 0 0; }

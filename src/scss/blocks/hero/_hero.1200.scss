@@ -3,7 +3,12 @@
 	padding-bottom: 110px;
 	background: linear-gradient(to bottom, $white-color 260px, $form-bg-color 260px) no-repeat;
 	background-position-x: calc((50vw - 300px) * -1);
-	&::after {
+	// &::after {
+	// 	width: 690px;
+	// 	height: 620px;
+	// 	margin: 40px calc(50vw - 600px) 0 0;
+	// }
+	&__img {
 		width: 690px;
 		height: 620px;
 		margin: 40px calc(50vw - 600px) 0 0;

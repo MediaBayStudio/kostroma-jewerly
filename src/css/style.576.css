@@ -56,10 +56,9 @@ label.invalid {
   padding-top: 475px;
   padding-bottom: 70px;
   background: linear-gradient(to bottom, #fff 380px, #FDFBFA 380px); }
-  .hero-sect::after {
+  .hero-sect__img {
     width: 450px;
-    height: 450px;
-    background-image: url("../img/pusets/hero-img.768.jpg"); }
+    height: 450px; }
   .hero-sect::before {
     top: 140px;
     left: calc((100vw - 767px)/(576 - 767)*(-100 - 92) + 92px);

@@ -16,15 +16,16 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<link rel="stylesheet" href="./css/style.css">
-	<link media="(hover), (-ms-high-contrast: active), (-ms-high-contrast: none), (min-width: 1024.98px)" rel="stylesheet" href="./css/hover.css">
+	<link media="(hover), (min-width: 1024.98px)" rel="stylesheet" href="./css/hover.css">
 
 	<link media="(min-width: 419.98px)" rel="stylesheet" href="./css/style.420.css">
 	<link media="(min-width: 575.98px)" rel="stylesheet" href="./css/style.576.css">
 	<link media="(min-width: 767.98px)" rel="stylesheet" href="./css/style.768.css">
 	<link media="(min-width: 991.98px)" rel="stylesheet" href="./css/style.992.css">
 	<link media="(min-width: 1229.98px)" rel="stylesheet" href="./css/style.1200.css">
-	<!-- <link media="(min-width: 1719.98px)" rel="stylesheet" href="./css/style.1720.css"> -->
+	<link rel="stylesheet" href="./css/pages.css">
 	
+	<script defer src="./js/lazyload.min.js"></script>
 	<script defer src="./js/slick.min.js"></script>
 	<script defer src="./js/jquery.validate.min.js"></script>
 	<script defer src="./js/SimplePopup.min.js"></script>
@@ -81,6 +82,7 @@
 		<h1 class="hero-sect__title">Пусеты</h1>
 		<span class="hero-sect__subtitle">С  бриллиантами и драгоценными камнями</span>
 		<button type="button" class="hero-sect__btn btn"><span class="hero-sect__btn-text">Подобрать</span></button>
+		<div class="hero-sect__img lazyload" data-src="./img/pusets/hero-img.1440.jpg"></div>
 	</section>
 
 	<section id="catalog" class="catalog-sect container">
@@ -186,14 +188,14 @@
 			<p class="about-sect__desc">Мы работаем более чем с 1000 магазинов и торговых сетей в различных регионах России, от Калининграда до Владивостока, а также в странах ближнего зарубежья.</p>
 			<button type="button" class="desc-block__more-btn">Подробнее...</button>
 		</div>
-		<img src="./img/about-sect-image.jpg" alt="#" class="about-sect__img">
+		<img src="#" data-src="./img/about-sect-image.jpg" alt="#" class="about-sect__img lazyload">
 		<div class="about-sect__images-block">
 			<img src="./img/about-sect-logo.svg" alt="#" class="about-sect__logo">
 			<button type="button" class="about-sect__preview-img-wrap">
 				<img src="./img/about-sect-img-1.jpg" alt="#" class="about-sect__preview-img">
 			</button>			
-			<img src="./img/about-sect-img-2.jpg" alt="#" class="about-sect__preview-img">
-			<img src="./img/about-sect-img-3.jpg" alt="#" class="about-sect__preview-img">
+			<img src="#" data-src="./img/about-sect-img-2.jpg" alt="#" class="about-sect__preview-img lazyload">
+			<img src="#" data-src="./img/about-sect-img-3.jpg" alt="#" class="about-sect__preview-img lazyload">
 		</div>
 		<a href="https://best-brilliant.ru/" class="about-sect__link site-link"><span>Основной сайт</span></a>
 	</section>
@@ -206,31 +208,30 @@
 		<p class="production-sect__desc">Создание настоящих шедевров ювелирного искусства невозможно без умения мыслить творчески и неординарно. Вдохновение имеет здесь первостепенную важность! Прежде чем попасть на витрину магазина, украшение проходит через множество этапов. Обрабатывается как вручную, так и на высокотехнологичном оборудовании.</p>
 		<div class="production-slider contained">
 			<div class="production-slider__slide">
-				<img src="./img/pusets/step-1.svg" alt="#" class="production-slider__slide-img">
+				<object type="image/svg+xml" data="./img/pusets/step-1.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Разработка эскиза и модели будущего украшения</p>
 			</div>
 			<div class="production-slider__slide">
-				<img src="./img/pusets/step-2.svg" alt="#" class="production-slider__slide-img">
+				<object type="image/svg+xml" data="./img/pusets/step-2.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Изготовление<br> мастер-модели</p>
 			</div>
 			<div class="production-slider__slide">
-				<img src="./img/pusets/step-3.svg" alt="#" class="production-slider__slide-img">
+				<object type="image/svg+xml" data="./img/pusets/step-3.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Литье ювелирного<br> украшения и монтировка</p>
 			</div>
 			<div class="production-slider__slide">
-				<img src="./img/pusets/step-4.svg" alt="#" class="production-slider__slide-img">
+				<object type="image/svg+xml" data="./img/pusets/step-4.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Шлифовка и полировка<br> до блеска и гладких краев</p>
 			</div>
 			<div class="production-slider__slide">
-				<img src="./img/pusets/step-5.svg" alt="#" class="production-slider__slide-img">
+				<object type="image/svg+xml" data="./img/pusets/step-5.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Контроль качества, пробирное<br> клеймо, именник и бирка</p>
 			</div>
-
 			<div class="production-slider__arrows"></div>
 		</div>
 	</section>
@@ -238,28 +239,28 @@
 	<section class="gallery-sect container">
 		<div class="gallery-slider">
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-1.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-1.big.jpg">
+				<img src="#" data-src="./img/pusets/image-1.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-1.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-2.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-2.big.jpg">
+				<img src="#" data-src="./img/pusets/image-2.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-2.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-3.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-3.big.jpg">
+				<img src="#" data-src="./img/pusets/image-3.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-3.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-4.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-4.big.jpg">
+				<img src="#" data-src="./img/pusets/image-4.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-4.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-5.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-5.big.jpg">
+				<img src="#" data-src="./img/pusets/image-5.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-5.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-6.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-6.big.jpg">
+				<img src="#" data-src="./img/pusets/image-6.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-6.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-7.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-7.big.jpg">
+				<img src="#" data-src="./img/pusets/image-7.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-7.big.jpg">
 			</button>
 			<button type="button" class="gallery-slider__img-wrap">
-				<img src="./img/pusets/image-8.jpg" alt="#" class="gallery-slider__img" data-big="./img/pusets/image-8.big.jpg">
+				<img src="#" data-src="./img/pusets/image-8.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-8.big.jpg">
 			</button>
 		</div>
 	</section>

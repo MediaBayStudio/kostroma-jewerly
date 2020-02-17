@@ -2,7 +2,7 @@
   &-sect {
     padding-top: 25px;
     padding-bottom: calc((100vw - 320px)/(576 - 320)*(430 - 265) + 265px);
-    background: $form-bg-color url('../img/pusets/help-sect-img.jpg') bottom/100% calc((100vw - 320px)/(420 - 320)*(285 - 235) + 235px) no-repeat;
+    background: $form-bg-color url('#') bottom/100% calc((100vw - 320px)/(420 - 320)*(285 - 235) + 235px) no-repeat;
     &::before {
       display: none;
     }

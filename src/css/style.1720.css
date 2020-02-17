@@ -28,10 +28,9 @@
   padding-bottom: 165px;
   background-image: linear-gradient(to bottom, #fff 265px, #FDFBFA 265px);
   background-position-x: calc((50vw - 70px) * -1); }
-  .hero-sect::after {
+  .hero-sect__img {
     width: 865px;
     height: 775px;
-    background-image: url("../img/pusets/hero-img.1920.jpg");
     margin: 60px calc(50vw - 840px) 0 0; }
   .hero-sect::before {
     top: -20px;

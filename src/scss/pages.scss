@@ -1,0 +1,74 @@
+@import 'assets/colors';
+// colors and backgrounds for page
+$option-page-color: #034C3B;
+
+.btn {
+  background-color: $option-page-color;
+  &::after, &::before {
+    border: 1px solid $option-page-color;
+  }
+}
+
+.btn-ol {
+  border: 1px solid $option-page-color;
+}
+
+.quiz-form__btn {
+  background-color: $option-page-color;
+}
+
+.progress__bar {
+  background-color: $option-page-color;
+}
+
+      // hero sect
+
+.hero-sect::after {
+  background-image: url('../img/pusets/hero-img.320.jpg');
+}
+
+      // help sect
+
+.help-sect {
+  background-image: url('../img/pusets/help-sect-img.jpg');
+}
+
+      // production-sect
+
+.production-slider__slide-img {
+  color: $option-page-color;
+}
+
+.production-slider__slide-square {
+  background-color: $option-page-color;
+}
+
+
+
+@media (min-width: 575.98px) {
+  .hero-sect::after {
+    background-image: url('../img/pusets/hero-img.768.jpg');
+  }
+}
+
+@media (min-width: 991.98px) {
+  .hero-sect::after {
+    background-image: url('../img/pusets/hero-img.1440.jpg');
+  }
+  .help-sect {
+    background-image: linear-gradient(to left, $form-bg-color, $form-bg-color), url('../img/pusets/help-sect-img.jpg');
+  }
+}
+
+@media (hover), (min-width: 1024.98px) {
+  .btn-ol:hover {
+    background-color: $option-page-color;
+  }
+  .quiz-form__btn:not(.disabled):hover {
+    border-color: $option-page-color;
+  }
+  .catalog-block__catalog-card:hover .catalog-card__btn {
+    background-color: $option-page-color;
+    color: $white-text-color;
+  }
+}
