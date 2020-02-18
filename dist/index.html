@@ -23,7 +23,64 @@
 	<link media="(min-width: 767.98px)" rel="stylesheet" href="./css/style.768.css">
 	<link media="(min-width: 991.98px)" rel="stylesheet" href="./css/style.992.css">
 	<link media="(min-width: 1229.98px)" rel="stylesheet" href="./css/style.1200.css">
-	<link rel="stylesheet" href="./css/pages.css">
+	<style>
+
+		.btn {
+  		background-color: #DD7D5C;
+		}
+
+  	.btn::after, .btn::before {
+   		border: 1px solid #DD7D5C;
+  	}
+
+		.btn-ol {
+		  border: 1px solid #DD7D5C;
+		}
+
+		.quiz-form__btn {
+		  background-color: #DD7D5C;
+		}
+
+		.progress__bar {
+		  background-color: #DD7D5C;
+		}
+
+		.help-sect {
+		  background-image: url('pusets/img/help-sect-img.jpg');
+		}
+
+		.production-slider__slide-img, .delivery-card__img {
+		  color: #DD7D5C;
+		}
+
+		.production-slider__slide-square {
+		  background-color: #DD7D5C;
+		}
+
+		@media (min-width: 575.98px) {
+	  	.help-sect {
+	    	background-image: none;
+	  	}
+	  }
+
+		@media (min-width: 991.98px) {
+	  .help-sect {
+	    background-image: linear-gradient(to left, #FDFBFA, #FDFBFA), url("img/pusets/help-sect-img.jpg");
+	  	}
+	  }
+
+		@media (hover), (min-width: 1024.98px) {
+	  	.btn-ol:hover {
+	    	background-color: #DD7D5C;
+	  	}
+	  	.quiz-form__btn:not(.disabled):hover {
+	    	border-color: #DD7D5C;
+	  	}
+	  	.catalog-block__catalog-card:hover .catalog-card__btn {
+	    	background-color: #DD7D5C;
+	  	}
+	  }
+	</style>
 	
 	<script defer src="./js/lazyload.min.js"></script>
 	<script defer src="./js/slick.min.js"></script>
@@ -100,22 +157,30 @@
 		<p class="delivery-sect__subtitle sect-subtitle">Мы сделали все, чтобы вам было удобно и приятно выбирать</p>
 		<div class="delivery-block">
 			<div class="delivery-card">
-				<img src="#" data-src="./img/pusets/delivery-1.svg" alt="#" class="delivery-card__img lazyload">
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+        	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons.svg#pusets-delivery-1"></use>
+      	</svg>
 				<b class="delivery-card__title">Примерка</b>
 				<p class="delivery-card__desc">Наш курьер привезет вам понравившиеся украшения и вы сможете их примерить в комфортной обстановке. Украшения, которые вам не подойдут, курьер заберет с собой.</p>
 			</div>
 			<div class="delivery-card">
-				<img src="#" data-src="./img/pusets/delivery-2.svg" alt="#" class="delivery-card__img lazyload">
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+        	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons.svg#pusets-delivery-2"></use>
+      	</svg>
 				<b class="delivery-card__title">Доставка</b>
 				<p class="delivery-card__desc">Доставка осуществляется службой <q>Pony Express</q> в пункты выдачи и курьером на дом. Курьер свяжется с Вами для уточнения времени и места доставки. Примерный срок доставки 7 рабочих дней.</p>
 			</div>
 			<div class="delivery-card">
-				<object type="image/svg+xml" data="./img/delivery-3.svg" class="delivery-card__img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+        	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons.svg#delivery-3"></use>
+      	</svg>
 				<b class="delivery-card__title">Оплата</b>
 				<p class="delivery-card__desc">Оплата производится при получении товара двумя удобными вам способами: <br>– наличный расчет <br>– банковская карта</p>
 			</div>
 			<div class="delivery-card">
-				<object type="image/svg+xml" data="./img/delivery-4.svg" class="delivery-card__img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+        	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/icons.svg#delivery-4"></use>
+      	</svg>
 				<b class="delivery-card__title">Гарантии</b>
 				<p class="delivery-card__desc"><span>Украшения ювелирного завода <q>Бриллианты Костромы</q> имеют все необходимые пометки о подлинности:</span>
 					<button type="button" class="delivery-card__guarantee">
@@ -206,27 +271,37 @@
 		<p class="production-sect__desc">Создание настоящих шедевров ювелирного искусства невозможно без умения мыслить творчески и неординарно. Вдохновение имеет здесь первостепенную важность! Прежде чем попасть на витрину магазина, украшение проходит через множество этапов. Обрабатывается как вручную, так и на высокотехнологичном оборудовании.</p>
 		<div class="production-slider contained">
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/step-1.svg" class="production-slider__slide-img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+	        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#step-1"></use>
+	      </svg>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Разработка эскиза и модели будущего украшения</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/step-2.svg" class="production-slider__slide-img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+	        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#step-2"></use>
+	      </svg>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Изготовление<br> мастер-модели</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/step-3.svg" class="production-slider__slide-img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+	        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#step-3"></use>
+	      </svg>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Литье ювелирного<br> украшения и монтировка</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/step-4.svg" class="production-slider__slide-img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+	        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#step-4"></use>
+	      </svg>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Шлифовка и полировка<br> до блеска и гладких краев</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/step-5.svg" class="production-slider__slide-img"></object>
+				<svg viewBox="0 0 512 512" class="delivery-card__img">
+	        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#step-5"></use>
+	      </svg>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Контроль качества, пробирное<br> клеймо, именник и бирка</p>
 			</div>
