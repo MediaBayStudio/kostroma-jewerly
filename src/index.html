@@ -38,14 +38,13 @@
 </head>
 <body>
 	<noscript>
-    <noindex class="noscript">Для полноценного использования сайта включите JavaScript в настройках вашего браузера.</noindex>
+    <!-- <noindex class="noscript"> -->Для полноценного использования сайта включите JavaScript в настройках вашего браузера.<!-- </noindex> -->
   </noscript>
 	<header class="hdr container flex">
 		<div class="logo hdr__logo">
 			<span class="logo__text">Бриллианты Костромы</span>
 		</div>
 		<nav class="hdr__nav">
-			<!-- <a href="/" class="hdr__nav-link">Главная</a> -->
 			<a href="#catalog" class="hdr__nav-link">Каталог</a>
 			<a href="#delivery" class="hdr__nav-link">Примерка и доставка</a>
 			<a href="#about" class="hdr__nav-link">О нас</a>
@@ -54,9 +53,9 @@
 		</nav>
 		<button type="button" class="burger-btn">
 			<svg viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<rect class="burger-btn-line top"/>
-				<rect class="burger-btn-line middle" x="4" y="7"/>
-				<rect class="burger-btn-line bottom" y="14"/>
+				<rect width="100%" height="2" class="burger-btn-line top"/>
+				<rect width="73%"  height="2" class="burger-btn-line middle" x="4" y="7"/>
+				<rect width="100%" height="2" class="burger-btn-line bottom" y="14"/>
 			</svg>
 		</button>
 		<aside class="mobile-menu hdr__mobile-menu duplicate-title" data-title="Pusets">
@@ -64,7 +63,6 @@
 				<span class="logo__text">Бриллианты Костромы</span>
 			</div>
 			<nav class="mobile-menu__nav">
-				<!-- <a href="#start" class="mobile-menu__link">Главная</a> -->
 				<a href="#catalog" class="mobile-menu__link">Каталог</a>
 				<a href="#delivery" class="mobile-menu__link">Примерка и доставка</a>
 				<a href="#about" class="mobile-menu__link">О нас</a>
@@ -112,12 +110,12 @@
 				<p class="delivery-card__desc">Доставка осуществляется службой <q>Pony Express</q> в пункты выдачи и курьером на дом. Курьер свяжется с Вами для уточнения времени и места доставки. Примерный срок доставки 7 рабочих дней.</p>
 			</div>
 			<div class="delivery-card">
-				<img src="#" data-src="./img/pusets/delivery-3.svg" alt="#" class="delivery-card__img lazyload">
+				<object type="image/svg+xml" data="./img/delivery-3.svg" class="delivery-card__img"></object>
 				<b class="delivery-card__title">Оплата</b>
 				<p class="delivery-card__desc">Оплата производится при получении товара двумя удобными вам способами: <br>– наличный расчет <br>– банковская карта</p>
 			</div>
 			<div class="delivery-card">
-				<img src="#" data-src="./img/pusets/delivery-4.svg" alt="#" class="delivery-card__img lazyload">
+				<object type="image/svg+xml" data="./img/delivery-4.svg" class="delivery-card__img"></object>
 				<b class="delivery-card__title">Гарантии</b>
 				<p class="delivery-card__desc"><span>Украшения ювелирного завода <q>Бриллианты Костромы</q> имеют все необходимые пометки о подлинности:</span>
 					<button type="button" class="delivery-card__guarantee">
@@ -208,27 +206,27 @@
 		<p class="production-sect__desc">Создание настоящих шедевров ювелирного искусства невозможно без умения мыслить творчески и неординарно. Вдохновение имеет здесь первостепенную важность! Прежде чем попасть на витрину магазина, украшение проходит через множество этапов. Обрабатывается как вручную, так и на высокотехнологичном оборудовании.</p>
 		<div class="production-slider contained">
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/pusets/step-1.svg" class="production-slider__slide-img"></object>
+				<object type="image/svg+xml" data="./img/step-1.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Разработка эскиза и модели будущего украшения</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/pusets/step-2.svg" class="production-slider__slide-img"></object>
+				<object type="image/svg+xml" data="./img/step-2.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Изготовление<br> мастер-модели</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/pusets/step-3.svg" class="production-slider__slide-img"></object>
+				<object type="image/svg+xml" data="./img/step-3.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Литье ювелирного<br> украшения и монтировка</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/pusets/step-4.svg" class="production-slider__slide-img"></object>
+				<object type="image/svg+xml" data="./img/step-4.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Шлифовка и полировка<br> до блеска и гладких краев</p>
 			</div>
 			<div class="production-slider__slide">
-				<object type="image/svg+xml" data="./img/pusets/step-5.svg" class="production-slider__slide-img"></object>
+				<object type="image/svg+xml" data="./img/step-5.svg" class="production-slider__slide-img"></object>
 				<div class="production-slider__slide-square"></div>
 				<p class="production-slider__slide-desc">Контроль качества, пробирное<br> клеймо, именник и бирка</p>
 			</div>
@@ -237,6 +235,7 @@
 	</section>
 
 	<section class="gallery-sect container">
+		<h2 class="gallery-sect__title hide">Галерея</h2>
 		<div class="gallery-slider">
 			<button type="button" class="gallery-slider__img-wrap">
 				<img src="#" data-src="./img/pusets/image-1.jpg" alt="#" class="gallery-slider__img lazyload" data-big="./img/pusets/image-1.big.jpg">

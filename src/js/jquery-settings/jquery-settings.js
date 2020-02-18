@@ -162,6 +162,7 @@ $(document).ready(function() {
 		nextArrow: buildArrow('production-slider__next next', nextArrow),
 		prevArrow: buildArrow('production-slider__prev prev', prevArrow),
 		accessibility: false,
+		draggable: false,
 		responsive: [{
 			breakpoint: 575.98,
 			settings: {

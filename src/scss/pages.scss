@@ -35,12 +35,18 @@ $option-page-color: #DD7D5C;
 
       // production-sect
 
-.production-slider__slide-img {
+.production-slider__slide-img, .delivery-card__img  {
   color: $option-page-color;
 }
 
 .production-slider__slide-square {
   background-color: $option-page-color;
+}
+
+@media (min-width: 575.98px) {
+  .help-sect {
+    background-image: none;
+  }
 }
 
 @media (min-width: 991.98px) {

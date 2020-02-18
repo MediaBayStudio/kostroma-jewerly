@@ -18,11 +18,15 @@
 .help-sect {
   background-image: url("../img/pusets/help-sect-img.jpg"); }
 
-.production-slider__slide-img {
+.production-slider__slide-img, .delivery-card__img {
   color: #DD7D5C; }
 
 .production-slider__slide-square {
   background-color: #DD7D5C; }
+
+@media (min-width: 575.98px) {
+  .help-sect {
+    background-image: none; } }
 
 @media (min-width: 991.98px) {
   .help-sect {

@@ -942,7 +942,7 @@ label.invalid {
     display: inline-block;
     top: 0;
     right: 0;
-    width: 62.5%;
+    width: 57.5%;
     height: calc(100% - 0.5px);
     border-bottom: 1px solid #987A6E;
     pointer-events: none;
