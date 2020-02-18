@@ -7,10 +7,12 @@
 	}
 	&-block {
 		margin-top: 90px;
+		justify-content: space-between;
 	}
 
 	&-card {
-		margin: 0 !important;
+		flex-basis: auto;
+		margin: 0;
 		&__img {
 			width: 80px;
 			height: 80px;

@@ -1,5 +1,8 @@
 .delivery {
-	&-card:last-child {
-		margin: 35px auto 0;
+  &-block {
+    justify-content: space-around;
+  }
+	&-card {
+		flex-basis: 35%;
 	}
 }

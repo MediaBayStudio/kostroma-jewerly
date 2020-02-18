@@ -32,8 +32,11 @@
   width: 575px;
   height: 575px; }
 
-.delivery-card:last-child {
-  margin: 35px auto 0; }
+.delivery-block {
+  justify-content: space-around; }
+
+.delivery-card {
+  flex-basis: 35%; }
 
 .help-sect {
   padding-bottom: 80px;
