@@ -3,11 +3,6 @@
 		padding-top: 475px;
 		padding-bottom: 70px;
 		background: linear-gradient(to bottom, $white-color 380px, $form-bg-color 380px);
-		// &::after {
-		// 	width: 450px;
-		// 	height: 450px;
-		// 	// background-image: url('../img/pusets/hero-img.768.jpg');
-		// }
 		&__img {
 			width: 450px;
 			height: 450px;
@@ -25,4 +20,32 @@
 			font-size: 22px;
 		}
 	}
+}
+
+.pendant, .bracelet, .jewelry {
+	>.hero-sect__title {
+		font-size: 92px;
+	}
+}
+
+.pendant, .bracelet {
+	&::before {
+		font-size: 100px;
+	}
+}
+
+.jewelry::before {
+	font-size: 109px;
+}
+
+.earrings::before {
+	font-size: 96px;
+}
+
+.necklace::before {
+	font-size: 94px;
+}
+
+.brooch::before {
+	font-size: 114px;
 }

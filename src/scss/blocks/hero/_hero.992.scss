@@ -1,12 +1,26 @@
 .hero-sect {
-	// &::after {
-	// 	width: 575px;
-	// 	height: 575px;
-	// 	// background-image: url('../img/pusets/hero-img.1440.jpg');
-	// }
+  background: linear-gradient(to bottom, #fff 200px, #FDFBFA 200px);
+  padding-top: 215px;
+  &::before {
+    top: 10px;
+  }
+  &__title {
+    font-size: 100px;
+  }
   &__img {
-    width: 575px;
+    width: 480px;
     height: 575px;
-    // background-image: url('../img/pusets/hero-img.1440.jpg');
+  }
+}
+
+.pendant, .bracelet {
+  >.hero-sect__title {
+    font-size: 100px;
+  }
+}
+
+.jewelry {
+  >.hero-sect__title {
+    font-size: 85px;
   }
 }

@@ -6,10 +6,25 @@
 	&-block {
 		margin-top: 10px;
 		&__catalog-card {
-			max-width: 265px;
+			max-width: 290px;
+			margin: 20px 10px 0 0;
+			&:nth-child(3n+5) {
+		    margin-right: 10px;
+		  }
+		  &:nth-child(4n+6) {
+		  	margin-right: 0;
+		  }
 		}
 		&__more-btn {
 			margin-top: 40px;
 		}
 	}
+}
+
+.website-card, .website-card:nth-of-type(3n) {
+	margin-right: 20px;
+}
+
+.website-card:nth-of-type(4n) {
+	margin-right: 0;
 }

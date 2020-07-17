@@ -1,9 +1,0 @@
-.gallery-sect {
-  padding-top: 50px; }
-
-.gallery-slider__img-wrap {
-  width: 270px;
-  height: 273px;
-  margin-right: 40px; }
-  .gallery-slider__img-wrap:nth-child(-n+4) {
-    margin-bottom: 40px; }

@@ -1,28 +1,19 @@
 ;(function() {
 	hdr = document.querySelector('.hdr');
-	menu = new SimpleMenu({
-		mediaQuery: '(max-width: 992px)',
+	menu = new MobileMenu({
 		menu: '.mobile-menu',
-		openBtn: {
-			selector: '.burger-btn',
-			class: 'active'
-		},
-		overlay: {
-			zi: 3,
-			css: 'background:rgba(64,54,55,.85);'
-		},
-		closeBtn: {
-			selector: '.burger-btn',
-			class: 'active'
-		},
+		openBtn: '.burger-btn',
+		closeBtn: '.burger-btn',
+		overlay: '.overlay',
+		fixHeader: '.hdr',
 		toRight: true 
 	});
 
 	if (menu.style) {
-		menu.addEventListener('beforeopen', function() {
+		menu.addEventListener('menubeforeopen', function() {
 			hdr.classList.add('active');
 		});
-		menu.addEventListener('beforeclose', function() {
+		menu.addEventListener('menubeforeclose', function() {
 			hdr.classList.remove('active');
 		});
 	}

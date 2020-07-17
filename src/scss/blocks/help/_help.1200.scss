@@ -2,8 +2,14 @@
   &-sect {
     padding-top: 15px;
     padding-bottom: 120px;
-    background-size: calc((100vw - 1230px)/(1720 - 1230)*(1000 - 725) + 725px) 83.5%, 520px 380px;
-    background-position: top right, bottom left calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px);
+    background-size: 
+      calc((100vw - 1230px)/(1720 - 1230)*(1000 - 725) + 725px) 83.5%,
+      520px 380px,
+      520px 380px;
+    background-position:
+      top right,
+      bottom left calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px),
+      bottom left calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px);
     &::before {
       top: -60px;
       left: calc((100vw - 1230px)/(1720 - 1230)*(260 - 15) + 15px);

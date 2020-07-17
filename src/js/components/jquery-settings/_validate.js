@@ -17,16 +17,18 @@
 					'user-name': {
 						required: true,
 						userName: true,
-						minlength: 2,
-						maxlength: 50
+						minlength: 2
 					},
 					'user-tel': {
 						required: true,
 						userPhone: true
 					},
 					'user-email': {
+						email: true
+					},
+					'user-msg': {
 						required: true,
-						userEmail: true
+						minlength: 5
 					},
 					'privacy-policy': {
 						required: true,
@@ -36,8 +38,7 @@
 				messages: {
 					'user-name': {
 						required: 'Укажите имя',
-						minlength: jQuery.validator.format("Поле с именем должно содержать минимум 2 символа!"),
-						maxlength: jQuery.validator.format("Поле с именем должно содержать не более {0} символов!"),
+						minlength: jQuery.validator.format("Имя не может быть таким коротким"),
 						userName: 'Допустимы только буквы'
 					},
 					'user-tel': {
@@ -45,8 +46,11 @@
 						userPhone: 'Укажите верный номер телефона'
 					},
 					'user-email': {
-						required: 'Укажите E-mail',
-						userEmail: 'Укажите верный E-mail'
+						email: 'Укажите верный E-mail'
+					},
+					'user-msg': {
+						required: 'Введите сообщение',
+						minlength: jQuery.validator.format("Сообщение не может быть таким коротким"),
 					},
 					'privacy-policy': {
 						required: 'Согласитель с политикой обработки персональных данных'
@@ -56,7 +60,7 @@
 				submitHandler: function(form, event) {
 					event.preventDefault();
 					form = $(this)[0].errorContext;
-					form.find('input').val('');
+					form.find('input').val('').removeClass('focus');
 					if (form.hasClass('quiz-popup__form')) {
 						form.addClass('hide');
 
@@ -90,10 +94,6 @@
 			}
 		})
 	})();
-
-	$.validator.methods.userEmail = function(value, element) {
-	  return /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z])+$/.test(value);
-	}
 
 	$.validator.methods.userPhone = function(value, element) {
 	  return /\+7\([0-9]{3}\)[0-9]{3}\-[0-9]{2}\-[0-9]{2}/.test(value);

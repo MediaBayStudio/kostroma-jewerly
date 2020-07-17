@@ -2,7 +2,10 @@
   &-sect {
     padding-top: 25px;
     padding-bottom: calc((100vw - 320px)/(576 - 320)*(430 - 265) + 265px);
-    background: $form-bg-color url('#') bottom/100% calc((100vw - 320px)/(420 - 320)*(285 - 235) + 235px) no-repeat;
+    background:
+      url('#') left bottom no-repeat,
+      url('#') left bottom no-repeat, $form-bg-color;
+    background-size: 100% calc((100vw - 320px)/(575 - 320)*(400 - 235) + 235px);
     &::before {
       display: none;
     }

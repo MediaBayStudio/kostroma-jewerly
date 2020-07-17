@@ -13,12 +13,11 @@
 			margin-top: 60px;
 		}
 		&__map-block {
-			// width: calc((100vw - 992px)/(1229 - 992)*(675 - 575) + 575px);
-			width: calc((100vw - 992px)/(1229 - 992)*(666 - 546) + 556px);
+			width: calc((100vw - 992px)/(1229 - 992)*(676 - 546) + 546px);
 			margin: auto 0 0 calc((50vw - 480px) * -1);
 			z-index: 1;
 		}
-		&__form {
+		&__form-wrap {
 			order: 12;
 			margin: 0;
 			z-index: 1;

@@ -3,10 +3,6 @@
 		padding-top: 520px;
 		padding-bottom: 90px;
 		background: linear-gradient(to bottom, $white-color 345px, $form-bg-color 345px);
-		// &::after {
-		// 	width: 520px;
-		// 	height: 465px;
-		// }
 		&__img {
 			width: 520px;
 			height: 465px;
@@ -24,5 +20,11 @@
 		&__subtitle {
 			margin: 0 0 75px;
 		}
+	}
+}
+
+.pendant, .bracelet, .jewelry {
+	>.hero-sect__title {
+		font-size: 110px;
 	}
 }

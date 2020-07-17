@@ -58,6 +58,9 @@
       position: static;
       width: 21px;
       height: 7px;
+      &:not(.slick-disabled):active {
+        transform: translateY(-50%) scale(.9);
+      }
     }
     &__prev {
       margin-top: 20px;

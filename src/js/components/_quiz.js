@@ -1,5 +1,7 @@
 ;(function() {
-  let xhr = new XMLHttpRequest(),
+
+  let dir = document.querySelector('#dir').dataset.dir,
+    xhr = new XMLHttpRequest(),
     stepsLength,
     currentStep = 0,
     data = {},
@@ -16,6 +18,7 @@
     progressWrap = popup.querySelector('.progress'),
     finalForm = popup.querySelector('.quiz-popup__form'),
     thanks = popup.querySelector('.quiz-popup__thanks-wrap'),
+    resultInp = popup.querySelector('#quiz-result-inp'),
     progressBar = progressWrap.querySelector('.progress__bar'),
     progressPercent = progressWrap.querySelector('.progress__percent'),
     buildInsides = function(elem) {
@@ -55,7 +58,13 @@
     if (quizForm.children.length > 0) {
       for (let i = 0; i < labels.length; i++) {
         if (labels[i].classList.contains('active')) {
-          data[quizForm.dataset.step] = labels[i].textContent;
+          for (let key in response) {
+            let elem = response[key];
+            if (elem['name'] === quizForm.dataset.step) {
+              data[elem['question']] = labels[i].textContent;
+            }
+          }
+          // data[quizForm.dataset.step] = labels[i].textContent;
         }
         quizForm.removeChild(labels[i]);
       }
@@ -66,7 +75,7 @@
       insertInsides();
   });
 
-  xhr.open('GET', 'quiz.json');
+  xhr.open('GET', dir + '/quiz.json');
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.send();
 
@@ -78,10 +87,11 @@
       ldr.classList.remove('active');
 
       for (let key in response) {
-        let str = buildInsides(response[key]);
+        let elem = response[key],
+          str = buildInsides(elem);
 
         stepsInsides.push(str);
-        data[response[key]['name']] = '';
+        data[elem['question']] = '';
       }
 
       insertInsides();
@@ -93,7 +103,12 @@
       // insert in data
       for (let i = 0; i < labels.length; i++) {
         if (labels[i].classList.contains('active')) {
-          data[quizForm.dataset.step] = labels[i].textContent;
+          for (let key in response) {
+            let elem = response[key];
+            if (elem['name'] === quizForm.dataset.step) {
+              data[elem['question']] = labels[i].textContent;
+            }
+          }
         }
         quizForm.removeChild(labels[i]);
       }
@@ -117,6 +132,7 @@
 
         insertInsides();
       } else {
+        // final step
         currentStep = 0;
         quizForm.classList.add('hide');
         finalForm.classList.remove('hide');
@@ -126,7 +142,15 @@
         progressWrap.classList.add('hide');
         progressBar.style.width =  '0%';
         progressPercent.textContent = '0%';
-        // send data
+
+        let resultString = '',
+          i = 0;
+        for (let key in data) {
+          resultString += (i === 0 ? key : ' ' + key) + ' ' + data[key] + ';';
+          i++;
+        }
+        resultInp.value = resultString;
+
       }
     }
   });

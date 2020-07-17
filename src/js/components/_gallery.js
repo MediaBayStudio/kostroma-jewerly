@@ -29,6 +29,17 @@
         initialSlide = i;
       }
     }
+    let images = gallerySlider.querySelectorAll('img'),
+      figures = gallerySlider.querySelectorAll('figure'),
+      loaders = gallerySlider.querySelectorAll('.loader-bg');
+
+    for (let i = 0; i < images.length; i++) {
+      images[i].onload = function() {
+        figures[i].classList.add('loaded');
+        loaders[i].classList.add('hide');
+        images[i].onload = null;
+      }
+    }
     if (!gallerySlider.classList.contains('slick-slider')) {
       buildGallerySlider();
     }

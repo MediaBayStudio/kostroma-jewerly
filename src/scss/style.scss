@@ -1,5 +1,5 @@
-@import 'assets/reset';
 @import 'assets/fonts';
+@import 'assets/reset';
 @import 'assets/grid';
 @import 'assets/colors';
 @import 'assets/variables';
@@ -9,6 +9,14 @@
 body {
   font: 16px/normal Playfair Display;
   color: $main-text-color;
+}
+
+img.lazyload:not(.about-sect__logo) {
+  background: url('../img/img-placeholder.svg') center/cover no-repeat;
+}
+
+div.wpcf7-response-output, span.wpcf7-not-valid-tip, .screen-reader-response {
+  display: none !important;
 }
 
 .slick-slider {
@@ -34,10 +42,12 @@ body {
   &:focus {
     outline: none !important;
   }
-  &:active {
-    transform: none !important;
-  }
 }
+
+button.disabled {
+  pointer-events: none;
+}
+
 .hide {
   display: none !important;
 }
@@ -90,6 +100,7 @@ body {
     position: absolute;
     font-size: 60px;
     letter-spacing: 0.01em;
+    text-transform: capitalize;
     color: $duplicate-text-color;
     z-index: 1;
     pointer-events: none;
@@ -195,7 +206,7 @@ button {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   max-width: 70vw;
@@ -257,6 +268,35 @@ button {
       background: url('../img/next-arrow.svg') center/contain no-repeat;
     }
   }
+}
+
+.menu-jewelry::before {
+  font-size: 181px;
+}
+
+.menu-earrings::before {
+  font-size: 158px;
+  line-height: 0.72em;
+}
+
+.menu-pendant::before {
+  font-size: 164px;
+}
+
+.menu-rings::before {
+  font-size: 227px;
+}
+
+.menu-necklace::before {
+  font-size: 153.5px;
+}
+
+.menu-brooch::before {
+  font-size: 185px;
+}
+
+.menu-bracelet::before {
+  font-size: 163.5px;
 }
 
 .btn, .btn-ol {
@@ -482,7 +522,6 @@ label.invalid {
 
 .thanks-popup,
 .overlay,
-.trying-popup,
 .video-popup {
   display: none; 
   animation: fadeOut .5s;
@@ -503,13 +542,23 @@ label.invalid {
 }
 
 .trying-popup {
-  flex-direction: column;
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
   width: 320px;
-  max-height: 700px;
-  padding: 15px 25px 30px;
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100); 
+  padding: 15px 25px 0;
   overflow: auto;
   z-index: 5;
+  animation: fadeOut .5s;
+  &.active {
+    display: grid;
+    animation: fadeIn .5s;
+  }
   &__close {
+    grid-row: 1;
+    grid-column: 1;
     display: block;
     width: 12px;
     height: 12px;
@@ -526,38 +575,43 @@ label.invalid {
   &__title {
     font: 600 18px Montserrat;
     color: $brown-text-color;
-    order: 1;
+    grid-row: 3;
+    grid-column: 1;
   }
   &__desc {
-    font: 13.5px/120% Montserrat;
+    margin-top: 10px;
+    font: 12px/120% Montserrat;
     color: $brown-text-color;
-    order: 3;
+    grid-row: 4;
+    grid-column: 1;
   }
   &__product {
     &.catalog-card {
-      order: 2;
-      margin: 10px 0;
+      grid-row: 2;
+      grid-column: 1;
+      margin-bottom: 30px;
       max-width: 100%;
       text-align: left;
       padding: 0;
-      flex-flow: column wrap;
-      justify-content: center;
-      height: 82px;
-      min-height: 82px;
     }
-    >.catalog-card {
+    .catalog-card {
       &__img {
-        width: 75px;
-        height: 75px;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
       }
       &__title {
         margin: 0;
         min-width: 0;
-        font-size: 12px;
+        font-size: 14px;
+        &-block {
+          display: flex;
+          justify-content: space-between;
+        }
       }
       &__desc {
-        margin-top: 15px;
-        font-size: 10px;
+        margin: 15px 0 10px;
+        font-size: 12px;
         line-height: 160%;
         position: relative;
         &::after {
@@ -566,15 +620,18 @@ label.invalid {
           position: absolute;
           top: -7.5px;
           left: 0;
-          width: 80%;
+          width: 100%;
           border-bottom: 1px solid $brown-light-color;
         }
       }
     }
   }
   &__form {
-    text-align: left;
-    order: 4;
+    &-wrap {
+      text-align: left;
+      grid-row: 5;
+      grid-column: 1;
+    }
     >.inp-block {
       font-size: 15px;
       >.inp {
@@ -587,8 +644,101 @@ label.invalid {
       }
     }
   }
+  .catalog-card__info-btn {
+    display: flex;
+    position: relative;
+    >.info-icon {
+      margin-right: 0;
+      pointer-events: none;
+    }
+    .info-dropdown {
+      font-size: 10px;
+      text-align: left;
+      position: absolute;
+      right: 100%;
+      top: 100%;
+      white-space: nowrap;
+      background-color: $white-text-color;
+      padding: 10px;
+      z-index: 1;
+      color: $brown-light-color;
+      border: 1px solid transparent;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    &.active {
+      .info-dropdown {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      >.info-icon {
+        background-color: transparent;
+        border-color: currentColor;
+      }
+    }
+  }
+  .catalog-card__weight,
+  .catalog-card__metal,
+  .catalog-card__weight-title,
+  .catalog-card__metal-title {
+    flex-shrink: 0;
+  }
+  .catalog-card__dots {
+    width: 100%;
+    border-bottom: 1px dotted;
+    margin: 0 3px 3px;
+  }
 
+  .catalog-card__metal-block,
+  .catalog-card__weight-block {
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .catalog-card__gems-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
 }
+
+.gem {
+  margin-top: 10px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 125px;
+  height: 38px;
+  overflow: hidden;
+  color: $brown-text-color;
+  border: 1px solid;
+  &:last-child {
+    margin-right: 0;
+  }
+  &__info {
+    flex-shrink: 0;
+    padding: 5px;
+  }
+  &__name {
+    display: block;
+    color: $main-text-color;
+    font-weight: 500;
+  }
+  &__ct, &__purity {
+    font-size: 8px;
+  }
+  &__quantity {
+    padding: 5px;
+    margin-left: 13px;
+    text-align: center;
+    background-color: $quiz-inp-color;
+  }
+}
+
 
 .thanks-popup {
   flex-direction: column;
@@ -618,6 +768,14 @@ label.invalid {
     font: 15px/130% Montserrat;
     color: $brown-text-color;
   }
+}
+
+#quiz-result-inp {
+  width: 0px;
+  height: 0px;
+  border: none;
+  margin: 0;
+  position: absolute;
 }
 
 .quiz {

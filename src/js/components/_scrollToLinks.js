@@ -15,6 +15,7 @@
 				start = null;
 
 			requestAnimationFrame(step);
+			menu.closeMenu();
 
 			function step(time) {
 				if (start === null) {

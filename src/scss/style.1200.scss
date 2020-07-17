@@ -29,7 +29,9 @@
     }
 
     &__form {
-      width: 100%;
+      &-wrap {
+        width: 100%;
+      }
       >.form__title {
         font-size: 20px;
       }
@@ -55,6 +57,8 @@
   width: 790px;
   height: 437px;
 }
+
+
 
 //blocks import
 @import 'blocks/header/header.1200';

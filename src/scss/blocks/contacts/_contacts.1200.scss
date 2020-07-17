@@ -18,26 +18,26 @@
 		&__title {
 			margin-bottom: 60px;
 		}
-		&__form {
+		&__form-wrap {
 			max-width: 615px;
 			padding: 60px 90px 60px 140px;
 			background-color: #fdfbfa;
 			height: 100%;
-			>.form__title {
+			.form__title {
 				margin-bottom: 20px;
 			}
-			>.inp-block {
+			.inp-block {
 				&:last-of-type {
 					margin-bottom: 20px;
 				}
 			}
-			>.check-inp-block {
+			.check-inp-block {
 				justify-content: flex-start;
 				>.check-inp-block__pseudo-inp {
 					margin-right: 8px;
 				}
 			}
-			>.form__btn {
+			.form__btn {
 				margin: 55px 0 0 10px;
 			}
 		}

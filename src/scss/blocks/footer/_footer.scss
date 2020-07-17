@@ -3,6 +3,25 @@
 	padding-bottom: 20px;
 	font: 12px Montserrat;
 	background-color: $brown-light-color;
+	&__links-block {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		font: 500 16px Playfair Display;
+		border-bottom: 1px solid fade-out($main-text-color, .7);
+		margin-bottom: 15px;
+	}
+	&__page-link {
+		margin-bottom: 10px;
+		border-bottom: 1px dotted transparent;
+		transition: border-bottom-color .35s;
+		opacity: .75;
+		&.active {
+			opacity: 1;
+			border-bottom-style: solid;
+			border-bottom-color: currentColor;
+		}
+	}
 	&__logo {
 		margin-bottom: 25px;
 		justify-content: center;

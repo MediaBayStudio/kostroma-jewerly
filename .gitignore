@@ -1,3 +1,7 @@
+scripts
+.jshintrc
+*.txt
+
 # Logs
 logs
 *.log
@@ -28,6 +32,11 @@ coverage
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+#gulp
+gulpfile.js
+package-lock.json
+package.json
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 
@@ -40,11 +49,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-
-# gulp
-gulpfile.js
-package-lock.json
-package.json
 
 # TypeScript v1 declaration files
 typings/

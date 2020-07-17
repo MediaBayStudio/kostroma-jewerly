@@ -1,0 +1,7 @@
+// @mixin calc($property, $max-width, $min-width, $max-px, $min-px) {
+//   $property: calc((100vw - 320px)/($max-width - $min-width)*($max-px - $min-px) + $min-px);
+// }
+
+@mixin calc($property, $max-width, $min-width, $max-px, $min-px) {
+  $property: "calc((100vw - 320px)/(#{$max-width} - #{$min-width})*(${$max-px} - ${$min-px}) + #{$min-px}px)";
+}

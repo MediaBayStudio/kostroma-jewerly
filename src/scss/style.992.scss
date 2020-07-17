@@ -11,6 +11,35 @@
 	width: 330px;
 }
 
+.trying-popup {
+  .catalog-card {
+    max-width: 380px;
+    width: 380px;
+  }
+  &__form {
+    &-wrap {
+      max-width: 310px;
+    }
+    .check-inp-block, label.invalid {
+      font-size: 9px;
+    }
+  }
+  .catalog-card__gems-block {
+    justify-content: flex-start;
+  }
+
+  .gem {
+    max-width: 120px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: auto;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
 //blocks import
 @import 'blocks/header/header.992';
 @import 'blocks/hero/hero.992';

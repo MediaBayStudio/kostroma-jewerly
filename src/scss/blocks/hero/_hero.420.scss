@@ -1,11 +1,6 @@
 .hero {
 	&-sect {
 		background: linear-gradient(to bottom, $white-color 250px, $form-bg-color 250px);
-		// &::after {
-		// 	width: 300px;
-		// 	height: 300px;
-		// 	background-size: cover;
-		// }
 		&__img {
 			width: 300px;
 			height: 300px;
@@ -15,4 +10,26 @@
 			font-size: 80px;
 		}
 	}
+}
+
+.pendant, .bracelet {
+	&::before {
+		font-size: 67px;
+	}
+}
+
+.jewelry::before {
+	font-size: 71px;
+}
+
+.earrings::before {
+	font-size: 65px;
+}
+
+.necklace::before {
+	font-size: 64px;
+}
+
+.brooch::before {
+	font-size: 76px;
 }

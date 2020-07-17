@@ -41,6 +41,10 @@
 				bottom: auto;
 				position: relative;
 				z-index: 0;
+				transition: opacity .35s;
+				&:not(.slick-disabled):active {
+					transform: scale(.9);
+				}
 			}
 			>.prev {
 				margin-right: 12px;

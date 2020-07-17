@@ -1,9 +1,15 @@
 .help {
   &-sect {
     padding-bottom: 80px;
-    background:
-      url('#') top right/calc((100vw - 992px)/(1230 - 992)*(735 - 620) + 620px) 92.5% no-repeat,
-      url('#') bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px)/450px 300px no-repeat;
+    background: url("#") no-repeat, url("#") no-repeat, url("#") no-repeat;
+    background-position:
+      top right,
+      bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px),
+      bottom left calc((100vw - 992px)/(1230 - 992)*(134 - 18) + 18px);
+    background-size:
+      calc((100vw - 992px)/(1230 - 992)*(735 - 620) + 620px) 92.5%,
+      450px 300px,
+      450px 300px;
       &::before {
         display: inline-flex;
         font-size: 130px;

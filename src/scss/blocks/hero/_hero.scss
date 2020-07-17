@@ -7,19 +7,7 @@
 			top: 88px;
 			left: calc((100vw - 420px)/(320 - 420)*(-38 - 60) + 60px);
 			transform: rotate(-90deg);
-			pointer-events: auto;
 		}
-		// &::after {
-		// 	content: '';
-		// 	display: inline-block;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: 0;
-		// 	width: 247px;
-		// 	height: 267px;
-		// 	background: url('#') no-repeat;
-		// 	z-index: 2;
-		// }
 		&__img {
 			content: '';
 			display: inline-block;
@@ -50,4 +38,38 @@
 			line-height: 46px;
 		}
 	}
+}
+
+.jewelry {
+	>.hero-sect__title {
+		font-size: 48px;
+	}
+}
+
+.pendant, .bracelet {
+	>.hero-sect__title {
+		font-size: 54px;
+	}
+}
+
+.pendant, .bracelet {
+	&::before {
+		font-size: 48px;
+	}
+}
+
+.jewelry::before {
+	font-size: 52px;
+}
+
+.earrings::before {
+	font-size: 47px;
+}
+
+.necklace::before {
+	font-size: 46px;
+}
+
+.brooch::before {
+	font-size: 55px;
 }

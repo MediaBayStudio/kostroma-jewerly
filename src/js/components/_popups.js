@@ -49,6 +49,9 @@
 	let popupProductImg = tryingPopup.querySelector('.catalog-card__img'),
 		popupProductTitle = tryingPopup.querySelector('.catalog-card__title'),
 		popupProductDesc = tryingPopup.querySelector('.catalog-card__desc'),
+		popupProductWeight = tryingPopup.querySelector('.catalog-card__weight'),
+		popupProductMetal = tryingPopup.querySelector('.catalog-card__metal'),
+		popupProductGemsBlock = tryingPopup.querySelector('.catalog-card__gems-block'),
 		checkInputs = document.querySelectorAll('.check-inp-block__inp');
 
 	for (let i = 0; i < checkInputs.length; i++) {
@@ -61,27 +64,59 @@
 	}
 
 	tryingPopup.addEventListener('beforeopen', function() {
+		popupProductGemsBlock.innerHTML = '';
+
 		let product = this.caller.closest('.catalog-card'),
+			jewerly = product.jewerly,
 			productImg = product.querySelector('.catalog-card__img'),
-			imgSrc = productImg.src,
-			imgAlt = productImg.alt,
+			productImgSrc = productImg.src,
+			productImgAlt = productImg.alt,
 			productName = product.querySelector('.catalog-card__title').textContent,
 			productDesc = product.querySelector('.catalog-card__desc').textContent;
+
 		product.classList.add('active');
-		document.body.classList.add('blur');
-		popupProductImg.src = imgSrc;
-		popupProductImg.alt = imgAlt;
+
+		popupProductImg.src = productImgSrc;
+		popupProductImg.alt = productImgAlt;
 		popupProductTitle.textContent = productName;
 		popupProductDesc.textContent = productDesc;
+		popupProductWeight.textContent = jewerly.weight;
+		popupProductMetal.textContent = jewerly.metal;
+		
+		articleInput.value = product.id;
 
+		
+		for (let i in jewerly.gems) {
+			let gem = jewerly.gems[i],
+				{title, number, weight, purity} = gem,
+				block =
+				`<div class="gem">
+					<div class="gem__info">
+						<span class="gem__name">${title}</span>
+						<span class="gem__ct">${weight}</span>
+						<span class="gem__purity">${purity}</span>
+					</div>
+					<div class="gem__quantity">${number.replace(/(\d+)/, '$1<br>')}</div>
+				</div>`;
+			popupProductGemsBlock.insertAdjacentHTML('beforeend', block);
+		}
+		
+
+	});
+
+	tryingPopup.addEventListener('click', function() {
+		let target = event.target;
+		if (target.classList.contains('catalog-card__info-btn')) {
+			target.classList.toggle('active');
+		}
 	});
 
 	tryingPopup.addEventListener('beforeclose', function() {
 		document.body.classList.remove('blur');
+		this.querySelector('.catalog-card__info-btn').classList.remove('active');
 	});
 
 	tryingPopup.addEventListener('close', function() {
-		let catalogCards = document.querySelectorAll('.catalog-block__catalog-card');
 		for (let i = 0; i < catalogCards.length; i++) {
 			catalogCards[i].classList.remove('active');
 		}

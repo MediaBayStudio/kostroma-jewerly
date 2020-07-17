@@ -1,0 +1,12 @@
+.gallery {
+  &-slider {
+    &__img-wrap {
+      margin-bottom: 40px;
+      margin-right: 40px;
+      width: calc((100vw - 767px)/(991 - 767)*(220 - 176) + 176px);
+      height: calc((100vw - 767px)/(991 - 767)*(220 - 206) + 206px);
+      max-width: calc((100vw - 767px)/(991 - 767)*(220 - 176) + 176px);
+      max-height: calc((100vw - 767px)/(991 - 767)*(220 - 206) + 206px);
+    }
+  }
+}

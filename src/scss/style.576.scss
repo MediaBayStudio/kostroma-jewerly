@@ -25,6 +25,39 @@
   }
 }
 
+.menu-jewelry::before {
+  bottom: 41%;
+  font-size: 185px;
+}
+
+.menu-earrings::before {
+  bottom: 47%;
+}
+
+.menu-pendant::before {
+  bottom: 54%;
+}
+
+.menu-rings::before {
+  bottom: 48%;
+  font-size: 236px;
+}
+
+.menu-necklace::before {
+  bottom: 53%;
+  font-size: 159px;
+}
+
+.menu-brooch::before {
+  bottom: 50%;
+  font-size: 191px;
+}
+
+.menu-bracelet::before {
+  bottom: 53%;
+  font-size: 170px;
+}
+
 .sect {
   &-title {
     font-size: 28px;
@@ -39,13 +72,10 @@ label.invalid {
 .trying-popup {
   width: 390px;
   &__product {
-    &.catalog-card {
-      margin: 20px 0;
-    }
     >.catalog-card {
       &__img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
       }
     }
   }

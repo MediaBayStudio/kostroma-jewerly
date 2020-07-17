@@ -20,6 +20,12 @@
     outline: 1px dotted $main-text-color;
   }
 }
+.website-card:hover {
+  border-color: $option-page-color;
+  .website-card__arrow {
+    opacity: 1;
+  }
+}
 
 .hdr__nav-link:not(.disabled):hover {
 	&::after {
@@ -166,7 +172,7 @@
 }
 
 .ftr {
-  &__privacy-policy-btn:hover, &__dev-link:hover {
+  &__privacy-policy-btn:hover, &__dev-link:hover, &__page-link:hover {
     border-bottom-color: currentColor;
   }
 }

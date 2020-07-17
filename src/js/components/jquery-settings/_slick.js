@@ -67,3 +67,29 @@ $('.gallery-slider').slick({
 		settings: 'unslick'
 	}]
 });
+
+$('.websites-block').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	infinite: false,
+	mobileFirst: true,
+	centerMode: true,
+	centerPadding: 'calc((100vw - 320px)/(575 - 320)*(120 - 0) + 0px)',
+	nextArrow: buildArrow('websites-block__next next', nextArrow),
+	prevArrow: buildArrow('websites-block__prev prev', prevArrow),
+	slide: '.website-card',
+	appendArrows: '.websites-block__arrows',
+	accessibility: false,
+	responsive: [{
+		breakpoint: 575.98,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				centerMode: false,
+				centerPadding: '120px'
+			}
+		}, {
+			breakpoint: 991.98,
+			settings: 'unslick'
+		}]
+});
