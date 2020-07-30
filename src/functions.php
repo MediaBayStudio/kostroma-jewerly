@@ -1,73 +1,99 @@
 <?php 
 
-add_filter('manage_posts_columns', 'add_views_column', 4);
+
+
 add_filter( 'wpcf7_load_css', '__return_false' );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-if( 'disable_gutenberg' ){
+if ( 'disable_gutenberg' ) {
 	add_filter( 'use_block_editor_for_post_type', '__return_false', 100 );
 
 	remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
 
-	add_action( 'admin_init', function(){
+	add_action( 'admin_init', function() {
 		remove_action( 'admin_notices', [ 'WP_Privacy_Policy_Content', 'notice' ] );
 		add_action( 'edit_form_after_title', [ 'WP_Privacy_Policy_Content', 'notice' ] );
 	} );
 }
 
-function add_views_column($columns){
-	$num = 2; // после какой по счету колонки вставлять новые
+add_filter('manage_posts_columns', 'add_views_column', 4);
+function add_views_column( $columns ){
+  $num = 1; // после какой по счету колонки вставлять новые
 
-	$new_columns = array(
-		'img'		=> 'Миниатюра',
-		'name'	=> 'Название',
-		'descr' => 'Описание',
-		'metal' => 'Металл',
-		'gems'	=> 'Состав',
-		'price'	=> 'Цена'
-	);
+  $new_columns = [
+    'title'       => 'Артикул',
+    'img'         => 'Миниатюра',
+    'name'        => 'Название',
+    'descr'       => 'Описание',
+    'metal'       => 'Металл',
+    'gems'        => 'Состав',
+    'price'       => 'Цена',
+    'categories'  => 'Категория',
+    'modified'    => 'Дата изменения',
+    'date'        => 'Дата публикации'
+  ];
 
-	return array_slice($columns, 0, $num) + $new_columns + array_slice($columns, $num);
+  // return array_slice($columns, 0, $num) + $new_columns + array_slice($columns, $num);
+  return array_slice($columns, 0, $num) + $new_columns;
 }
 
-add_action('manage_posts_custom_column', 'fill_views_column', 5, 2);
+add_action('manage_posts_custom_column', function( $colname, $post_id ) {
+  $fields = get_field('jewerly_opt', $id);
 
-function fill_views_column($colname, $post_id) {
-	$fields = get_field('jewerly_opt', $id);
+  $style = $fields['visibility'] ? "" : "style='opacity: 0.25;'";
 
-	$style = $fields['visibility'] ? "" : "style='opacity: 0.25;'";
-
-	if ($colname === 'img') {
+  if ($colname === 'img') {
 
     $src = $fields['img']['url'];
     echo "<img src='$src' width='75px' height='75px'>";
 
-	} else if ($colname === 'descr') {
-		echo "<p $style>$fields[descr]</p>";
-	} else if ($colname === 'metal') {
-		echo "<p $style>$fields[metal]</p>";
-	} else if ($colname === 'gems') {
-		$terms = get_terms();
+  } else if ($colname === 'descr') {
+    echo "<p $style>$fields[descr]</p>";
+  } else if ($colname === 'metal') {
+    echo "<p $style>$fields[metal]</p>";
+  } else if ($colname === 'gems') {
+    $gems_repeater = $fields['gems_repeater'];
 
-		$paragraph = '';
+    if ( $gems_repeater ) {
+      foreach ( $gems_repeater as $gem_fields ) {
+        if ( $gem_fields['number'] ) {
+          $paragraph .= $gem_fields['title'] . '<br>';
+        }
+      }
+    } else {
+      $terms = get_terms();
 
-		foreach ($terms as $term) {
-      $gem_slug = $term->slug;
-      $gem_fields = get_field($gem_slug . '_opt');
+      $paragraph = '';
 
+      foreach ( $terms as $term ) {
+        $gem_slug = $term->slug;
+        $gem_fields = get_field( $gem_slug . '_opt' );
 
-            if ($gem_fields['number']) {
-        $gem_name= $term->name;
-        $paragraph .= $gem_name . '<br>';
+        if ( $gem_fields['number'] ) {
+          $gem_name= $term->name;
+          $paragraph .= $gem_name . '<br>';
+        }
       }
     }
+
     echo "<p $style>$paragraph</p>";
-	} else if ($colname === 'price') {
-		echo "<p $style>$fields[price]</p>";
-	} else if ($colname === 'name') {
-		echo "<p $style>$fields[title]</p>";
-	}
-}
+  } else if ($colname === 'price') {
+    echo "<p $style>$fields[price]</p>";
+  } else if ($colname === 'name') {
+    echo "<p $style>$fields[title]</p>";
+  } else if ($colname === 'modified') {
+    echo "<p>" . get_the_modified_date( 'd.m.Y, G:i' ) . "</p>";
+  } else if ($colname === 'tags') {
+    return;
+  }
+}, 5, 2);
+
+// добавляем возможность сортировать колонку
+add_filter( 'manage_'.'edit-post'.'_sortable_columns', function( $sortable_columns ){
+  $sortable_columns['modified'] = ['modified_modified', false];
+  return $sortable_columns;
+} );
+
 
 add_action('wp_enqueue_scripts', 'styles');
 add_action('wp_enqueue_scripts', 'scripts');
@@ -107,37 +133,44 @@ function scripts () {
 	wp_enqueue_script('jquery');
 }
 
-function mihdan_add_defer_attribute($tag, $handle) {
-  $handles = array(
-    'slick-script',
-    'lazyload-script',
+add_filter( 'script_loader_tag', function( $tag, $handle ) {
+  $handles = [
+	  'slick-script',
+	  'lazyload-script',
 		'validate-script',
 		'MobileMenu-script',
 		'simplePopup-script',
 		'jquery-settings-script',
-		// 'ymaps-script',
-		// 'gmaps-script',
 		'main-script'
-  );
+	];
 
-  // $async_scripts = ['ymaps-script', 'gmaps-script'];
+   foreach( $handles as $defer_script ) {
+    if ( $defer_script === $handle ) {
+    	return str_replace(' src', ' defer src', $tag);
+    };
+  };
+   
+	return $tag;
+}, 10, 2 );
 
-       foreach($handles as $defer_script) {
-      if ($defer_script === $handle) {
-         return str_replace(' src', ' defer src', $tag);
-      }
-   }
+// удаление ненужных миниатюр
+add_filter( 'intermediate_image_sizes', function ( $sizes ) {
+  // размеры которые нужно удалить
+  return array_diff( $sizes, [
+    'medium',
+    'medium_large',
+    'large',
+    '1536x1536',
+    '2048x2048',
+  ] );
+} );
 
-  //  foreach($async_scripts as $script) {
-		// if ($script === $handle) {
-  //     return str_replace(' src', ' async src', $tag);
-  //   }
-  //  }
-
-    return $tag;
-}
-
-add_filter('script_loader_tag', 'mihdan_add_defer_attribute', 10, 2);
+add_action( 'init', function() {
+	remove_post_type_support( 'post', 'editor' );
+	remove_post_type_support( 'post', 'comments' );
+  remove_post_type_support( 'page', 'editor' );
+  add_post_type_support( 'post', 'thumbnail' );
+} );
 
 
 add_action('init', 'register_posts_and_tax');
@@ -151,50 +184,7 @@ function register_posts_and_tax() {
 
 	$all_tax = array_merge($gems, $metal);
 
-	$post_types = [
-		'bracelet' 	=> ['Браслеты', 'Браслет'],
-		'brooch' 		=> ['Броши', 'Брошь'],
-		'earrings' 	=> ['Серьги', 'Серьги'],
-		'necklace' 	=> ['Колье', 'Колье'],
-		'pendant' 	=> ['Подвески', 'Подвеска'],
-		'pusets' 		=> ['Пусеты', 'Пусеты'],
-		'rings' 		=> ['Кольца', 'Кольцо']
-	];
-
-
-	foreach ($post_types as $type => $name) {
-		register_post_type($type, [
-			'labels'             => [
-				'name'               => $name[0], // Основное название типа записи
-				'singular_name'      => $name[1], // отдельное название записи типа Book
-				'add_new'            => 'Добавить новый товар',
-				'add_new_item'       => 'Добавление нового товара',
-				'edit_item'          => 'Редактировать товар',
-				'new_item'           => 'Новый товар',
-				'view_item'          => 'Посмотреть товар',
-				'search_items'       => 'Найти товар',
-				'not_found'          => 'Ничего не найдено',
-				'not_found_in_trash' => 'В корзине ничего не найдено',
-				'parent_item_colon'  => '',
-				'menu_name'          => $name[0]
-			  ],
-			'description'        => 'Рубрики для раздела вопросов', // описание таксономии
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => true,
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => 10,
-			'supports'           => ['title', 'thumbnail'],
-			'taxonomies'		 => $all_tax
-		]);
-	}
-
-	register_taxonomy( 'gems', $posts, [ 
+	register_taxonomy( 'gems', ['post'], [ 
 			'labels'                => [
 				'name'              => 'Драгоценные камни',
 				'singular_name'     => 'Драгоценный камень',
@@ -223,38 +213,68 @@ function register_posts_and_tax() {
 
 
 	};
-// add_action( 'init', 'create_taxonomy' );
 
+add_filter( 'taxonomy_labels_'.'category', 'change_labels_category' );
+function change_labels_category( $labels ) {
 
+  // Запишем лейблы для изменения в виде массива для удобства
+  $my_labels = [
+    'name'                  => 'Категории',
+    'singular_name'         => 'Категория',
+    'search_items'          => 'Поиск категорий',
+    'all_items'             => 'Все категории',
+    'parent_item'           => 'Родительская категория',
+    'parent_item_colon'     => 'Родительская категория:',
+    'edit_item'             => 'Изменить категорию',
+    'view_item'             => 'Просмотреть категорию',
+    'update_item'           => 'Обновить категорию',
+    'add_new_item'          => 'Добавить новую категорию',
+    'new_item_name'         => 'Название новой категории',
+    'not_found'             => 'Категории не найдены',
+    'no_terms'              => 'Категорий нет',
+    'items_list_navigation' => 'Навигация по списку категорий',
+    'items_list'            => 'Список категорий',
+    'back_to_items'         => '← Назад к категориям',
+    'menu_name'             => 'Категории',
+  ];
 
-// function create_taxonomy(){
-	
+  return $my_labels;
+}
 
-// }
+// Переименовываем записи
+add_filter( 'post_type_labels_post', 'rename_posts_labels' );
+function rename_posts_labels( $labels ){
 
-// add_filter( 'wpcf7_load_js', '__return_false' );
-// add_filter( 'wpcf7_load_css', '__return_false' );
+  $new = [
+    'name'                  => 'Товары',
+    'singular_name'         => 'Товары',
+    'add_new'               => 'Добавить товар',
+    'add_new_item'          => 'Добавить товар',
+    'edit_item'             => 'Редактировать товар',
+    'new_item'              => 'Новый товар',
+    'view_item'             => 'Просмотреть товар',
+    'search_items'          => 'Поиск товаров',
+    'not_found'             => 'Товаров не найдено.',
+    'not_found_in_trash'    => 'Товаров в корзине не найдено.',
+    'parent_item_colon'     => '',
+    'all_items'             => 'Все товары',
+    'archives'              => 'Архивы товаров',
+    'insert_into_item'      => 'Вставить в товар',
+    'uploaded_to_this_item' => 'Загруженные для этого товара',
+    'featured_image'        => 'Миниатюра товара',
+    'filter_items_list'     => 'Фильтровать список товаров',
+    'items_list_navigation' => 'Навигация по списку товаров',
+    'items_list'            => 'Список товаров',
+    'menu_name'             => 'Товары',
+    'name_admin_bar'        => 'Товар', // пункте "добавить"
+  ];
+
+  return (object) array_merge( (array) $labels, $new );
+}
+
 add_filter('wpcf7_autop_or_not', '__return_false');
 add_filter('wpcf7_form_elements', function($content) {
     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
 
     return $content;
 });
-
-
-
-add_action('admin_menu', 'remove_admin_menu');
-function remove_admin_menu() {
-	remove_menu_page('themes.php');
-	remove_menu_page('edit.php');
-	remove_menu_page('edit-comments.php');
-}
-
-function remove_admin_bar_links() {
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('new-content');
-	$wp_admin_bar->remove_menu('new-link');
-	$wp_admin_bar->remove_menu('comments');
-	$wp_admin_bar->remove_menu('archive');
-}
-add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );

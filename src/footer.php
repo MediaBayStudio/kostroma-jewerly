@@ -1,18 +1,18 @@
 
 	<footer class="ftr container">
-		<div class="ftr__links-block">
-			<?php 
-				$pages = ['Главная', 'Браслеты', 'Броши', 'Колье', 'Кольца', 'Подвески', 'Пусеты', 'Серьги'];
-				$pages_en = ['/', 'bracelet', 'brooch', 'necklace', 'rings', 'pendant', 'pusets', 'earrings'];
-				for ($i=0; $i < count($pages); $i++) {
-					if ($title_ru === $pages[$i] || $title_ru === 'Украшения' && $i === 0) {
-						$ftr_link_class =  " active";
-					} else {
-						$ftr_link_class =  "";
-					}
-					echo "<a href=\"$pages_en[$i]\" class=\"ftr__page-link$ftr_link_class\">$pages[$i]</a>";
+		<div class="ftr__links-block"> <?php 
+			$pages = ['Главная', 'Браслеты', 'Броши', 'Колье', 'Кольца', 'Подвески', 'Пусеты', 'Серьги'];
+			$pages_en = ['', 'bracelet', 'brooch', 'necklace', 'rings', 'pendant', 'pusets', 'earrings'];
+			$page_url = home_url();
+			for ($i = 0; $i < count($pages); $i++) {
+				if ($title_ru === $pages[$i] || $title_ru === 'Украшения' && $i === 0) {
+					$ftr_link_class =  " active";
+				} else {
+					$ftr_link_class =  "";
 				}
-			?>
+				$href = $page_url . '/' . $pages_en[$i];
+				echo "<a href=\"{$href}\" class=\"ftr__page-link$ftr_link_class\">$pages[$i]</a>";
+			} ?>
 		</div>
 		<div class="logo ftr__logo">
 			<span class="logo__text">Бриллианты Костромы</span>
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div class="trying-popup__form-wrap">
-			<?php echo do_shortcode( '[contact-form-7 id="351" title="Оформление примерки" html_class="form trying-popup__form"]' ); ?>
+			<?php echo do_shortcode( '[contact-form-7 id="366" title="Оформление примерки" html_class="form trying-popup__form"]' ); ?>
 		</div>
 	</div>
 

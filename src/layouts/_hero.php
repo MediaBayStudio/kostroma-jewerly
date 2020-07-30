@@ -1,13 +1,9 @@
 <?php
-  $hero_img = 'url(' . get_field('hero_img', $page_id)['url'] . '), ';
-
-
-  if (is_null(get_field('hero_img', $page_id)['url'])) {
+  $hero_img = 'url(' . get_field('hero_img', $post)['url'] . '), ';
+  if ( is_front_page() ) {
     $hero_img = 'url(' . get_template_directory_uri() . "/img/hero.jpg), ";
   }
-
-    $total_hero_img = $hero_img . 'url(' . $placeholder . ')';
- ?>
+  $total_hero_img = $hero_img . 'url(' . $placeholder . ')' ?>
 <section class="hero-sect container duplicate-title <?php echo $title_en; ?>" data-title="<?php echo $title_en; ?>">
   <h1 class="hero-sect__title"><?php echo $title_ru; ?></h1>
   <span class="hero-sect__subtitle">С  бриллиантами и драгоценными камнями</span>

@@ -12,6 +12,6 @@
     </div>
   </div>
   <div class="contacts-sect__form-wrap">
-    <?php echo do_shortcode( '[contact-form-7 id="349" title="Форма Есть вопросы?" html_class="form contacts-sect__form"]' ); ?>
+    <?php echo do_shortcode( '[contact-form-7 id="350" title="Форма Есть вопросы?" html_class="form contacts-sect__form"]' ); ?>
   </div>
 </section>

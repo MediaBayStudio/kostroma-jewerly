@@ -1,37 +1,32 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="ru-RU">
+<html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<meta name="description" content="">
-	<meta name="keywords" content="">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"> <?php 
+  $fonts = [
+    'Montserrat-Medium.woff',
+    'Montserrat-Regular.woff',
+    'Montserrat-SemiBold.woff',
+    'PlayfairDisplay-Bold.woff',
+    'PlayfairDisplay-Regular.woff'
+  ];
+  foreach ( $fonts as $font ) : ?>
+  	<link rel="preload" href="<?php echo get_template_directory_uri() . "/fonts/{$font}" ?>" as="font" type="font/woff" crossorigin> <?php
+  endforeach ?>
 
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/favicon-32x32.png'?>">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/favicon-16x16.png' ?>">
 	<link rel="manifest" href="<?php echo get_template_directory_uri() . '/site.webmanifest' ?>">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/safari-pinned-tab.svg' ?>" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#fcf9f7">
-	<meta name="theme-color" content="#ffffff">
-
-		<?php
+	<meta name="theme-color" content="#ffffff"> <?php
 		wp_head();
 
-		$title_ru =  preg_replace( '/\s.*/', '', wp_get_document_title() );
-		$title_en = preg_replace( '/.*\/(?!$)|\/(?=$)/', '', $current_url );
-		$page_color = get_field( 'color', $page_id );
-		$help_img = get_field( 'help_img', $page_id )['url'];
+		$page_color = get_field( 'color', $post );
+		$help_img = get_field( 'help_img', $post )['url'];
 
-		if ($title_ru === "Бриллианты") {
-			$title_ru = get_bloginfo('description');
-			$title_en = 'jewelry';
-			$page_color ='#D37979';
-			$help_img = get_template_directory_uri() . '/img/help.jpg';
-		}
-
-		$placeholder = get_template_directory_uri() . "/img/img-placeholder.svg";
-	?>
+		$placeholder = get_template_directory_uri() . "/img/img-placeholder.svg" ?>
 
 	<style>.btn{background-color:<?php echo $page_color; ?>}.btn::after,.btn::before{border: 1px solid <?php echo $page_color; ?>}.btn-ol{border:1px solid <?php echo $page_color; ?>}.quiz-form__btn{background-color:<?php echo $page_color; ?>}.progress__bar{background-color:<?php echo $page_color; ?>}.help-sect{background-image:url(<?php echo $placeholder; ?>)}.production-slider__slide-img,.delivery-card__img{color: <?php echo $page_color; ?>}.production-slider__slide-square{background-color:<?php echo $page_color; ?>}@media(min-width:575.98px){.help-sect{background-image:none;}}@media(min-width:991.98px){.help-sect{background-image:linear-gradient(to left,#FDFBFA,#FDFBFA),url(<?php echo $placeholder; ?>)}}@media(hover),(min-width:1024.98px){.btn-ol:hover{background-color:<?php echo $page_color; ?>}.quiz-form__btn:not(.disabled):hover{border-color:<?php echo $page_color; ?>}.catalog-block__catalog-card:hover .catalog-card__btn{background-color:<?php echo $page_color; ?>}}
 	</style>

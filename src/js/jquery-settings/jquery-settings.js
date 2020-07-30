@@ -284,6 +284,7 @@ $(document).ready(function() {
 							userPhone: 'Укажите верный номер телефона'
 						},
 						'user-email': {
+							required: 'Укажите E-mail',
 							email: 'Укажите верный E-mail'
 						},
 						'user-msg': {
@@ -319,6 +320,18 @@ $(document).ready(function() {
 					}
 				});
 			});
+	
+			$('form .btn').on('click', function() {
+		    if (!$(event.target).parents('form').valid()) {
+		      event.preventDefault();
+		    }
+		  });
+	
+			// $('.questions-sect__form').on('submit', function() {
+		 //    if (!$(this).valid()) return;
+		 //    ym(65100022,'reachGoal','button_click_question');
+		 //    return true;
+		 //  });
 	
 			$('.thanks-popup__close').on('click', function() {
 				closeThanksPopup();
