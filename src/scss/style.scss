@@ -423,6 +423,12 @@ label.invalid {
   margin-top: 5px;
 }
 
+.check-inp-block__inp,
+[name^=website] {
+  position: absolute;
+  opacity: 0;
+}
+
 .check-inp-block {
   width: 101%;
   display: inline-flex;
@@ -431,13 +437,13 @@ label.invalid {
   position: relative;
   font: 8px Montserrat;
   cursor: pointer;
-  &__inp {
-    margin: 0;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    position: absolute;
-  }
+  // &__inp {
+  //   margin: 0;
+  //   opacity: 0;
+  //   width: 0;
+  //   height: 0;
+  //   position: absolute;
+  // }
   &__inp:checked {
     ~.check-inp-block__pseudo-inp {
       background-color: $brown-light-color;
